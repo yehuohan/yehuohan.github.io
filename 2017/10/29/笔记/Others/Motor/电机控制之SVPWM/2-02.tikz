@@ -1,0 +1,40 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{bm}
+
+\usetikzlibrary{arrows,automata}
+
+\input{motor.tex}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\coordinate (O1) at (5,0);
+
+% alpha beta 轴
+\draw [line width=2pt] [-latex] (O1) -- +(0:7.8) node [right] {\LARGE \bm{$\alpha$}};
+\draw [line width=2pt] [-latex] (O1) -- +(90:7.8) node [right] {\LARGE \bm{$\beta$}};
+
+% u1~u6
+\draw (O1)+(0:0.5) node [above right] {\LARGE \bm{$u_0(000)$}};
+\draw (O1)+(0:-0.5) node [above left] {\LARGE \bm{$u_7(111)$}};
+\draw [line width=2pt] [-latex] (O1) -- +(0:5) node [below] {\LARGE \bm{$u_4(100)$}};
+\draw [line width=2pt] [-latex] (O1) -- +(60:5) node [right] {\LARGE \bm{$u_6(110)$}};
+\draw [line width=2pt] [-latex] (O1) -- +(120:5) node [left] {\LARGE \bm{$u_2(010)$}};
+\draw [line width=2pt] [-latex] (O1) -- +(180:5) node [below] {\LARGE \bm{$u_3(011)$}};
+\draw [line width=2pt] [-latex] (O1) -- +(240:5) node [below] {\LARGE \bm{$u_1(001)$}};
+\draw [line width=2pt] [-latex] (O1) -- +(300:5) node [below] {\LARGE \bm{$u_5(101)$}};
+
+% sec
+\draw [line width=2pt] (O1)+(30:3) node {\LARGE \bm{$\uppercase\expandafter{\romannumeral 1}$}};
+\draw [line width=2pt] (O1)+(30+60:3) node [right] {\LARGE \bm{$\uppercase\expandafter{\romannumeral 2}$}};
+\draw [line width=2pt] (O1)+(30+2*60:3) node {\LARGE \bm{$\uppercase\expandafter{\romannumeral 3}$}};
+\draw [line width=2pt] (O1)+(30+3*60:3) node {\LARGE \bm{$\uppercase\expandafter{\romannumeral 4}$}};
+\draw [line width=2pt] (O1)+(30+4*60:3) node {\LARGE \bm{$\uppercase\expandafter{\romannumeral 5}$}};
+\draw [line width=2pt] (O1)+(30+5*60:3) node {\LARGE \bm{$\uppercase\expandafter{\romannumeral 6}$}};
+
+\end{tikzpicture}
+
+\end{document}
+

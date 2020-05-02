@@ -1,0 +1,40 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{bm}
+
+\usetikzlibrary{arrows,automata}
+
+\input{motor.tex}
+
+\begin{document}
+
+\begin{tikzpicture} [line width=2pt]
+
+\coordinate (O1) at (5,0);
+
+% alpha beta 轴
+\draw [-latex] (O1) -- +(0:7) node [right] {\LARGE \bm{$\alpha$}};
+\draw [-latex] (O1) -- +(90:7) node [right] {\LARGE \bm{$\beta$}};
+
+% u1~u6
+\draw [-latex] (O1) -- +(0:6) node [below] {\LARGE \bm{$u_a=u_4(100)$}};
+\draw [-latex] (O1) -- +(60:6) node [right] {\LARGE \bm{$u_b=u_6(110)$}};
+
+% us
+\newcommand {\ua} {1.93};
+\newcommand {\ub} {3.71};
+\draw [-latex] (O1) -- +(40:5) node [right] {\LARGE \bm{$u_s$}};
+\draw [-latex] (O1) -- +(0:\ua) node [below] {\LARGE \bm{$a$}};
+\draw [dotted] (O1)+(0:\ua) -- +(40:5);
+\draw [-latex] (O1) -- +(60:\ub) node [above left] {\LARGE \bm{$b$}};
+\draw [dotted] (O1)+(60:\ub) -- +(40:5);
+
+\draw (O1)+(0:1) arc (0:40:1);
+\draw (O1)+(25:1) node [right] {\LARGE \bm{$\theta$}};
+\draw (O1)+(0:3) arc (0:40:3);
+\draw (O1)+(15:3) node [right] {\LARGE \bm{$\theta_{us}$}};
+
+\end{tikzpicture}
+
+\end{document}
+

@@ -1,0 +1,121 @@
+
+\usepackage{bm}
+
+%===============================================================================
+% New commands
+
+% 电流流入方向
+% #1 中心位置
+\newcommand {\currentIn}[1] {
+\filldraw [line width=1.5pt,color=white] #1 circle(0.2);
+\draw [line width=1.5pt] #1 circle(0.2);
+\draw [line width=1.5pt] #1 +(45:0.2)--+(45:-0.2);
+\draw [line width=1.5pt] #1 +(-45:0.2)--+(-45:-0.2);
+}
+
+% 电流流出方向
+% #1 中心位置
+\newcommand {\currentOut}[1] {
+\filldraw [line width=1.5pt,color=white] #1 circle(0.2);
+\draw [line width=1.5pt] #1 circle(0.2);
+\draw [fill ] #1 circle(0.08);
+}
+
+% 三相绕组
+% #1 中心位置
+% #2 环绕半径
+\newcommand {\threeWind}[2] {
+\currentIn{#1 ++(30:#2)};
+\draw #1 ++(30:#2+0.2) node [right] {\large \textbf{B}};
+\currentOut{#1 ++(90:#2)};
+\draw #1 ++(90:#2+0.2) node [above] {\large \textbf{X}};
+\currentIn{#1 ++(150:#2)};
+\draw #1 ++(150:#2+0.1) node [above left] {\large \textbf{C}};
+\currentOut{#1 ++(-30:#2)};
+\draw #1 ++(-30:#2+0.1) node [below right] {\large \textbf{Z}};
+\currentIn{#1 ++(-90:#2)};
+\draw #1 ++(-90:#2+0.2) node [below] {\large \textbf{A}};
+\currentOut{#1 ++(-150:#2)};
+\draw #1 ++(-150:#2+0.1) node [below left] {\large \textbf{Y}};
+}
+
+% ABC轴系
+% #1 中心位置
+% #2 轴长
+\newcommand {\abcAxis}[2]{
+\draw [line width=2pt] [-latex] #1 -- +(0:#2) node [right] {\LARGE \textbf{A}};
+\draw [line width=2pt] [-latex] #1 -- +(120:#2) node [above] {\LARGE \textbf{B}};
+\draw [line width=2pt] [-latex] #1 -- +(-120:#2) node [below] {\LARGE \textbf{C}};
+}
+
+% 轴向绕组
+% #1 定点位置
+% #2 旋转角度
+\newcommand {\inductorWind}[2] {
+\draw [line width=1.5pt,rotate around={#2:(0,0)}] 
+	#1 circle(0.09) 
+	+(0,0.045) -- +(0,0.9)
+ 	arc(180:0:0.2) arc(180:0:0.2) arc(180:0:0.2) arc(180:0:0.2)
+ 	-- ++(0,-0.9+0.045)
+ 	+(0,-0.045) circle(0.09);
+\filldraw [color=white,rotate around={#2:(0,0)}] #1 circle(0.06);
+\filldraw [color=white,rotate around={#2:(0,0)}] #1+(1.6,0) circle(0.06);
+\draw [line width=1.5pt,rotate around={#2:(0,0)}] [latex-] #1+(0.2,-0.5)-- +(1.4,-0.5);
+\draw [line width=1.5pt,rotate around={#2:(0,0)}] [-latex] #1+(1.3,-0.3)-- +(1.3,0.5);
+}
+
+% 扇形
+% #1 圆心位置
+% #2 内圆半径
+% #3 外圆半径
+% #4 扇形角度
+% #5 旋转角度
+\newcommand {\sector}[5]{
+\filldraw [rotate around={#5:(0,0)}, color=gray,line width=2pt,draw=black] 
+	#1 ++(0:#2) arc(0:#4:#2)
+	-- ++(#4:#3-#2)
+	arc(#4:0:#3)
+	-- ++(0:#2-#3);
+}
+
+% 扇形
+% #1 圆心位置
+% #2 内圆半径
+% #3 外圆半径
+% #4 扇形角度
+% #5 旋转角度
+\newcommand {\sectorLine}[5]{
+\draw [line width=2pt, rotate around={#5:(0,0)}] 
+	#1 ++(0:#2) arc(0:#4:#2)
+	-- ++(#4:#3-#2)
+	arc(#4:0:#3)
+	-- ++(0:#2-#3);
+}
+
+% 电压源
+% #1 定点位置
+% #2 角度
+\newcommand {\powerVol}[2]{
+\filldraw [color=white, rotate around={#2:(0,0)}] #1+(0.5,0) circle(0.6);
+\draw [line width=2pt, rotate around={#2:(0,0)}] #1+(0.5,0) circle(0.6);
+\draw [line width=2pt, rotate around={#2:(0,0)}] [-latex] #1 -- +(1,0);
+}
+
+% 电流源
+% #1 定点位置
+% #2 角度
+\newcommand {\powerCur}[2]{
+\filldraw [color=white, rotate around={#2:(0,0)}] #1+(0.5,0) circle(0.6);
+\draw [line width=2pt, rotate around={#2:(0,0)}] #1+(0.5,0) circle(0.6);
+\draw [line width=2pt, rotate around={#2:(0,0)}] [-latex] #1++(0.5,0.5) -- +(0,-1);
+}
+
+% 电感
+% #1 定点位置
+% #2 旋转角度
+\newcommand {\inductor}[2] {
+\draw [line width=2pt,rotate around={#2:(0,0)}] 
+	#1 arc(180:0:0.2) arc(180:0:0.2) arc(180:0:0.2) arc(180:0:0.2);
+}
+
+%===============================================================================

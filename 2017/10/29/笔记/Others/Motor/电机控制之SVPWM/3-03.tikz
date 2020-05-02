@@ -1,0 +1,97 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{ifthen}
+\usepackage{arrayjobx}	% Please install 'arrayjobx' by 'MikTeX Package Manager'
+\usepackage{arraysort}	% Please install 'arraysort' by 'MikTeX Package Manager'
+\usetikzlibrary{math}
+\usetikzlibrary{arrows,automata}
+
+\begin{document}
+
+\begin{tikzpicture} [line width=2pt]
+
+\newcommand {\wid} 	{1.5};
+\newcommand {\hei} 	{1};
+\newcommand {\row} 	{0};
+\newcommand {\hhh} 	{4.5};
+\newcommand {\hh} 	{3};
+\newcommand {\h} 	{1.5};
+\newcounter {ly};
+
+\newarray\pwma;
+\newarray\pwmb;
+\newarray\pwmc;
+\newarray\pwm
+\newarray\svvec
+\newarray\svtime
+\readarray{svtime}{\frac{T_0}{4} & \frac{T_a}{2} & \frac{T_b}{2} & \frac{T_0}{2}
+				 & \frac{T_a}{2} & \frac{T_b}{2} & \frac{T_0}{4} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% sec I
+\coordinate (O1) at (0,0);
+% pwm start
+\readarray{pwma}{0 & 1 & 1 & 1 & 1 & 1 & 0}
+\readarray{pwmb}{0 & 0 & 1 & 1 & 1 & 0 & 0}
+\readarray{pwmc}{0 & 0 & 0 & 1 & 0 & 0 & 0}
+\readarray{pwm}{\checkpwma(\y) & \checkpwmb(\y)  & \checkpwmc(\y) }
+
+\foreach \index/\r in {1/\hhh, 2/\hh, 3/\h}{
+	\renewcommand {\row} {\r};
+	\checkpwm(\index);
+	\foreach \y/\x in {1/0, 2/1, 3/2,   4/3,   5/5, 6/6, 7/7}{
+	 	\cachedata;
+		\ifthenelse{\x=3}
+			{\draw (O1)++(0,\row)++(\x*\wid, \cachedata*\hei)--+(\wid*2, 0);}
+			{\draw (O1)++(0,\row)++(\x*\wid, \cachedata*\hei)--+(\wid, 0);}
+		\ifthenelse{\NOT \value{ly}=\cachedata \AND \NOT \x=0}
+			{\draw (O1)++(0,\row)++(\x*\wid, 0) -- +(0, \hei);}{}
+		\setcounter {ly} {\cachedata};
+	}
+}
+%pwm end
+
+% dashed and text
+\readarray{svvec}{u_0 & u_4 & u_6 & u_7 & u_6 & u_4 & u_0}
+
+\foreach \x/\index in {0/1, 1/2, 2/3,   3/4,   5/5, 6/6, 7/7, 8/8}{
+    \draw [line width=1.5pt][dashed] (O1)+(\x*\wid,0) -- +(\x*\wid, 7.5);
+    \ifthenelse{\NOT \x = 8 \AND \NOT \x = 3}{
+    	\checksvvec(\index);
+    	\draw (O1)++(\x*\wid+\wid/2-0.5,0.4) node [right] {\LARGE \bm{$\cachedata$}};
+    	\checksvtime(\index);
+    	\draw (O1)++(\x*\wid+\wid/2-0.5,6.8) node [right] {\huge \bm{$\cachedata$} };
+    }{}
+    \ifthenelse{\x = 3}{
+    	\checksvvec(\index);
+    	\draw (O1)++(\x*\wid+\wid-0.5,0.4) node [right] {\LARGE \bm{$\cachedata$}};
+    	\checksvtime(\index);
+    	\draw (O1)++(\x*\wid+\wid-0.5,6.8) node [right] {\huge \bm{$\cachedata$}};
+    }{}
+}
+
+% sa sb sc
+\foreach \y/\text in {\h/s_c, \hh/s_b, \hhh/s_a}{
+	\draw (O1)+(-0.1,\y) node [left] {\LARGE \bm{$\text$}};
+}
+
+% time
+\draw [-latex](O1)++(0,-1)--+(\wid*8,0);
+\draw (O1)++(0,-1) node [below] {\LARGE \bm{$0$}};
+\draw (O1)++(\wid*8,-1) node [below] {\LARGE \bm{$T_s$}};
+\draw (O1)++(\wid*1, -1) node [below] {\LARGE \bm{$t_a$}};
+\draw (O1)++(\wid*2, -1) node [below] {\LARGE \bm{$t_b$}};
+\draw (O1)++(\wid*3, -1) node [below] {\LARGE \bm{$t_c$}};
+\draw (O1)++(\wid*5, -1) node [below] {\LARGE \bm{$t_c'$}};
+\draw (O1)++(\wid*6, -1) node [below] {\LARGE \bm{$t_b'$}};
+\draw (O1)++(\wid*7, -1) node [below] {\LARGE \bm{$t_a'$}};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{tikzpicture}
+
+\end{document}
+

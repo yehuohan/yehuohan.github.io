@@ -1,0 +1,57 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{bm}
+
+\newcommand*{\pos}{pi/4+0.2}
+
+\begin{document}
+ 
+\begin{tikzpicture}[scale = 1.3]
+
+% 坐标轴
+\draw [line width = 1pt] [->] (0,0) -- (2*pi+pi,0) node[below] {\huge $\bm{\theta_s}$};
+\draw [line width = 1pt] [->] (0,pi) -- (0,-pi) node[below] {\huge $\bm{B_{mA}}$};
+\draw (0,0) node [left] () {\huge $\bm{O}$};
+
+% sin函数
+\draw [line width =2pt, domain=0:2*pi+pi/3] plot(\x,{-2*sin(\x r)});
+\foreach \x in {1, 2, ..., 20}
+	\draw [line width = 1pt] [->] (\x* 2*pi/20, 0) -- (\x* 2*pi/20, -2*sin(\x* 2*pi/20 r);
+\draw [line width = 1pt] (pi/2,-2)--(0, -2)
+		node [left] {\huge $\bm{B_{mAmax}}$};
+
+% 线圈Pos
+\filldraw [line width =2pt, color=white] (\pos, 0) circle (0.25);
+\draw [line width =2pt] (\pos, 0) circle (0.25)
+		+(0,0.3) node [above right] {\huge $\bm{B}$}
+		+(45:0.25)--+(45+180:0.25)
+		+(-45:0.25)--+(-45+180:0.25);
+\filldraw [line width =2pt, color=white] (\pos+pi, 0) circle (0.25);
+\draw [line width =2pt] (\pos+pi, 0) circle (0.25);
+\filldraw (\pos+pi,0) circle(0.1)
+		+(0,-0.3) node [below] {\huge $\bm{B'}$};
+
+% 箭头
+\draw [line width=1pt] [->] (-0.5, 1.2)--(0, 1.2);
+\draw [line width=1pt] [-] (0, 1.2)--(\pos, 1.2)
+		node [above left] {\huge $\bm{\theta_r}$};
+\draw [line width=1pt] [<->] (\pos, 1.2)--(\pos+pi/2, 1.2);
+\draw (\pos+pi/2-0.2, 1.2) node [above left] {\huge $\bm{90^\circ}$};
+\draw [line width=1pt] [<->] (\pos+pi, 1.2)--(\pos+pi/2, 1.2);
+\draw (\pos+pi-0.2, 1.2) node [above left] {\huge $\bm{90^\circ}$};
+
+\draw [line width=1pt] [-] (\pos, 1.6)--(\pos, 0.25);
+\draw [line width=1pt] [->] (\pos+pi/2, 1.6)--(\pos+pi/2, -3)
+		node [below] {\huge $\bm{r}$};
+\draw [line width=1pt] [->] (pi/2, 0)--(pi/2, -3)
+		node [below] {\huge $\bm{s}$};
+
+\draw [line width=1pt] [->] (pi/2-0.5, -2.5)--(pi/2,-2.5);
+\draw [line width=1pt] [-] (pi/2, -2.5)--(\pos+pi/2,-2.5);
+\draw (pi/2+0.5,-2.5) node [above] {\huge $\bm{\theta_r}$};
+\draw [line width=1pt] [<-] (\pos+pi/2,-2.5)--(\pos+pi/2+0.5,-2.5);
+
+\end{tikzpicture}
+
+\end{document}
+

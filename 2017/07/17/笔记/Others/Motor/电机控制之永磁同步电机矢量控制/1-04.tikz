@@ -1,0 +1,108 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{bm}
+
+\usetikzlibrary{arrows,automata}
+
+\newcommand {\tr} {18}
+
+% 轴向绕组
+% #1 定点位置
+% #2 旋转角度
+\newcommand {\inductorWindd}[2] {
+\draw [line width=1.5pt,rotate around={#2:(0,0)}] 
+	#1 circle(0.09) 
+	+(0,0.045) -- +(0,0.9)
+ 	arc(180:0:0.2) arc(180:0:0.2) arc(180:0:0.2) arc(180:0:0.2)
+ 	-- ++(0,-0.9+0.045)
+ 	+(0,-0.045) circle(0.09);
+\draw [line width=1.5pt,rotate around={#2:(0,0)}] [-latex] #1+(1.3,-0.3)-- +(1.3,0.5);
+}
+
+\input{motor.tex}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\coordinate (O1) at (0,0);
+
+% 插入式
+\draw [line width=2pt] (O1) circle(3);
+
+\filldraw [color=gray] 
+	(O1)+(\tr+90-40:1.8) arc(\tr+90-40:\tr+90+40:1.8)
+	--(\tr-90-40:1.8)
+	arc(\tr-90-40:\tr-90+40:1.8);
+\draw [line width=1.5pt] 
+	(O1)+(\tr+90-40:1.8) arc(\tr+90-40:\tr+90+40:1.8)
+	--(\tr-90-40:1.8)
+	arc(\tr-90-40:\tr-90+40:1.8)
+	--(\tr+90-40:1.8);
+
+\draw [line width=1.5pt][latex-latex] (260:1.8)--(260:3);
+\draw (260:2.5) node [right] {\Large \textbf{g}};
+
+\abcAxis{(O1)}{7};
+
+% is轴
+\draw [line width=2pt] [-latex] (O1)--+(\tr+40:7) 
+	node [above left] {\LARGE \bm{$i_s(f_s)$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr:4.2) to[out=\tr+90,in=\tr+40-90] +(\tr+40:4.2);
+\draw (O1)+(\tr+40-20:4.3) node [right] {\LARGE \bm{$\beta$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr+40-10:7.8) to[out=\tr+40-10+90,in=\tr+40+10-90] +(\tr+40+10:7.8);
+\draw (O1)+(\tr+40:8) node [right] {\LARGE \bm{$\omega_s$}};
+
+% dq轴
+\draw [line width=2pt] [-latex] (O1)--+(\tr:5.5) 
+	node [above] {\LARGE \bm{$\psi_f$}}
+	node [below right] {\LARGE \bm{$d$}};
+\draw [line width=1.5pt] [-latex] (O1)+(0:4.2) to[out=0+90,in=\tr-90] +(\tr:4.2);
+\draw (O1)+(\tr-7:4.3) node [right] {\LARGE \bm{$\theta_r$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr-10:6.5) to[out=\tr-10+90,in=\tr+10-90] +(\tr+10:6.5);
+\draw (O1)+(\tr:6.6) node [right] {\LARGE \bm{$\omega_r$}};
+
+\draw [line width=2pt] [-latex] (O1)--+(\tr+90:4) 
+	node [right] {\LARGE \bm{$q$}};
+
+\draw [line width=1.5pt] [-latex] (O1)+(0:3.3) to[out=90,in=\tr+40-90] +(\tr+40:3.3);
+\draw (O1)+(\tr+20:3.5) node [right] {\LARGE \bm{$\theta_s$}};
+
+% N、S极
+\draw (O1)+(\tr+20:2) node {\Large \textbf{N}};
+\draw (O1)+(\tr+10+180:1.6) node {\Large \textbf{S}};
+\currentOut{(\tr+90:1.6)};
+\currentIn{(\tr-90:1.6)};
+
+% 转矩
+\draw [line width = 1.5pt] [-latex] (O1)+(145:2.3) to[out=145+90,in=180-90] +(180:2.3);
+\draw (O1)+(185:2.4) node {\Large \bm{$t_e$}};
+
+% 绕组
+\coordinate (W1) at ([shift={+(-10:4.8)}] O1);
+\coordinate (W2) at ([shift={+(110:4.8)}] O1);
+\coordinate (W3) at ([shift={+(-130:4.8)}] O1);
+\coordinate (W4) at ([shift={+(48:4.8)}] O1);
+\inductorWind{(W1)}{0};
+\draw [rotate around={0:(0,0)}] (W1)+(0.3,-0.9) node [right] {\Large \bm{$u_A$}};
+\draw [rotate around={0:(0,0)}] (W1)+(0.4,0.4) node [right] {\Large \bm{$i_A$}};
+\inductorWind{(W2)}{120};
+\draw [rotate around={0:(0,0)}] (W2)+(85:0.9) node [right] {\Large \bm{$u_B$}};
+\draw [rotate around={0:(0,0)}] (W2)+(120:1.2) node [below]{\Large \bm{$i_B$}};
+\inductorWind{(W3)}{-120};
+\draw [rotate around={0:(0,0)}] (W3)+(-0.8,0) node [left] {\Large \bm{$u_C$}};
+\draw [rotate around={0:(0,0)}] (W3)+(-0.6,-0.9) node [right] {\Large \bm{$i_C$}};
+\inductorWind{(W4)}{\tr+40};
+\draw [rotate around={0:(0,0)}] (W4)+(1.5,0) node [left] {\Large \bm{$u_s$}};
+\draw [rotate around={0:(0,0)}] (W4)+(0.1,0.8) node [right] {\Large \bm{$i_s$}};
+\draw [rotate around={0:(0,0)}] (W4)+(-0.6,1.4) node [left] {\Large \bm{$s$}};
+
+\coordinate (W5) at ([shift={+(\tr-55:1)}] O1);
+\inductorWindd{(W5)}{\tr};
+\draw [rotate around={0:(0,0)}] (W5)+(0.9,-0.2) node [right] {\Large \bm{$i_f$}};
+
+
+\end{tikzpicture}
+
+\end{document}
+
