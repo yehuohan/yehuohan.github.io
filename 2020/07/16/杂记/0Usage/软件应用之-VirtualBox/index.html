@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>软件应用之 VirtualBox | z000tech</title>
+  <meta name="keywords" content>
+  <meta name="description" content="软件应用之 VirtualBox | z000tech">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="photo">
+<meta property="og:url" content="http://yehuohan.github.io/photo/index.html">
+<meta property="og:site_name" content="z000tech">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2017-07-12T15:48:39.024Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="photo">
+
+
+<link rel="icon" href="/img/1.png">
+
+<link href="/css/style.css" rel="stylesheet">
+
+<link href="/css/hl_theme/github.css" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/iconfont.js"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/1.png">
+</a>
+<div class="author">
+    <span>z000tech</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/yehuohan" target="_blank">
+            
+                <i class="iconfont icon-github"></i>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:yehuohan@qq.com" target="_blank">
+            
+                <i class="iconfont icon-email"></i>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(120)</small></div></li>
+    
+        
+            
+            <li><div data-rel="笔记"><i class="fold iconfont icon-right"></i>笔记<small>(29)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="DOC">DOC<small>(12)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="DSA">DSA<small>(7)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="OS">OS<small>(3)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="杂记">杂记<small>(40)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Gist"><i class="fold iconfont icon-right"></i>Gist<small>(51)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="c-cpp">c-cpp<small>(27)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="others">others<small>(8)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="linux">linux<small>(3)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="python">python<small>(12)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="120">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off" id="local-search-input">
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none">
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">dsp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">arm</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">c/c++</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">单片机</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ssd</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">mingw</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cmd</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">ubuntu</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">opencv</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">qt</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">gif</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">shell</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">五笔</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">电路</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ssh</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">teamviewer</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">gsp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">html</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">python</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">matlab</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">gcc</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">makefile</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">markdown</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">mathjax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">tensorflow</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">matplotlib</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">reStructuredText</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">numpy</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">数据结构(dsa)</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">电机控制</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">boot</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">refind</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">grub4dos</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">arch</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">altium designer</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ccs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">keil</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">node.js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">office</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">visual studio</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Android</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="笔记 " href="/2018/03/06/笔记/0笔记目录全览/" data-tag data-author>
+            <span class="post-title" title="笔记目录全览">笔记目录全览</span>
+            <span class="post-date" title="2018-03-06 11:08:37">2018/03/06</span>
+        </a>
+        
+        <a class="杂记 " href="/2020/07/16/杂记/0Usage/软件应用之-Python/" data-tag="python" data-author>
+            <span class="post-title" title="软件应用之 Python">软件应用之 Python</span>
+            <span class="post-date" title="2020-07-16 18:59:06">2020/07/16</span>
+        </a>
+        
+        <a class="杂记 " href="/2020/07/16/杂记/0Usage/android-ndk/" data-tag data-author>
+            <span class="post-title" title="Android NDK">Android NDK</span>
+            <span class="post-date" title="2020-07-16 13:41:18">2020/07/16</span>
+        </a>
+        
+        <a class="杂记 " href="/2020/07/16/杂记/0Usage/软件应用之-CMake/" data-tag data-author>
+            <span class="post-title" title="软件应用之 CMake">软件应用之 CMake</span>
+            <span class="post-date" title="2020-07-16 13:40:43">2020/07/16</span>
+        </a>
+        
+        <a class="杂记 " href="/2020/07/16/杂记/0Usage/软件应用之-Sphinx/" data-tag data-author>
+            <span class="post-title" title="软件应用之 Sphinx">软件应用之 Sphinx</span>
+            <span class="post-date" title="2020-07-16 13:40:00">2020/07/16</span>
+        </a>
+        
+        <a class="杂记 " href="/2020/07/16/杂记/0Usage/软件应用之-SVN/" data-tag data-author>
+            <span class="post-title" title="软件应用之 SVN">软件应用之 SVN</span>
+            <span class="post-date" title="2020-07-16 13:39:52">2020/07/16</span>
+        </a>
+        
+        <a class="杂记 " href="/2020/07/16/杂记/0Usage/软件应用之-VirtualBox/" data-tag data-author>
+            <span class="post-title" title="软件应用之 VirtualBox">软件应用之 VirtualBox</span>
+            <span class="post-date" title="2020-07-16 12:05:02">2020/07/16</span>
+        </a>
+        
+        <a class="杂记 " href="/2020/03/16/杂记/ARM寄存器/" data-tag="dsp,arm" data-author>
+            <span class="post-title" title="ARM寄存器">ARM寄存器</span>
+            <span class="post-date" title="2020-03-16 19:15:09">2020/03/16</span>
+        </a>
+        
+        <a class="Gist python " href="/2019/10/18/Gist/python/py-numpy数组代替for/" data-tag="python" data-author>
+            <span class="post-title" title="py:numpy数组代替for">py:numpy数组代替for</span>
+            <span class="post-date" title="2019-10-18 09:00:49">2019/10/18</span>
+        </a>
+        
+        <a class="Gist python " href="/2019/10/02/Gist/python/py-协程/" data-tag="python" data-author>
+            <span class="post-title" title="py:协程">py:协程</span>
+            <span class="post-date" title="2019-10-02 22:35:31">2019/10/02</span>
+        </a>
+        
+        <a class="杂记 " href="/2019/09/21/杂记/0Usage/软件应用之-Docker/" data-tag="docker" data-author>
+            <span class="post-title" title="软件应用之 Docker">软件应用之 Docker</span>
+            <span class="post-date" title="2019-09-21 16:41:43">2019/09/21</span>
+        </a>
+        
+        <a class="Gist " href="/2019/08/15/Gist/python/py-多线程使用/" data-tag="python" data-author>
+            <span class="post-title" title="py:多线程使用">py:多线程使用</span>
+            <span class="post-date" title="2019-08-15 16:57:39">2019/08/15</span>
+        </a>
+        
+        <a class="Gist linux " href="/2019/04/11/Gist/linux/linux-socket本地通信/" data-tag="linux" data-author>
+            <span class="post-title" title="linux:socket本地通信">linux:socket本地通信</span>
+            <span class="post-date" title="2019-04-11 14:59:18">2019/04/11</span>
+        </a>
+        
+        <a class="Gist linux " href="/2019/04/03/Gist/linux/hidraw读写/" data-tag="linux" data-author>
+            <span class="post-title" title="linux:hidraw读写">linux:hidraw读写</span>
+            <span class="post-date" title="2019-04-03 20:46:05">2019/04/03</span>
+        </a>
+        
+        <a class="Gist linux " href="/2019/03/31/Gist/linux/linux-AOSP编译/" data-tag="linux" data-author>
+            <span class="post-title" title="linux:AOSP编译">linux:AOSP编译</span>
+            <span class="post-date" title="2019-03-31 16:26:54">2019/03/31</span>
+        </a>
+        
+        <a class="笔记 DSA " href="/2019/03/26/笔记/DSA/字符画之画线性容器/" data-tag="数据结构(dsa)" data-author>
+            <span class="post-title" title="字符画之画线性容器">字符画之画线性容器</span>
+            <span class="post-date" title="2019-03-26 20:10:17">2019/03/26</span>
+        </a>
+        
+        <a class="Gist python " href="/2019/03/26/Gist/python/py-遍历指定目录/" data-tag="python" data-author>
+            <span class="post-title" title="py:遍历指定目录">py:遍历指定目录</span>
+            <span class="post-date" title="2019-03-26 19:53:30">2019/03/26</span>
+        </a>
+        
+        <a class="Gist python " href="/2019/03/26/Gist/python/py-serialport-transmission/" data-tag="python" data-author>
+            <span class="post-title" title="py:serialport transmission">py:serialport transmission</span>
+            <span class="post-date" title="2019-03-26 19:48:20">2019/03/26</span>
+        </a>
+        
+        <a class="Gist python " href="/2019/03/26/Gist/python/py-create-wave-audio/" data-tag="python" data-author>
+            <span class="post-title" title="py:create wave audio">py:create wave audio</span>
+            <span class="post-date" title="2019-03-26 19:44:28">2019/03/26</span>
+        </a>
+        
+        <a class="Gist python " href="/2019/03/26/Gist/python/py-change-file-name/" data-tag="python" data-author>
+            <span class="post-title" title="py:change file name">py:change file name</span>
+            <span class="post-date" title="2019-03-26 19:40:30">2019/03/26</span>
+        </a>
+        
+        <a class="杂记 " href="/2019/03/21/杂记/0Usage/android-adb/" data-tag="Android" data-author>
+            <span class="post-title" title="[转]Android-ADB">[转]Android-ADB</span>
+            <span class="post-date" title="2019-03-21 21:58:03">2019/03/21</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2018/12/11/笔记/DOC/工具参考书之shell基本使用/" data-tag="linux" data-author>
+            <span class="post-title" title="[转]工具参考书之Shell语法">[转]工具参考书之Shell语法</span>
+            <span class="post-date" title="2018-12-11 20:18:24">2018/12/11</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2018/11/09/笔记/DOC/工具参考书之Makefile使用/" data-tag="makefile" data-author>
+            <span class="post-title" title="[转]工具参考书之Makefile使用">[转]工具参考书之Makefile使用</span>
+            <span class="post-date" title="2018-11-09 11:45:01">2018/11/09</span>
+        </a>
+        
+        <a class="杂记 " href="/2018/09/24/杂记/堆和栈的区别/" data-tag="c/c++" data-author>
+            <span class="post-title" title="[转]堆和栈的区别">[转]堆和栈的区别</span>
+            <span class="post-date" title="2018-09-24 15:15:39">2018/09/24</span>
+        </a>
+        
+        <a class="杂记 " href="/2018/08/24/杂记/Python代码规范和命名规范/" data-tag data-author>
+            <span class="post-title" title="[转]Python代码规范和命名规范">[转]Python代码规范和命名规范</span>
+            <span class="post-date" title="2018-08-24 00:06:32">2018/08/24</span>
+        </a>
+        
+        <a class="杂记 " href="/2018/08/23/杂记/P、NP、NPC和NP-Hard相关概念的图形和解释/" data-tag data-author>
+            <span class="post-title" title="[转]P、NP、NPC和NP-Hard相关概念的图形和解释">[转]P、NP、NPC和NP-Hard相关概念的图形和解释</span>
+            <span class="post-date" title="2018-08-23 23:44:21">2018/08/23</span>
+        </a>
+        
+        <a class="笔记 DSA " href="/2018/07/14/笔记/DSA/字符画之画优先级队列/" data-tag="数据结构(dsa)" data-author>
+            <span class="post-title" title="字符画之画优先级队列">字符画之画优先级队列</span>
+            <span class="post-date" title="2018-07-14 01:20:36">2018/07/14</span>
+        </a>
+        
+        <a class="笔记 DSA " href="/2018/07/14/笔记/DSA/字符画之画Bitmap/" data-tag="数据结构(dsa)" data-author>
+            <span class="post-title" title="字符画之画Bitmap">字符画之画Bitmap</span>
+            <span class="post-date" title="2018-07-14 00:55:05">2018/07/14</span>
+        </a>
+        
+        <a class="Gist others " href="/2018/07/13/Gist/gsp/图示矩阵特征值和特征向量/" data-tag="gsp" data-author>
+            <span class="post-title" title="gsp:图示矩阵特征值和特征向量">gsp:图示矩阵特征值和特征向量</span>
+            <span class="post-date" title="2018-07-13 10:08:59">2018/07/13</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2018/07/02/Gist/c&c++/c-c-printf和scanf辨析/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:printf和scanf辨析">c/c++:printf和scanf辨析</span>
+            <span class="post-date" title="2018-07-02 12:39:28">2018/07/02</span>
+        </a>
+        
+        <a class="笔记 DSA " href="/2018/06/29/笔记/DSA/字符画之画字符串匹配/" data-tag="数据结构(dsa)" data-author>
+            <span class="post-title" title="字符画之画字符串匹配">字符画之画字符串匹配</span>
+            <span class="post-date" title="2018-06-29 23:02:02">2018/06/29</span>
+        </a>
+        
+        <a class="Gist python " href="/2018/06/12/Gist/python/py-用moviepy生成动画/" data-tag="python" data-author>
+            <span class="post-title" title="py:用moviepy生成动画">py:用moviepy生成动画</span>
+            <span class="post-date" title="2018-06-12 23:33:10">2018/06/12</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2018/06/09/笔记/DOC/工具参考书之TensorFlow基本使用/" data-tag="tensorflow" data-author>
+            <span class="post-title" title="工具参考书之TensorFlow基本使用">工具参考书之TensorFlow基本使用</span>
+            <span class="post-date" title="2018-06-09 01:27:28">2018/06/09</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2018/05/29/笔记/DOC/工具参考书之OpenCv基本使用/" data-tag="opencv" data-author>
+            <span class="post-title" title="工具参考书之OpenCv基本使用">工具参考书之OpenCv基本使用</span>
+            <span class="post-date" title="2018-05-29 17:31:15">2018/05/29</span>
+        </a>
+        
+        <a class="杂记 " href="/2018/04/26/杂记/彻底禁用Win10自动更新/" data-tag data-author>
+            <span class="post-title" title="彻底禁用Win10自动更新">彻底禁用Win10自动更新</span>
+            <span class="post-date" title="2018-04-26 00:45:18">2018/04/26</span>
+        </a>
+        
+        <a class="杂记 " href="/2018/04/20/杂记/实战SSH端口转发/" data-tag="ssh" data-author>
+            <span class="post-title" title="[转]实战SSH端口转发">[转]实战SSH端口转发</span>
+            <span class="post-date" title="2018-04-20 10:49:40">2018/04/20</span>
+        </a>
+        
+        <a class="笔记 " href="/2018/04/10/笔记/Motor/电机控制之矢量控制基本方法/" data-tag="电机控制" data-author>
+            <span class="post-title" title="电机控制之矢量控制的基本方法">电机控制之矢量控制的基本方法</span>
+            <span class="post-date" title="2018-04-10 17:28:54">2018/04/10</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2018/04/03/笔记/DOC/工具参考书之reStructuredText语法/" data-tag="reStructuredText" data-author>
+            <span class="post-title" title="[转]工具参考书之reStructuredText语法">[转]工具参考书之reStructuredText语法</span>
+            <span class="post-date" title="2018-04-03 00:14:32">2018/04/03</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2018/04/03/笔记/DOC/工具参考书之MarkDown语法/" data-tag="markdown" data-author>
+            <span class="post-title" title="[转]工具参考书之MarkDown语法">[转]工具参考书之MarkDown语法</span>
+            <span class="post-date" title="2018-04-03 00:14:01">2018/04/03</span>
+        </a>
+        
+        <a class="杂记 " href="/2018/04/02/杂记/关于输入阻抗和输出阻抗的理解/" data-tag="电路" data-author>
+            <span class="post-title" title="[转]关于输入阻抗和输出阻抗的理解">[转]关于输入阻抗和输出阻抗的理解</span>
+            <span class="post-date" title="2018-04-02 11:02:19">2018/04/02</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2018/03/19/Gist/c&c++/cin-tie与sync-with-stdio加速输入输出/" data-tag="c/c++" data-author>
+            <span class="post-title" title="[转]c/c++:cin.tie与sync_with_stdio加速输入输出">[转]c/c++:cin.tie与sync_with_stdio加速输入输出</span>
+            <span class="post-date" title="2018-03-19 00:00:00">2018/03/19</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2018/03/18/Gist/c&c++/c-c-在main之前运行指定代码/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:在main之前运行指定代码">c/c++:在main之前运行指定代码</span>
+            <span class="post-date" title="2018-03-18 23:40:05">2018/03/18</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2018/03/09/笔记/DOC/工具参考书之matplotlib使用/" data-tag="matplotlib" data-author>
+            <span class="post-title" title="工具参考书之Matplotlib使用">工具参考书之Matplotlib使用</span>
+            <span class="post-date" title="2018-03-09 12:10:10">2018/03/09</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2018/03/08/笔记/DOC/工具参考书之numpy使用/" data-tag="numpy" data-author>
+            <span class="post-title" title="工具参考书之NumPy使用">工具参考书之NumPy使用</span>
+            <span class="post-date" title="2018-03-08 14:15:12">2018/03/08</span>
+        </a>
+        
+        <a class="笔记 DSA " href="/2018/02/02/笔记/DSA/字符画之画b-tree/" data-tag="数据结构(dsa)" data-author>
+            <span class="post-title" title="字符画之画b-tree">字符画之画b-tree</span>
+            <span class="post-date" title="2018-02-02 15:10:33">2018/02/02</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2018/02/01/Gist/c&c++/c-类的各类型成员初始化/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:类的各类型成员初始化">c/c++:类的各类型成员初始化</span>
+            <span class="post-date" title="2018-02-01 16:44:10">2018/02/01</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2018/02/01/Gist/c&c++/c-用using定义类型别名/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:用using定义类型别名">c/c++:用using定义类型别名</span>
+            <span class="post-date" title="2018-02-01 16:14:03">2018/02/01</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2018/01/25/Gist/c&c++/c-c-CountBits计算/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:CountBits计算">c/c++:CountBits计算</span>
+            <span class="post-date" title="2018-01-25 20:07:48">2018/01/25</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2018/01/25/Gist/c&c++/c-c-getopt解析参数/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:getopt解析参数">c/c++:getopt解析参数</span>
+            <span class="post-date" title="2018-01-25 10:44:23">2018/01/25</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2018/01/25/Gist/c&c++/c-使用std的多线程/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:使用std的多线程">c/c++:使用std的多线程</span>
+            <span class="post-date" title="2018-01-25 10:26:09">2018/01/25</span>
+        </a>
+        
+        <a class="Gist python " href="/2018/01/24/Gist/python/py-类的列表成员类型/" data-tag="python" data-author>
+            <span class="post-title" title="py:类的列表成员类型">py:类的列表成员类型</span>
+            <span class="post-date" title="2018-01-24 15:24:53">2018/01/24</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2018/01/24/Gist/c&c++/c-auto在遍历中的使用/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:auto在遍历中的使用">c/c++:auto在遍历中的使用</span>
+            <span class="post-date" title="2018-01-24 15:22:12">2018/01/24</span>
+        </a>
+        
+        <a class="Gist others " href="/2018/01/21/Gist/html/markdown中嵌入html/" data-tag="html" data-author>
+            <span class="post-title" title="html:markdown中嵌入html">html:markdown中嵌入html</span>
+            <span class="post-date" title="2018-01-21 23:18:46">2018/01/21</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2018/01/18/Gist/c&c++/c-lambda表达式/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:lambda表达式">c/c++:lambda表达式</span>
+            <span class="post-date" title="2018-01-18 15:46:56">2018/01/18</span>
+        </a>
+        
+        <a class="笔记 DSA " href="/2018/01/15/笔记/DSA/字符画之画二叉搜索树/" data-tag="数据结构(dsa)" data-author>
+            <span class="post-title" title="字符画之画二叉搜索树">字符画之画二叉搜索树</span>
+            <span class="post-date" title="2018-01-15 17:35:07">2018/01/15</span>
+        </a>
+        
+        <a class="笔记 DSA " href="/2018/01/11/笔记/DSA/字符画之画排序/" data-tag="数据结构(dsa)" data-author>
+            <span class="post-title" title="字符画之画排序">字符画之画排序</span>
+            <span class="post-date" title="2018-01-11 17:33:19">2018/01/11</span>
+        </a>
+        
+        <a class="Gist others " href="/2017/12/19/Gist/matlab/Python-Matlab绘制相平面轨迹/" data-tag="python,matlab" data-author>
+            <span class="post-title" title="py/matlab:绘制相平面轨迹">py/matlab:绘制相平面轨迹</span>
+            <span class="post-date" title="2017-12-19 11:20:00">2017/12/19</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/12/01/杂记/串口猎人多通道波形显示/" data-tag="单片机" data-author>
+            <span class="post-title" title="串口猎人多通道波形显示">串口猎人多通道波形显示</span>
+            <span class="post-date" title="2017-12-01 15:44:35">2017/12/01</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/11/01/杂记/LGPL与闭源程序/" data-tag data-author>
+            <span class="post-title" title="[转]LGPL与闭源程序">[转]LGPL与闭源程序</span>
+            <span class="post-date" title="2017-11-01 11:46:54">2017/11/01</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/11/01/杂记/程序员不可不知的版权协议/" data-tag data-author>
+            <span class="post-title" title="[转]程序员不可不知的版权协议">[转]程序员不可不知的版权协议</span>
+            <span class="post-date" title="2017-11-01 11:08:40">2017/11/01</span>
+        </a>
+        
+        <a class="笔记 " href="/2017/10/30/笔记/Motor/滑模变结构控制初步/" data-tag="电机控制" data-author>
+            <span class="post-title" title="滑模变结构控制初步">滑模变结构控制初步</span>
+            <span class="post-date" title="2017-10-30 13:34:12">2017/10/30</span>
+        </a>
+        
+        <a class="笔记 " href="/2017/10/29/笔记/Motor/电机控制之SVPWM/" data-tag="电机控制" data-author>
+            <span class="post-title" title="电机控制之SVPWM">电机控制之SVPWM</span>
+            <span class="post-date" title="2017-10-29 23:20:43">2017/10/29</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2017/10/10/笔记/DOC/工具参考书之Mathjax常用符号/" data-tag="mathjax" data-author>
+            <span class="post-title" title="工具参考书之Mathjax常用符号">工具参考书之Mathjax常用符号</span>
+            <span class="post-date" title="2017-10-10 21:22:55">2017/10/10</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/10/10/杂记/字符编码的故事-ASCII-ANSI-Unicode-Utf-8的区别/" data-tag data-author>
+            <span class="post-title" title="[转]字符编码的故事(ASCII, ANSI, UNICODE, UTF-8的区别)">[转]字符编码的故事(ASCII, ANSI, UNICODE, UTF-8的区别)</span>
+            <span class="post-date" title="2017-10-10 15:39:47">2017/10/10</span>
+        </a>
+        
+        <a class="Gist others " href="/2017/10/09/Gist/qt/Qt结束线程/" data-tag="qt" data-author>
+            <span class="post-title" title="qt:结束线程">qt:结束线程</span>
+            <span class="post-date" title="2017-10-09 18:59:23">2017/10/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/10/02/Gist/c&c++/Cpp中enum与class重名问题/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:enum和class重名问题">c/c++:enum和class重名问题</span>
+            <span class="post-date" title="2017-10-02 23:10:37">2017/10/02</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/09/30/杂记/使用curl进行校园网登录/" data-tag="shell" data-author>
+            <span class="post-title" title="使用curl进行校园网登录">使用curl进行校园网登录</span>
+            <span class="post-date" title="2017-09-30 00:22:13">2017/09/30</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/09/29/杂记/Cpp类笔记/" data-tag="c/c++" data-author>
+            <span class="post-title" title="C++ Class笔记">C++ Class笔记</span>
+            <span class="post-date" title="2017-09-29 21:50:32">2017/09/29</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/09/29/Gist/c&c++/指针释放问题/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:指针释放问题">c/c++:指针释放问题</span>
+            <span class="post-date" title="2017-09-29 21:32:02">2017/09/29</span>
+        </a>
+        
+        <a class="Gist others " href="/2017/09/29/Gist/qt/Qt界面语言动态切换/" data-tag="qt" data-author>
+            <span class="post-title" title="qt:界面语言动态切换">qt:界面语言动态切换</span>
+            <span class="post-date" title="2017-09-29 21:18:18">2017/09/29</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/09/28/杂记/Linux自动挂载权限问题/" data-tag="linux" data-author>
+            <span class="post-title" title="Linux自动挂载权限问题">Linux自动挂载权限问题</span>
+            <span class="post-date" title="2017-09-28 19:56:50">2017/09/28</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/09/08/杂记/DSP-FlashToRAM运行/" data-tag="dsp" data-author>
+            <span class="post-title" title="DSP Flash to RAM运行">DSP Flash to RAM运行</span>
+            <span class="post-date" title="2017-09-08 19:15:09">2017/09/08</span>
+        </a>
+        
+        <a class="Gist others " href="/2017/09/01/Gist/gsp/图示贝塞尔曲线/" data-tag="gsp" data-author>
+            <span class="post-title" title="gsp:图示贝塞尔曲线">gsp:图示贝塞尔曲线</span>
+            <span class="post-date" title="2017-09-01 10:08:59">2017/09/01</span>
+        </a>
+        
+        <a class="Gist python " href="/2017/08/21/Gist/python/FFT和滤波演示/" data-tag="python" data-author>
+            <span class="post-title" title="py:FFT和滤波演示">py:FFT和滤波演示</span>
+            <span class="post-date" title="2017-08-21 21:45:09">2017/08/21</span>
+        </a>
+        
+        <a class="Gist others " href="/2017/08/17/Gist/gsp/从三角单位圆看Fourier/" data-tag="gsp" data-author>
+            <span class="post-title" title="gsp:从三角单位圆看Fourier">gsp:从三角单位圆看Fourier</span>
+            <span class="post-date" title="2017-08-17 15:07:56">2017/08/17</span>
+        </a>
+        
+        <a class="Gist others " href="/2017/08/15/Gist/matlab/Simulink-Integrator的理解/" data-tag data-author>
+            <span class="post-title" title="matlab:Simulink Integrator的理解">matlab:Simulink Integrator的理解</span>
+            <span class="post-date" title="2017-08-15 19:26:30">2017/08/15</span>
+        </a>
+        
+        <a class="Gist python " href="/2017/08/15/Gist/python/implement-atan2-from-atan/" data-tag="python" data-author>
+            <span class="post-title" title="py:implement atan2 from atan">py:implement atan2 from atan</span>
+            <span class="post-date" title="2017-08-15 17:42:53">2017/08/15</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/08/11/杂记/0Usage/软件应用之-Nodejs/" data-tag="node.js" data-author>
+            <span class="post-title" title="软件应用之 Node.js">软件应用之 Node.js</span>
+            <span class="post-date" title="2017-08-11 23:02:41">2017/08/11</span>
+        </a>
+        
+        <a class="Gist python " href="/2017/08/09/Gist/python/python-function-decorator/" data-tag="python" data-author>
+            <span class="post-title" title="py:function decorator">py:function decorator</span>
+            <span class="post-date" title="2017-08-09 21:16:24">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/make-dll/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:dll动态库生成">c/c++:dll动态库生成</span>
+            <span class="post-date" title="2017-08-09 15:50:46">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/throw-and-catch/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:异常抛出(throw and catch)">c/c++:异常抛出(throw and catch)</span>
+            <span class="post-date" title="2017-08-09 15:48:39">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/const-value-as-address-pointer/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:常量作为地址">c/c++:常量作为地址</span>
+            <span class="post-date" title="2017-08-09 13:38:49">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/pointer-parameter/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:指针作为函数参数">c/c++:指针作为函数参数</span>
+            <span class="post-date" title="2017-08-09 13:37:27">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/variable-list/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:可变参数用法">c/c++:可变参数用法</span>
+            <span class="post-date" title="2017-08-09 13:35:17">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/main-parameter/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:主函数参数使用">c/c++:主函数参数使用</span>
+            <span class="post-date" title="2017-08-09 13:33:18">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/inherited-variable/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:关于类成员变量的继承">c/c++:关于类成员变量的继承</span>
+            <span class="post-date" title="2017-08-09 13:30:56">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/function-pointer/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:function pointer">c/c++:function pointer</span>
+            <span class="post-date" title="2017-08-09 13:28:41">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/define-usage/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:define usage">c/c++:define usage</span>
+            <span class="post-date" title="2017-08-09 13:23:36">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/const-decoration/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:const修饰函数">c/c++:const修饰函数</span>
+            <span class="post-date" title="2017-08-09 13:22:04">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/callback-function/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:回调函数">c/c++:回调函数</span>
+            <span class="post-date" title="2017-08-09 13:20:28">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/pointer-and-array/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:指针与数组">c/c++:指针与数组</span>
+            <span class="post-date" title="2017-08-09 13:17:57">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/sizeof-pointer-arrray/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:sizeof pointer and array">c/c++:sizeof pointer and array</span>
+            <span class="post-date" title="2017-08-09 13:08:56">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/time-as-name-string/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:生成时间string">c/c++:生成时间string</span>
+            <span class="post-date" title="2017-08-09 13:05:30">2017/08/09</span>
+        </a>
+        
+        <a class="Gist python " href="/2017/08/09/Gist/python/loan-calculation/" data-tag="python" data-author>
+            <span class="post-title" title="py:loan calculation">py:loan calculation</span>
+            <span class="post-date" title="2017-08-09 11:26:37">2017/08/09</span>
+        </a>
+        
+        <a class="Gist c-cpp " href="/2017/08/09/Gist/c&c++/path-define/" data-tag="c/c++" data-author>
+            <span class="post-title" title="c/c++:用宏配置路径">c/c++:用宏配置路径</span>
+            <span class="post-date" title="2017-08-09 11:17:04">2017/08/09</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/07/21/杂记/c-and-cpp代码规范/" data-tag data-author>
+            <span class="post-title" title="C/C++代码规范">C/C++代码规范</span>
+            <span class="post-date" title="2017-07-21 20:41:15">2017/07/21</span>
+        </a>
+        
+        <a class="笔记 " href="/2017/07/17/笔记/Motor/电机控制之永磁同步电机矢量控制/" data-tag="电机控制" data-author>
+            <span class="post-title" title="电机控制之永磁同步电机矢量控制">电机控制之永磁同步电机矢量控制</span>
+            <span class="post-date" title="2017-07-17 14:34:46">2017/07/17</span>
+        </a>
+        
+        <a class="笔记 " href="/2017/07/16/笔记/Motor/电机控制之空间矢量/" data-tag="电机控制" data-author>
+            <span class="post-title" title="电机控制之空间矢量">电机控制之空间矢量</span>
+            <span class="post-date" title="2017-07-16 23:27:43">2017/07/16</span>
+        </a>
+        
+        <a class="笔记 " href="/2017/07/13/笔记/Motor/电机控制之电磁基础/" data-tag="电机控制" data-author>
+            <span class="post-title" title="电机控制之电磁基础">电机控制之电磁基础</span>
+            <span class="post-date" title="2017-07-13 16:55:27">2017/07/13</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/07/03/杂记/0Usage/软件应用之-QtCreator/" data-tag="qt" data-author>
+            <span class="post-title" title="软件应用之 QtCreator">软件应用之 QtCreator</span>
+            <span class="post-date" title="2017-07-03 17:52:50">2017/07/03</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/17/杂记/0Usage/软件应用之-VS/" data-tag="visual studio" data-author>
+            <span class="post-title" title="软件应用之 Visual Studio">软件应用之 Visual Studio</span>
+            <span class="post-date" title="2017-06-17 23:19:37">2017/06/17</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/17/杂记/0Usage/软件应用之-Keil/" data-tag="keil" data-author>
+            <span class="post-title" title="软件应用之 Keil">软件应用之 Keil</span>
+            <span class="post-date" title="2017-06-17 22:12:22">2017/06/17</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/17/杂记/五笔86/" data-tag="五笔" data-author>
+            <span class="post-title" title="五笔86">五笔86</span>
+            <span class="post-date" title="2017-06-17 22:06:15">2017/06/17</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/17/杂记/0Usage/软件应用之-Office/" data-tag="office" data-author>
+            <span class="post-title" title="软件应用之-Office">软件应用之-Office</span>
+            <span class="post-date" title="2017-06-17 01:02:08">2017/06/17</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/17/杂记/SSD优化/" data-tag="ssd" data-author>
+            <span class="post-title" title="SSD优化">SSD优化</span>
+            <span class="post-date" title="2017-06-17 00:52:53">2017/06/17</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/17/杂记/0Usage/软件应用之-AltiumDesigner/" data-tag="altium designer" data-author>
+            <span class="post-title" title="软件应用之-AltiumDesigner">软件应用之-AltiumDesigner</span>
+            <span class="post-date" title="2017-06-17 00:24:49">2017/06/17</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/16/杂记/ROM和RAM/" data-tag="单片机" data-author>
+            <span class="post-title" title="ROM和RAM">ROM和RAM</span>
+            <span class="post-date" title="2017-06-16 21:27:13">2017/06/16</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/16/杂记/0Usage/软件应用之-CCS/" data-tag="ccs" data-author>
+            <span class="post-title" title="软件应用之 Code Composer Studio">软件应用之 Code Composer Studio</span>
+            <span class="post-date" title="2017-06-16 16:36:56">2017/06/16</span>
+        </a>
+        
+        <a class="笔记 OS " href="/2017/06/11/笔记/OS/Arch-Linux安装记录/" data-tag="linux,arch" data-author>
+            <span class="post-title" title="Arch Linux安装记录">Arch Linux安装记录</span>
+            <span class="post-date" title="2017-06-11 23:36:58">2017/06/11</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/09/杂记/信号槽库：sigslot-h和sigc-使用/" data-tag="c/c++" data-author>
+            <span class="post-title" title="信号槽库：sigslot.h和sigc++使用">信号槽库：sigslot.h和sigc++使用</span>
+            <span class="post-date" title="2017-06-09 18:09:52">2017/06/09</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/09/杂记/两个gif图片处理库使用/" data-tag="c/c++,gif" data-author>
+            <span class="post-title" title="两个gif图片处理库使用">两个gif图片处理库使用</span>
+            <span class="post-date" title="2017-06-09 18:00:52">2017/06/09</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/09/杂记/跨平台远程登录/" data-tag="ssh,teamviewer" data-author>
+            <span class="post-title" title="跨平台远程登录(SSH,TeamViewer)">跨平台远程登录(SSH,TeamViewer)</span>
+            <span class="post-date" title="2017-06-09 17:50:02">2017/06/09</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/09/杂记/Windows使用mklink建立“符号链接”/" data-tag="cmd" data-author>
+            <span class="post-title" title="Windows使用mklink建立“符号链接”">Windows使用mklink建立“符号链接”</span>
+            <span class="post-date" title="2017-06-09 17:42:53">2017/06/09</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/09/杂记/Windows搭建类UNIX环境-Msys2-MinGW-w64/" data-tag="mingw" data-author>
+            <span class="post-title" title="Windows搭建类UNIX环境: Msys2+MinGW-w64">Windows搭建类UNIX环境: Msys2+MinGW-w64</span>
+            <span class="post-date" title="2017-06-09 00:36:01">2017/06/09</span>
+        </a>
+        
+        <a class="杂记 " href="/2017/06/09/杂记/linux下opencv3-1-0的基本使用/" data-tag="ubuntu,opencv,qt" data-author>
+            <span class="post-title" title="linux下opencv3.1.0的基本使用">linux下opencv3.1.0的基本使用</span>
+            <span class="post-date" title="2017-06-09 00:11:05">2017/06/09</span>
+        </a>
+        
+        <a class="笔记 OS " href="/2017/06/08/笔记/OS/USB启动管理/" data-tag="boot,refind,grub4dos" data-author>
+            <span class="post-title" title="USB启动管理">USB启动管理</span>
+            <span class="post-date" title="2017-06-08 23:32:50">2017/06/08</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2017/06/07/笔记/DOC/工具参考书之GCC基本使用/" data-tag="c/c++,linux,gcc" data-author>
+            <span class="post-title" title="工具参考书之GCC基本使用">工具参考书之GCC基本使用</span>
+            <span class="post-date" title="2017-06-07 01:05:36">2017/06/07</span>
+        </a>
+        
+        <a class="笔记 OS " href="/2017/06/07/笔记/OS/Ubuntu常用设置/" data-tag="linux,ubuntu" data-author>
+            <span class="post-title" title="Ubuntu常用设置">Ubuntu常用设置</span>
+            <span class="post-date" title="2017-06-07 00:38:29">2017/06/07</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2017/06/06/笔记/DOC/工具参考书之Linux命令学习/" data-tag="linux,ubuntu" data-author>
+            <span class="post-title" title="工具参考书之Linux命令学习">工具参考书之Linux命令学习</span>
+            <span class="post-date" title="2017-06-06 14:21:13">2017/06/06</span>
+        </a>
+        
+        <a class="笔记 DOC " href="/2017/06/05/笔记/DOC/工具参考书之Git命令行基础/" data-tag="git" data-author>
+            <span class="post-title" title="工具参考书之Git命令行基础">工具参考书之Git命令行基础</span>
+            <span class="post-date" title="2017-06-05 23:34:57">2017/06/05</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-杂记/0Usage/软件应用之-VirtualBox" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">软件应用之 VirtualBox</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="杂记">杂记</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title="更新时间: 2020-07-16 12:06:28">2020-07-16 12:05</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VBoxManage"><span class="toc-text">VBoxManage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#清理磁盘"><span class="toc-text">清理磁盘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络配置"><span class="toc-text">网络配置</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="VBoxManage"><a href="#VBoxManage" class="headerlink" title="VBoxManage"></a>VBoxManage</h2><pre><code>VBoxManage list vms
+# 查看所有虚拟机
+VBoxManage list runningvms
+# 查看运行的虚拟机
+VBoxManage startvm &lt;vname&gt; --type headless
+# 无界面运行虚拟机（需要ssh到虚拟机使用）
+VBoxManage controlvm &lt;vname&gt; acpipowerbutton
+# 正常关闭虚拟机
+VBoxManage controlvm &lt;vname&gt; poweroff
+# 强制关闭虚拟机
+</code></pre><h2 id="清理磁盘"><a href="#清理磁盘" class="headerlink" title="清理磁盘"></a>清理磁盘</h2><ul>
+<li>虚拟机中执行</li>
+</ul>
+<pre><code>sudo dd if=/dev/zero of=/EMPTY  bs=1M 
+sudo rm -f /EMPTY
+</code></pre><ul>
+<li>主机执行</li>
+</ul>
+<pre><code># vdi格式
+VBoxManage modifyhd &lt;path-to-vdi&gt; –-compact
+# vmdk格式
+VBoxManage clonehd source.vmdk cloned.vdi --format vdi
+VBoxManage modifyhd cloned.vdi --compact
+VBoxManage clonehd cloned.vdi compressed.vmdk --format vmdk
+# 或者vmware的工具
+vmware-vdiskmanager -k disk.vmdk
+</code></pre><h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><ul>
+<li><a href="https://www.cnblogs.com/jpfss/p/8616613.html" target="_blank" rel="noopener">VirtualBox的四种网络连接方式</a></li>
+<li><a href="http://xintq.net/2014/09/05/virtualbox/" target="_blank" rel="noopener">VirtualBox下虚拟机和主机内网互通+虚拟机静态IP的网络配置</a></li>
+</ul>
+<p>VirtualBox安装ArchLinux设置:</p>
+<ul>
+<li>enp0s3: <strong><em>仅主机(Host-Only)网络</em></strong>（使用IP为192.168.1.1的Adapter），完成主机和虚拟之间的双向访问；</li>
+<li>enp0s8: <strong><em>桥接网卡</em></strong>，用于虚拟机访问Internet</li>
+</ul>
+<p>ArchLinux通过<a href="https://wiki.archlinux.org/index.php/Systemd-networkd" target="_blank" rel="noopener">systemd-networkd</a>管理和配置网络，包括dhcp和static-ip配置：</p>
+<ul>
+<li>enp0s3: 设置静态IP为192.168.1.2（主机访问1.2即访问虚拟机，虚拟机访问1.1即访问主机）</li>
+<li>enp0s8: 动态获取IP</li>
+</ul>
+<p>测试：</p>
+<ul>
+<li>主机：ping 192.168.1.2 正常响应，ssh正常响应</li>
+<li>虚拟机：ping 192.168.1.1 正常响应（主机可能需要关闭防火墙）</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 [ yehuohan@gmail.com ] </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>软件应用之 VirtualBox</p>
+    
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="z000tech">z000tech</a></p>
+    <p><span>发布时间:</span>2020-07-16, 12:05:02</p>
+    <p><span>最后更新:</span>2020-07-16, 12:06:28</p>
+    <span>原始链接:</span><a class="post-url" href="/2020/07/16/杂记/0Usage/软件应用之-VirtualBox/" title="软件应用之 VirtualBox">http://yehuohan.github.io/2020/07/16/杂记/0Usage/软件应用之-VirtualBox/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2017 z000tech</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#dsp','#arm','#c/c++','#linux','#单片机','#ssd','#mingw','#cmd','#ubuntu','#opencv','#qt','#gif','#shell','#五笔','#电路','#ssh','#teamviewer','#gsp','#html','#python','#matlab','#gcc','#git','#makefile','#markdown','#mathjax','#tensorflow','#matplotlib','#reStructuredText','#numpy','#数据结构(dsa)','#电机控制','#boot','#refind','#grub4dos','#arch','#altium designer','#ccs','#docker','#keil','#node.js','#office','#visual studio','#Android',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
