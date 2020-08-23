@@ -7,12 +7,13 @@
   <meta name="description" content="Arch Linux安装记录 | z000tech">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
-<meta property="og:title" content="z000tech">
-<meta property="og:url" content="http://yehuohan.github.io/archives/index.html">
+<meta property="og:title" content="About">
+<meta property="og:url" content="http://yehuohan.github.io/about/index.html">
 <meta property="og:site_name" content="z000tech">
 <meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2017-10-10T06:39:16.692Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="z000tech">
+<meta name="twitter:title" content="About">
 
 
 <link rel="icon" href="/img/1.png">
@@ -219,11 +220,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">单片机</a>
+        <a href="javascript:" class="color1">linux</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">linux</a>
+        <a href="javascript:" class="color4">单片机</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -279,11 +280,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">html</a>
+        <a href="javascript:" class="color4">gsp</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">gsp</a>
+        <a href="javascript:" class="color5">html</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -307,11 +308,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">node.js</a>
+        <a href="javascript:" class="color5">keil</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">keil</a>
+        <a href="javascript:" class="color3">node.js</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -331,11 +332,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">makefile</a>
+        <a href="javascript:" class="color4">markdown</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">markdown</a>
+        <a href="javascript:" class="color4">makefile</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -343,11 +344,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">matplotlib</a>
+        <a href="javascript:" class="color1">numpy</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">numpy</a>
+        <a href="javascript:" class="color1">matplotlib</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -360,6 +361,10 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">电机控制</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">tensorflow</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -376,10 +381,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">arch</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">tensorflow</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -1001,7 +1002,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-06-05 17:28:50">2017-06-11 23:36</time>
+        创建时间:<time class="date" title="更新时间: 2020-08-23 18:36:14">2017-06-11 23:36</time>
         
     </div>
     <div class="article-meta">
@@ -1077,6 +1078,9 @@
 <h1 id="安装Arch"><a href="#安装Arch" class="headerlink" title="安装Arch"></a>安装Arch</h1><blockquote>
 <p>这里的“安装Arch”，是指按照此部分教程安装完后，会得到一个只有控制台的Arch Linux系统。同时，此部分开始的的教程，均是基于已经正确进入Arch安装环境的前提下。</p>
 </blockquote>
+<p>进入安装控制台的第一件事： <strong><em>关闭响铃</em></strong></p>
+<pre><code class="base">setterm -blength 0
+</code></pre>
 <h2 id="键盘布局"><a href="#键盘布局" class="headerlink" title="键盘布局"></a>键盘布局</h2><p>控制台键盘默认布局为us（一般不用担心键盘布局），使用下列命令更改（<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank" rel="noopener">二位字母编码表</a>）：</p>
 <pre><code class="bash">loadkeys &lt;layou&gt;
 # 更改布局
@@ -1229,16 +1233,16 @@ mount /dev/sda1 /mnt/boot/efi
 <pre><code class="bash">vim /etc/pacman.d/mirrorlist
 # 更改镜像源，将其中China的放在文件开头，其它的可以删了（有一个HongKong的可以留着）
 
-pacstrap -i /mnt base base-devel
+pacstrap /mnt base linux linux-firmware
 # 安装ArchLinux基本系统
 </code></pre>
-<h2 id="生成分区表"><a href="#生成分区表" class="headerlink" title="生成分区表"></a>生成分区表</h2><pre><code class="bash">genfstab -U -p /mnt &gt;&gt; /mnt/etc/fstab
+<h2 id="生成分区表"><a href="#生成分区表" class="headerlink" title="生成分区表"></a>生成分区表</h2><pre><code class="bash">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
 # 生成fstab文件，保存系统分区表
 </code></pre>
 <p>到了这，系统已经基本安装完了，接下来就要配置系统，至少现在Arch还不知道如何启动。</p>
 <hr>
 <h1 id="配置Arch"><a href="#配置Arch" class="headerlink" title="配置Arch"></a>配置Arch</h1><p>现在开始配置安装完的Arch Linux。</p>
-<h2 id="切换root用户"><a href="#切换root用户" class="headerlink" title="切换root用户"></a>切换root用户</h2><pre><code class="bash">arch-chroot /mnt /bin/bash
+<h2 id="切换root用户"><a href="#切换root用户" class="headerlink" title="切换root用户"></a>切换root用户</h2><pre><code class="bash">arch-chroot /mnt
 # 转到新系统的root用户，使用bash，即此后的命令都是对以/mnt作为根目录的系统操作
 
 alias vim=vi
@@ -1246,7 +1250,7 @@ alias vim=vi
 alias ll=&#39;ls -l&#39;
 # 查看目录，控制台下方便点
 </code></pre>
-<h2 id="设置时区"><a href="#设置时区" class="headerlink" title="设置时区"></a>设置时区</h2><pre><code class="bash">ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+<h2 id="设置时区"><a href="#设置时区" class="headerlink" title="设置时区"></a>设置时区</h2><pre><code class="bash">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # 设置时区，Shanghai即为东八时区（北京时间）
 
 hwclock --systohc --utc
@@ -1268,16 +1272,14 @@ echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
 # 设置主机名称，myhostname会出现在终端的提示符中
 vim /etc/hosts
 # 添加对应的信息，如下：
-
-# /etc/hostname: static lookup table for host names
-#&lt;ip-address&gt;   &lt;hostname.domain.org&gt;   &lt;hostname&gt;
-127.0.0.1       localhost.localdomain   myhostname
-::1             localhost.localdomain   myhostname
+127.0.0.1          localhost
+::1                  localhost
+127.0.1.1          myhostname.localdomain    myhostname
 </code></pre>
-<h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><p>用<a href="#网络">前面</a>的方法即可。<br>不过有趣的是，新安装的Arch系统里没有iw等无线网式具，需要先安装</p>
-<pre><code class="bash">pacman -S iw wpa_supplicant dialog
-# 安装式具
+<h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><pre><code class="bash">pacman -S iw wpa_supplicant dialog dhcpcd
+# 安装网络相关工具
 </code></pre>
+<p>用<a href="#网络">前面</a>的方法即可。<br>不过有趣的是，新安装的Arch系统里没有iw等无线网式具，需要先安装</p>
 <p>但是，安装软件就需要先联网，所以，如果只联网。。。好像循环了。。。应该可以从Arch安装环境中拷吧（我没试过）<br>好了，我反正用手机USB共享的网络，既然有网了，当然得学会pacman的的基本用法：</p>
 <pre><code class="bash">pacman -S &lt;packge-name&gt;     # 安装软件(install)
 pacman -U &lt;pkg-file&gt;        # 安装本地包(unpack)，其扩展名为 *.tar.gz, *.tar.xz
@@ -1307,7 +1309,7 @@ pacman -Rsc &lt;packge-name&gt;   # 删除(remove)单个软件包，删除该软
 <h2 id="Root密码"><a href="#Root密码" class="headerlink" title="Root密码"></a>Root密码</h2><pre><code class="bash">passwd root
 # 设置root密码
 </code></pre>
-<h2 id="Initramfs"><a href="#Initramfs" class="headerlink" title="Initramfs"></a>Initramfs</h2><pre><code class="bash">mkinitcpio -p linux
+<h2 id="Initramfs"><a href="#Initramfs" class="headerlink" title="Initramfs"></a>Initramfs</h2><pre><code class="bash">mkinitcpio -P
 # 初始化Initramfs(init ram fs)
 </code></pre>
 <h2 id="安装引导程序"><a href="#安装引导程序" class="headerlink" title="安装引导程序"></a>安装引导程序</h2><p>UEFI引导可以使用<a href="https://wiki.archlinux.org/index.php/GRUB" target="_blank" rel="noopener">grub</a>、<a href="https://wiki.archlinux.org/index.php/GRUB" target="_blank" rel="noopener">refind</a>等。</p>
@@ -1340,7 +1342,7 @@ efibootmgr
 # 安装linux内核，也可以使用其它的，如linux-lts, linux-zen等
 mkinitcpio -p linux
 </code></pre>
-<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><pre><code class="bash">pacman -S zsh
+<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><pre><code class="bash">pacman -S zsh sudo
 # 安装zsh，新用户使用zsh
 cp /etc/sudoers /etc/sudoers_bak
 vim /etc/sudoers
@@ -1582,7 +1584,7 @@ yay nvidia-xrun
 <p>同样需要为使用独显的Xorg服务配置，具体可以参考<a href="https://wiki.archlinux.org/index.php/Nvidia-xrun" target="_blank" rel="noopener">nvidia-xrun</a>。首先使用独显的Xorg的配置文件为<code>/etc/X11/nvidia-xorg.conf</code>，需要更改里面的BusID为自己电脑的，然后将自己的<code>xorg.conf.d</code>中的touchpach.conf等配置复制一份到<code>nvidia-xorg.conf.d</code>中，如果需要要可以建一个<code>~/.nvidia-xinitrc</code>作为使用独显的图形窗口配置文件，然后继续进行以下设置：</p>
 <pre><code class="bash">echo &#39;bbswitch &#39; &gt; /etc/modules-load.d/bbswitch.conf
 # 加载bbswitch驱动
-echo &#39;options bbswitch load_state=0 unload_state=1&#39; &gt; /etc/modprobe.d/bbswitch.conf 
+echo &#39;options bbswitch load_state=0 unload_state=1&#39; &gt; /etc/modprobe.d/bbswitch.conf
 # 开机禁用nvidia驱动
 blacklist nvidia
 blacklist nvidia-drm
@@ -1704,7 +1706,7 @@ connect MAC_addr    # 连接设备
     
     <p><span>本文作者:</span><a href="javascript:void(0)" title="z000tech">z000tech</a></p>
     <p><span>发布时间:</span>2017-06-11, 23:36:58</p>
-    <p><span>最后更新:</span>2019-06-05, 17:28:50</p>
+    <p><span>最后更新:</span>2020-08-23, 18:36:14</p>
     <span>原始链接:</span><a class="post-url" href="/2017/06/11/笔记/OS/Arch-Linux安装记录/" title="Arch Linux安装记录">http://yehuohan.github.io/2017/06/11/笔记/OS/Arch-Linux安装记录/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -1747,7 +1749,7 @@ connect MAC_addr    # 连接设备
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#dsp','#arm','#单片机','#linux','#ssd','#cmd','#mingw','#ubuntu','#opencv','#qt','#五笔','#shell','#电路','#c/c++','#gif','#ssh','#teamviewer','#html','#gsp','#python','#matlab','#altium designer','#ccs','#docker','#node.js','#keil','#office','#visual studio','#gcc','#git','#makefile','#markdown','#mathjax','#matplotlib','#numpy','#数据结构(dsa)','#reStructuredText','#电机控制','#boot','#refind','#grub4dos','#arch','#tensorflow','#Android',],
+            'data': ['#dsp','#arm','#linux','#单片机','#ssd','#cmd','#mingw','#ubuntu','#opencv','#qt','#五笔','#shell','#电路','#c/c++','#gif','#ssh','#teamviewer','#gsp','#html','#python','#matlab','#altium designer','#ccs','#docker','#keil','#node.js','#office','#visual studio','#gcc','#git','#markdown','#makefile','#mathjax','#numpy','#matplotlib','#数据结构(dsa)','#reStructuredText','#电机控制','#tensorflow','#boot','#refind','#grub4dos','#arch','#Android',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
