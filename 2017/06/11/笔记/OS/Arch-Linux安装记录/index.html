@@ -240,27 +240,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">ubuntu</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">opencv</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">qt</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">五笔</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color1">shell</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">电路</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -272,7 +256,23 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">电路</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">ssh</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">ubuntu</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">opencv</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">qt</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -336,19 +336,23 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">makefile</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">mathjax</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">numpy</a>
+        <a href="javascript:" class="color1">matplotlib</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">matplotlib</a>
+        <a href="javascript:" class="color1">tensorflow</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">makefile</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">numpy</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -364,7 +368,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">tensorflow</a>
+        <a href="javascript:" class="color5">arch</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -377,10 +381,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">grub4dos</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">arch</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -1002,7 +1002,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2020-08-23 18:36:14">2017-06-11 23:36</time>
+        创建时间:<time class="date" title="更新时间: 2020-08-26 13:52:02">2017-06-11 23:36</time>
         
     </div>
     <div class="article-meta">
@@ -1371,19 +1371,22 @@ sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/to
 </code></pre>
 <h2 id="AUR"><a href="#AUR" class="headerlink" title="AUR"></a>AUR</h2><p>AUR是为用户而建、由用户主导的Arch软件仓库。AUR中的软件包以软件包生成脚本（PKGBUILD）的形式提供，用户自己通过makepkg生成包，再由pacman安装；也可以使用AUR工具来完成。</p>
 <pre><code class="bash">sudo vim /etc/pacman.conf
-# 添加：
+# 添加（使用国内源快些）：
 
 [archlinuxcn]
-#The Chinese Arch Linux communities packages.
-SigLevel = Optional TrustAll
-Server   = http://repo.archlinuxcn.org/$arch
+#Server = http://repo.archlinuxcn.org/$arch
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+
+# 然后：
+sudo pacman -S archlinuxcn-keyring
 
 # 安装AUR工具：yay
+sudo pacman -S yay
+# 或
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 </code></pre>
-<p><del>sudo pacman -Sy</del><br><del>sudo pacman -S yaourt</del><br><del># 安装yaourt，yaourt命令类似于pacman</del><br><del>suso pacman -S zsh-completions</del><br><del># yaourt自动补全</del></p>
 <hr>
 <h1 id="安装桌面环镜"><a href="#安装桌面环镜" class="headerlink" title="安装桌面环镜"></a>安装桌面环镜</h1><p>从头到尾安装桌面环境，包括：</p>
 <ul>
@@ -1472,35 +1475,29 @@ cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
 </code></pre>
 <hr>
 <h1 id="我的设置-Of-ArchLinux"><a href="#我的设置-Of-ArchLinux" class="headerlink" title="我的设置 Of ArchLinux"></a>我的设置 Of ArchLinux</h1><p>现在才是像其它Linux发行版安装完后，开始进行配置了。</p>
-<h2 id="Font"><a href="#Font" class="headerlink" title="Font"></a>Font</h2><pre><code class="bash">sudo pacman -S ttf-dejavu
-# 英文等宽字体
-sudo pacman -S wqy-microhei
-# 中文字体，包括等宽中文，用于终端和i3窗口管理器
-yaourt -S ttf-dejavu-sans-mono-powerline-git
-# 打补丁的dejavu字体，包含powerline图标字体
-
-sudo pacman -S noto-fonts noto-fonts-cjk
-# (可选)Google Noto字体
-sudo pacman -S adobe-source-han-sans-cn-fonts
-# (可选)安装思源体简体中文部体，中文效果比文泉好些
+<h2 id="Font"><a href="#Font" class="headerlink" title="Font"></a>Font</h2><pre><code class="bash"># 安装字体
+sudo pacman -S ttf-dejavu
 sudo pacman -S ttf-ubuntu-font-family
-# (可选)ubuntu上的字体
-yaourt -S ttf-ms-win10-zh_cn
-# (可选)win10字体
-yaourt -S fontconfig-infinality-ultimate
-# 字体渲染优化
+sudo pacman -S wqy-*
+sudo pacman -S nerd-*
+sudo pacman -S tts-ms-win10             # 安装yahei等字体
+yay -S freetype2-ultimate5              # 优化字体渲染
+yay -S lib32-freetype2-ultimate5        # 优化字体渲染（32位程序）
+yay -S fontconfig-infinality-ultimate   # 优化字体配置
 
-# 手动安装consolas安体
+# 查看字体名称
+fc-list
+
+# 手动安装字体
 cd /usr/share/fonts
-mkdir consolas
-# copy consolas-font to /usr/share/fonts/consolas
-cd consolas
+mkdir my-fonts
+# copy my-fonts to /usr/share/fonts/myfonts
+cd my-fonts
 sudo chmod 664 *.ttf
 sudo mkfontscale
 sudo mkfontdir
 sudo fc-cache -fv
 </code></pre>
-<p>附：<a href="https://github.com/yehuohan/dotconfigs/tree/master/fonts" target="_blank" rel="noopener">consolas字体</a></p>
 <h2 id="对调Esc和CapsLock"><a href="#对调Esc和CapsLock" class="headerlink" title="对调Esc和CapsLock"></a>对调Esc和CapsLock</h2><p>（方便Vim使用）</p>
 <ul>
 <li>Console环境</li>
@@ -1611,19 +1608,19 @@ sudo pacman -S python-tensorflow-cuda
 # 注意：同样会安装numpy等包，如果已经用pip安装，需要先删了，不然会提示文件冲突
 </code></pre>
 <h2 id="i3wm配置"><a href="#i3wm配置" class="headerlink" title="i3wm配置"></a>i3wm配置</h2><p>i3的配置比较容易，找一份详细的配置和教程，仔细看一看就可以配置自己所想要的。<br><a href="https://wiki.archlinux.org/index.php/I3" target="_blank" rel="noopener">i3wm ArchWiki</a><br><a href="https://wiki.archlinux.org/index.php/HiDPI" target="_blank" rel="noopener">HiDPI ArchWiki</a><br><a href="https://github.com/yehuohan/dotconfigs/tree/master/cf-arch" target="_blank" rel="noopener">我的i3wm置文件</a><br><a href="http://fontawesome.io/cheatsheet/" target="_blank" rel="noopener">awesome-font图标字体，直接复制使用</a></p>
-<pre><code class="bash">yaourt -S i3-gaps-git
+<pre><code class="bash">sudo pacman -S i3-gaps
 # 换用i3-gaps，可以设置透明i3bar
 sudo pacman -S i3lock
 # 锁屏
-pacman -S rofi
+sudo pacman -S rofi
 # 可用于窗口切换和程序启动，可代替dmenu
 sudo pacman -S feh
 # 壁纸
 sudo pacman -S compton
 # 透明效果设置
 sudo pacman -S conky
-yaourt -S ttf-font-awesome
-# 用conky代替i3status，并安装图标字体
+sudo pacman -S ttf-nerd-fonts-symbols
+# 用conky配置i3status，并安装图标字体
 sudo pacman -S scrot
 # 截图软件
 sudo pacman -S alsa-utils volumeicon pulseaudio ffmpeg
@@ -1706,7 +1703,7 @@ connect MAC_addr    # 连接设备
     
     <p><span>本文作者:</span><a href="javascript:void(0)" title="z000tech">z000tech</a></p>
     <p><span>发布时间:</span>2017-06-11, 23:36:58</p>
-    <p><span>最后更新:</span>2020-08-23, 18:36:14</p>
+    <p><span>最后更新:</span>2020-08-26, 13:52:02</p>
     <span>原始链接:</span><a class="post-url" href="/2017/06/11/笔记/OS/Arch-Linux安装记录/" title="Arch Linux安装记录">http://yehuohan.github.io/2017/06/11/笔记/OS/Arch-Linux安装记录/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -1749,7 +1746,7 @@ connect MAC_addr    # 连接设备
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#dsp','#arm','#linux','#单片机','#ssd','#cmd','#mingw','#ubuntu','#opencv','#qt','#五笔','#shell','#电路','#c/c++','#gif','#ssh','#teamviewer','#gsp','#html','#python','#matlab','#altium designer','#ccs','#docker','#keil','#node.js','#office','#visual studio','#gcc','#git','#markdown','#makefile','#mathjax','#numpy','#matplotlib','#数据结构(dsa)','#reStructuredText','#电机控制','#tensorflow','#boot','#refind','#grub4dos','#arch','#Android',],
+            'data': ['#dsp','#arm','#linux','#单片机','#ssd','#cmd','#mingw','#五笔','#shell','#c/c++','#gif','#电路','#ssh','#ubuntu','#opencv','#qt','#teamviewer','#gsp','#html','#python','#matlab','#altium designer','#ccs','#docker','#keil','#node.js','#office','#visual studio','#gcc','#git','#markdown','#mathjax','#matplotlib','#tensorflow','#makefile','#numpy','#数据结构(dsa)','#reStructuredText','#电机控制','#arch','#boot','#refind','#grub4dos','#Android',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
