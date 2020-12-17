@@ -7,13 +7,12 @@
   <meta name="description" content="工具参考书之Git命令行基础 | z000tech">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://yehuohan.github.io/about/index.html">
+<meta property="og:title" content="z000tech">
+<meta property="og:url" content="http://yehuohan.github.io/archives/index.html">
 <meta property="og:site_name" content="z000tech">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2017-10-10T06:39:16.692Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
+<meta name="twitter:title" content="z000tech">
 
 
 <link rel="icon" href="/img/1.png">
@@ -1021,7 +1020,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title="Updated At: 2020-12-15 19:25:11">2017-06-05 23:34</time>
+            Created At : <time class="date" title="Updated At: 2020-12-17 17:27:56">2017-06-05 23:34</time>
         
     </div>
     <div class="article-meta">
@@ -1306,15 +1305,16 @@ git revert --no-commint &lt;commit_id&gt;
 <ul>
 <li>rebase</li>
 </ul>
-<pre><code class="bash"># C0 --- C1 --- C2 --- C3(master)
+<pre><code class="bash"># rebase本质是对本分支的commit的重新修改
+
+# C0 --- C1 --- C2 --- C3 --- C7 (master)
 #                 \
-#                  --- C4(feature)
+#                  --- C4 --- C5 --- C6 (feature)
 git checkout feature
 git rebase master
-# 将当前分支（feature分支）的修改C4，应用到master分支的C3上
-
-git rebase -i HEAD~2
-# 合并最近的2个commit
+# 将当前分支（feature分支）的修改C4~C6，应用到master分支的C7上，最终修改结果作用于feature分支上（master分支不受影响）
+git rebase -i master
+# 通过交互方式，进行rebase
 </code></pre>
 <h2 id="查看相关信息"><a href="#查看相关信息" class="headerlink" title="查看相关信息"></a>查看相关信息</h2><ul>
 <li>log</li>
@@ -1627,7 +1627,7 @@ git remote add origin-local file:///C:/LocalGitServer/test.git
     
     <p><span class="copy-title">Author:</span><a title="z000tech">z000tech</a></p>
     <p><span class="copy-title">Created At:</span>2017-06-05, 23:34:57</p>
-    <p><span class="copy-title">Updated At:</span>2020-12-15, 19:25:11</p>
+    <p><span class="copy-title">Updated At:</span>2020-12-17, 17:27:56</p>
     <span class="copy-title">Url:</span><a class="post-url" href="/2017/06/05/笔记/DOC/工具参考书之Git命令行基础/" title="工具参考书之Git命令行基础">http://yehuohan.github.io/2017/06/05/笔记/DOC/工具参考书之Git命令行基础/</a>
     <p>
         <span class="copy-title">Copyright:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">&#39;Attribution-non-commercial-shared in the same way 4.0&#39;</a> Reprint please keep the original link and author.
