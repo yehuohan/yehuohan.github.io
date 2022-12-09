@@ -1,0 +1,2375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Arch Linux安装记录 | Y</title>
+  <meta name="keywords" content=" linux , arch ">
+  <meta name="description" content="Arch Linux安装记录 | Y">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y">
+<meta property="og:url" content="http://yehuohan.github.io/archives/">
+<meta property="og:site_name" content="Y">
+<meta property="og:locale">
+<meta property="article:author" content="Y">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/1.png">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/github.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="false" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/1.png"/>
+</a>
+<div class="author">
+    <span>Y</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/yehuohan"
+               target="_blank">
+                
+                    <i class="iconfont icon-github"></i>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:yehuohan@qq.com"
+               target="_blank">
+                
+                    <i class="iconfont icon-email"></i>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(113)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="笔记">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        笔记
+                        <small>(29)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="笔记<--->DOC">
+                                        
+                                        DOC
+                                        
+                                            <small>(12
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="笔记<--->DSA">
+                                        
+                                        DSA
+                                        
+                                            <small>(7
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="笔记<--->OS">
+                                        
+                                        OS
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="杂记">
+                        
+                        杂记
+                        <small>(34)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Gist">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        Gist
+                        <small>(50)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="Gist<--->c-cpp">
+                                        
+                                        c-cpp
+                                        
+                                            <small>(27
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Gist<--->linux">
+                                        
+                                        linux
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Gist<--->others">
+                                        
+                                        others
+                                        
+                                            <small>(8
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Gist<--->python">
+                                        
+                                        python
+                                        
+                                            <small>(12
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+    </div>
+    <div>
+        
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="113">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>单片机</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>电机控制</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>电路</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据结构(dsa)</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>五笔</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>altium designer</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>arch</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>arm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>boot</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>c/c++</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ccs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cmd</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>dsp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>gcc</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>gif</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>grub4dos</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>gsp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>keil</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>makefile</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mathjax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>matlab</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>matplotlib</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mingw</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>node.js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>numpy</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>office</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>opencv</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>python</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>qt</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>refind</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>reStructuredText</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ssd</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ssh</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>teamviewer</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>tensorflow</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ubuntu</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>visual studio</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 笔记 "
+           href="/2018/03/06/%E7%AC%94%E8%AE%B0/0%E7%AC%94%E8%AE%B0%E7%9B%AE%E5%BD%95%E5%85%A8%E8%A7%88/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="笔记目录全览">笔记目录全览</span>
+            <span class="post-date" title="2018-03-06 11:08:37">2018/03/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Python/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Python">软件应用之 Python</span>
+            <span class="post-date" title="2020-07-16 18:59:06">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/android-ndk/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Android NDK">Android NDK</span>
+            <span class="post-date" title="2020-07-16 13:41:18">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-CMake/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="软件应用之 CMake">软件应用之 CMake</span>
+            <span class="post-date" title="2020-07-16 13:40:43">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Sphinx/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="软件应用之 Sphinx">软件应用之 Sphinx</span>
+            <span class="post-date" title="2020-07-16 13:40:00">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-SVN/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="软件应用之 SVN">软件应用之 SVN</span>
+            <span class="post-date" title="2020-07-16 13:39:52">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-VirtualBox/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="软件应用之 VirtualBox">软件应用之 VirtualBox</span>
+            <span class="post-date" title="2020-07-16 12:05:02">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/03/16/%E6%9D%82%E8%AE%B0/ARM%E5%AF%84%E5%AD%98%E5%99%A8/"
+           data-tag="dsp,arm"
+           data-author="" >
+            <span class="post-title" title="ARM寄存器">ARM寄存器</span>
+            <span class="post-date" title="2020-03-16 19:15:09">2020/03/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/10/18/Gist/python/py-numpy%E6%95%B0%E7%BB%84%E4%BB%A3%E6%9B%BFfor/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:numpy数组代替for">py:numpy数组代替for</span>
+            <span class="post-date" title="2019-10-18 09:00:49">2019/10/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/10/02/Gist/python/py-%E5%8D%8F%E7%A8%8B/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:协程">py:协程</span>
+            <span class="post-date" title="2019-10-02 22:35:31">2019/10/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2019/09/21/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Docker/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Docker">软件应用之 Docker</span>
+            <span class="post-date" title="2019-09-21 16:41:43">2019/09/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist "
+           href="/2019/08/15/Gist/python/py-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%BD%BF%E7%94%A8/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:多线程使用">py:多线程使用</span>
+            <span class="post-date" title="2019-08-15 16:57:39">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist linux "
+           href="/2019/04/11/Gist/linux/linux-socket%E6%9C%AC%E5%9C%B0%E9%80%9A%E4%BF%A1/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux:socket本地通信">linux:socket本地通信</span>
+            <span class="post-date" title="2019-04-11 14:59:18">2019/04/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist linux "
+           href="/2019/04/03/Gist/linux/hidraw%E8%AF%BB%E5%86%99/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux:hidraw读写">linux:hidraw读写</span>
+            <span class="post-date" title="2019-04-03 20:46:05">2019/04/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2019/03/26/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BB%E7%BA%BF%E6%80%A7%E5%AE%B9%E5%99%A8/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画线性容器">字符画之画线性容器</span>
+            <span class="post-date" title="2019-03-26 20:10:17">2019/03/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/03/26/Gist/python/py-%E9%81%8D%E5%8E%86%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:遍历指定目录">py:遍历指定目录</span>
+            <span class="post-date" title="2019-03-26 19:53:30">2019/03/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/03/26/Gist/python/py-serialport-transmission/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:serialport transmission">py:serialport transmission</span>
+            <span class="post-date" title="2019-03-26 19:48:20">2019/03/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/03/26/Gist/python/py-create-wave-audio/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:create wave audio">py:create wave audio</span>
+            <span class="post-date" title="2019-03-26 19:44:28">2019/03/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/03/26/Gist/python/py-change-file-name/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:change file name">py:change file name</span>
+            <span class="post-date" title="2019-03-26 19:40:30">2019/03/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2019/03/21/%E6%9D%82%E8%AE%B0/0Usage/android-adb/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="[转]Android-ADB">[转]Android-ADB</span>
+            <span class="post-date" title="2019-03-21 21:58:03">2019/03/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/12/11/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8Bshell%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="[转]工具参考书之Shell语法">[转]工具参考书之Shell语法</span>
+            <span class="post-date" title="2018-12-11 20:18:24">2018/12/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/11/09/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BMakefile%E4%BD%BF%E7%94%A8/"
+           data-tag="makefile"
+           data-author="" >
+            <span class="post-title" title="[转]工具参考书之Makefile使用">[转]工具参考书之Makefile使用</span>
+            <span class="post-date" title="2018-11-09 11:45:01">2018/11/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2018/09/24/%E6%9D%82%E8%AE%B0/%E5%A0%86%E5%92%8C%E6%A0%88%E7%9A%84%E5%8C%BA%E5%88%AB/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="[转]堆和栈的区别">[转]堆和栈的区别</span>
+            <span class="post-date" title="2018-09-24 15:15:39">2018/09/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/07/14/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BB%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画优先级队列">字符画之画优先级队列</span>
+            <span class="post-date" title="2018-07-14 01:20:36">2018/07/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/07/14/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BBBitmap/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画Bitmap">字符画之画Bitmap</span>
+            <span class="post-date" title="2018-07-14 00:55:05">2018/07/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2018/07/13/Gist/gsp/%E5%9B%BE%E7%A4%BA%E7%9F%A9%E9%98%B5%E7%89%B9%E5%BE%81%E5%80%BC%E5%92%8C%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/"
+           data-tag="gsp"
+           data-author="" >
+            <span class="post-title" title="gsp:图示矩阵特征值和特征向量">gsp:图示矩阵特征值和特征向量</span>
+            <span class="post-date" title="2018-07-13 10:08:59">2018/07/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/07/02/Gist/c&c++/c-c-printf%E5%92%8Cscanf%E8%BE%A8%E6%9E%90/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:printf和scanf辨析">c/c++:printf和scanf辨析</span>
+            <span class="post-date" title="2018-07-02 12:39:28">2018/07/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/06/29/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BB%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画字符串匹配">字符画之画字符串匹配</span>
+            <span class="post-date" title="2018-06-29 23:02:02">2018/06/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2018/06/12/Gist/python/py-%E7%94%A8moviepy%E7%94%9F%E6%88%90%E5%8A%A8%E7%94%BB/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:用moviepy生成动画">py:用moviepy生成动画</span>
+            <span class="post-date" title="2018-06-12 23:33:10">2018/06/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/06/09/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BTensorFlow%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
+           data-tag="tensorflow"
+           data-author="" >
+            <span class="post-title" title="工具参考书之TensorFlow基本使用">工具参考书之TensorFlow基本使用</span>
+            <span class="post-date" title="2018-06-09 01:27:28">2018/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/05/29/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BOpenCv%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
+           data-tag="opencv"
+           data-author="" >
+            <span class="post-title" title="工具参考书之OpenCv基本使用">工具参考书之OpenCv基本使用</span>
+            <span class="post-date" title="2018-05-29 17:31:15">2018/05/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2018/04/26/%E6%9D%82%E8%AE%B0/%E5%BD%BB%E5%BA%95%E7%A6%81%E7%94%A8Win10%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="彻底禁用Win10自动更新">彻底禁用Win10自动更新</span>
+            <span class="post-date" title="2018-04-26 00:45:18">2018/04/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2018/04/20/%E6%9D%82%E8%AE%B0/%E5%AE%9E%E6%88%98SSH%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"
+           data-tag="ssh"
+           data-author="" >
+            <span class="post-title" title="[转]实战SSH端口转发">[转]实战SSH端口转发</span>
+            <span class="post-date" title="2018-04-20 10:49:40">2018/04/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2018/04/10/%E7%AC%94%E8%AE%B0/Motor/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B9%8B%E7%9F%A2%E9%87%8F%E6%8E%A7%E5%88%B6%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="电机控制之矢量控制的基本方法">电机控制之矢量控制的基本方法</span>
+            <span class="post-date" title="2018-04-10 17:28:54">2018/04/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/04/03/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BreStructuredText%E8%AF%AD%E6%B3%95/"
+           data-tag="reStructuredText"
+           data-author="" >
+            <span class="post-title" title="[转]工具参考书之reStructuredText语法">[转]工具参考书之reStructuredText语法</span>
+            <span class="post-date" title="2018-04-03 00:14:32">2018/04/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/04/03/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BMarkDown%E8%AF%AD%E6%B3%95/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="[转]工具参考书之MarkDown语法">[转]工具参考书之MarkDown语法</span>
+            <span class="post-date" title="2018-04-03 00:14:01">2018/04/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2018/04/02/%E6%9D%82%E8%AE%B0/%E5%85%B3%E4%BA%8E%E8%BE%93%E5%85%A5%E9%98%BB%E6%8A%97%E5%92%8C%E8%BE%93%E5%87%BA%E9%98%BB%E6%8A%97%E7%9A%84%E7%90%86%E8%A7%A3/"
+           data-tag="电路"
+           data-author="" >
+            <span class="post-title" title="[转]关于输入阻抗和输出阻抗的理解">[转]关于输入阻抗和输出阻抗的理解</span>
+            <span class="post-date" title="2018-04-02 11:02:19">2018/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/03/19/Gist/c&c++/cin-tie%E4%B8%8Esync-with-stdio%E5%8A%A0%E9%80%9F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="[转]c/c++:cin.tie与sync_with_stdio加速输入输出">[转]c/c++:cin.tie与sync_with_stdio加速输入输出</span>
+            <span class="post-date" title="2018-03-19 00:00:00">2018/03/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/03/18/Gist/c&c++/c-c-%E5%9C%A8main%E4%B9%8B%E5%89%8D%E8%BF%90%E8%A1%8C%E6%8C%87%E5%AE%9A%E4%BB%A3%E7%A0%81/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:在main之前运行指定代码">c/c++:在main之前运行指定代码</span>
+            <span class="post-date" title="2018-03-18 23:40:05">2018/03/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/03/09/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8Bmatplotlib%E4%BD%BF%E7%94%A8/"
+           data-tag="matplotlib"
+           data-author="" >
+            <span class="post-title" title="工具参考书之Matplotlib使用">工具参考书之Matplotlib使用</span>
+            <span class="post-date" title="2018-03-09 12:10:10">2018/03/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/03/08/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8Bnumpy%E4%BD%BF%E7%94%A8/"
+           data-tag="numpy"
+           data-author="" >
+            <span class="post-title" title="工具参考书之NumPy使用">工具参考书之NumPy使用</span>
+            <span class="post-date" title="2018-03-08 14:15:12">2018/03/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/02/02/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BBb-tree/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画b-tree">字符画之画b-tree</span>
+            <span class="post-date" title="2018-02-02 15:10:33">2018/02/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/02/01/Gist/c&c++/c-%E7%B1%BB%E7%9A%84%E5%90%84%E7%B1%BB%E5%9E%8B%E6%88%90%E5%91%98%E5%88%9D%E5%A7%8B%E5%8C%96/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:类的各类型成员初始化">c/c++:类的各类型成员初始化</span>
+            <span class="post-date" title="2018-02-01 16:44:10">2018/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/02/01/Gist/c&c++/c-%E7%94%A8using%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:用using定义类型别名">c/c++:用using定义类型别名</span>
+            <span class="post-date" title="2018-02-01 16:14:03">2018/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/01/25/Gist/c&c++/c-c-CountBits%E8%AE%A1%E7%AE%97/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:CountBits计算">c/c++:CountBits计算</span>
+            <span class="post-date" title="2018-01-25 20:07:48">2018/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/01/25/Gist/c&c++/c-c-getopt%E8%A7%A3%E6%9E%90%E5%8F%82%E6%95%B0/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:getopt解析参数">c/c++:getopt解析参数</span>
+            <span class="post-date" title="2018-01-25 10:44:23">2018/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/01/25/Gist/c&c++/c-%E4%BD%BF%E7%94%A8std%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:使用std的多线程">c/c++:使用std的多线程</span>
+            <span class="post-date" title="2018-01-25 10:26:09">2018/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2018/01/24/Gist/python/py-%E7%B1%BB%E7%9A%84%E5%88%97%E8%A1%A8%E6%88%90%E5%91%98%E7%B1%BB%E5%9E%8B/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:类的列表成员类型">py:类的列表成员类型</span>
+            <span class="post-date" title="2018-01-24 15:24:53">2018/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/01/24/Gist/c&c++/c-auto%E5%9C%A8%E9%81%8D%E5%8E%86%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:auto在遍历中的使用">c/c++:auto在遍历中的使用</span>
+            <span class="post-date" title="2018-01-24 15:22:12">2018/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2018/01/21/Gist/html/markdown%E4%B8%AD%E5%B5%8C%E5%85%A5html/"
+           data-tag="html"
+           data-author="" >
+            <span class="post-title" title="html:markdown中嵌入html">html:markdown中嵌入html</span>
+            <span class="post-date" title="2018-01-21 23:18:46">2018/01/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/01/18/Gist/c&c++/c-lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:lambda表达式">c/c++:lambda表达式</span>
+            <span class="post-date" title="2018-01-18 15:46:56">2018/01/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/01/15/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BB%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画二叉搜索树">字符画之画二叉搜索树</span>
+            <span class="post-date" title="2018-01-15 17:35:07">2018/01/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/01/11/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BB%E6%8E%92%E5%BA%8F/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画排序">字符画之画排序</span>
+            <span class="post-date" title="2018-01-11 17:33:19">2018/01/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/12/19/Gist/matlab/Python-Matlab%E7%BB%98%E5%88%B6%E7%9B%B8%E5%B9%B3%E9%9D%A2%E8%BD%A8%E8%BF%B9/"
+           data-tag="python,matlab"
+           data-author="" >
+            <span class="post-title" title="py/matlab:绘制相平面轨迹">py/matlab:绘制相平面轨迹</span>
+            <span class="post-date" title="2017-12-19 11:20:00">2017/12/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2017/10/30/%E7%AC%94%E8%AE%B0/Motor/%E6%BB%91%E6%A8%A1%E5%8F%98%E7%BB%93%E6%9E%84%E6%8E%A7%E5%88%B6%E5%88%9D%E6%AD%A5/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="滑模变结构控制初步">滑模变结构控制初步</span>
+            <span class="post-date" title="2017-10-30 13:34:12">2017/10/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2017/10/29/%E7%AC%94%E8%AE%B0/Motor/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B9%8BSVPWM/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="电机控制之SVPWM">电机控制之SVPWM</span>
+            <span class="post-date" title="2017-10-29 23:20:43">2017/10/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2017/10/10/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BMathjax%E5%B8%B8%E7%94%A8%E7%AC%A6%E5%8F%B7/"
+           data-tag="mathjax"
+           data-author="" >
+            <span class="post-title" title="工具参考书之Mathjax常用符号">工具参考书之Mathjax常用符号</span>
+            <span class="post-date" title="2017-10-10 21:22:55">2017/10/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/10/10/%E6%9D%82%E8%AE%B0/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9A%84%E6%95%85%E4%BA%8B-ASCII-ANSI-Unicode-Utf-8%E7%9A%84%E5%8C%BA%E5%88%AB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="[转]字符编码的故事(ASCII, ANSI, UNICODE, UTF-8的区别)">[转]字符编码的故事(ASCII, ANSI, UNICODE, UTF-8的区别)</span>
+            <span class="post-date" title="2017-10-10 15:39:47">2017/10/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/10/09/Gist/qt/Qt%E7%BB%93%E6%9D%9F%E7%BA%BF%E7%A8%8B/"
+           data-tag="qt"
+           data-author="" >
+            <span class="post-title" title="qt:结束线程">qt:结束线程</span>
+            <span class="post-date" title="2017-10-09 18:59:23">2017/10/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/10/02/Gist/c&c++/Cpp%E4%B8%ADenum%E4%B8%8Eclass%E9%87%8D%E5%90%8D%E9%97%AE%E9%A2%98/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:enum和class重名问题">c/c++:enum和class重名问题</span>
+            <span class="post-date" title="2017-10-02 23:10:37">2017/10/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/09/30/%E6%9D%82%E8%AE%B0/%E4%BD%BF%E7%94%A8curl%E8%BF%9B%E8%A1%8C%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%99%BB%E5%BD%95/"
+           data-tag="shell"
+           data-author="" >
+            <span class="post-title" title="使用curl进行校园网登录">使用curl进行校园网登录</span>
+            <span class="post-date" title="2017-09-30 00:22:13">2017/09/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/09/29/%E6%9D%82%E8%AE%B0/Cpp%E7%B1%BB%E7%AC%94%E8%AE%B0/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="C++ Class笔记">C++ Class笔记</span>
+            <span class="post-date" title="2017-09-29 21:50:32">2017/09/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/09/29/Gist/c&c++/%E6%8C%87%E9%92%88%E9%87%8A%E6%94%BE%E9%97%AE%E9%A2%98/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:指针释放问题">c/c++:指针释放问题</span>
+            <span class="post-date" title="2017-09-29 21:32:02">2017/09/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/09/29/Gist/qt/Qt%E7%95%8C%E9%9D%A2%E8%AF%AD%E8%A8%80%E5%8A%A8%E6%80%81%E5%88%87%E6%8D%A2/"
+           data-tag="qt"
+           data-author="" >
+            <span class="post-title" title="qt:界面语言动态切换">qt:界面语言动态切换</span>
+            <span class="post-date" title="2017-09-29 21:18:18">2017/09/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/09/28/%E6%9D%82%E8%AE%B0/Linux%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux自动挂载权限问题">Linux自动挂载权限问题</span>
+            <span class="post-date" title="2017-09-28 19:56:50">2017/09/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/09/08/%E6%9D%82%E8%AE%B0/DSP-FlashToRAM%E8%BF%90%E8%A1%8C/"
+           data-tag="dsp"
+           data-author="" >
+            <span class="post-title" title="DSP Flash to RAM运行">DSP Flash to RAM运行</span>
+            <span class="post-date" title="2017-09-08 19:15:09">2017/09/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/09/01/Gist/gsp/%E5%9B%BE%E7%A4%BA%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/"
+           data-tag="gsp"
+           data-author="" >
+            <span class="post-title" title="gsp:图示贝塞尔曲线">gsp:图示贝塞尔曲线</span>
+            <span class="post-date" title="2017-09-01 10:08:59">2017/09/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2017/08/21/Gist/python/FFT%E5%92%8C%E6%BB%A4%E6%B3%A2%E6%BC%94%E7%A4%BA/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:FFT和滤波演示">py:FFT和滤波演示</span>
+            <span class="post-date" title="2017-08-21 21:45:09">2017/08/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/08/17/Gist/gsp/%E4%BB%8E%E4%B8%89%E8%A7%92%E5%8D%95%E4%BD%8D%E5%9C%86%E7%9C%8BFourier/"
+           data-tag="gsp"
+           data-author="" >
+            <span class="post-title" title="gsp:从三角单位圆看Fourier">gsp:从三角单位圆看Fourier</span>
+            <span class="post-date" title="2017-08-17 15:07:56">2017/08/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/08/15/Gist/matlab/Simulink-Integrator%E7%9A%84%E7%90%86%E8%A7%A3/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="matlab:Simulink Integrator的理解">matlab:Simulink Integrator的理解</span>
+            <span class="post-date" title="2017-08-15 19:26:30">2017/08/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2017/08/15/Gist/python/implement-atan2-from-atan/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:implement atan2 from atan">py:implement atan2 from atan</span>
+            <span class="post-date" title="2017-08-15 17:42:53">2017/08/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/08/11/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Nodejs/"
+           data-tag="node.js"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Node.js">软件应用之 Node.js</span>
+            <span class="post-date" title="2017-08-11 23:02:41">2017/08/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2017/08/09/Gist/python/python-function-decorator/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:function decorator">py:function decorator</span>
+            <span class="post-date" title="2017-08-09 21:16:24">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/make-dll/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:dll动态库生成">c/c++:dll动态库生成</span>
+            <span class="post-date" title="2017-08-09 15:50:46">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/throw-and-catch/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:异常抛出(throw and catch)">c/c++:异常抛出(throw and catch)</span>
+            <span class="post-date" title="2017-08-09 15:48:39">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/const-value-as-address-pointer/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:常量作为地址">c/c++:常量作为地址</span>
+            <span class="post-date" title="2017-08-09 13:38:49">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/pointer-parameter/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:指针作为函数参数">c/c++:指针作为函数参数</span>
+            <span class="post-date" title="2017-08-09 13:37:27">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/variable-list/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:可变参数用法">c/c++:可变参数用法</span>
+            <span class="post-date" title="2017-08-09 13:35:17">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/main-parameter/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:主函数参数使用">c/c++:主函数参数使用</span>
+            <span class="post-date" title="2017-08-09 13:33:18">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/inherited-variable/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:关于类成员变量的继承">c/c++:关于类成员变量的继承</span>
+            <span class="post-date" title="2017-08-09 13:30:56">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/function-pointer/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:function pointer">c/c++:function pointer</span>
+            <span class="post-date" title="2017-08-09 13:28:41">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/define-usage/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:define usage">c/c++:define usage</span>
+            <span class="post-date" title="2017-08-09 13:23:36">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/const-decoration/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:const修饰函数">c/c++:const修饰函数</span>
+            <span class="post-date" title="2017-08-09 13:22:04">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/callback-function/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:回调函数">c/c++:回调函数</span>
+            <span class="post-date" title="2017-08-09 13:20:28">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/pointer-and-array/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:指针与数组">c/c++:指针与数组</span>
+            <span class="post-date" title="2017-08-09 13:17:57">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/sizeof-pointer-arrray/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:sizeof pointer and array">c/c++:sizeof pointer and array</span>
+            <span class="post-date" title="2017-08-09 13:08:56">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/time-as-name-string/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:生成时间string">c/c++:生成时间string</span>
+            <span class="post-date" title="2017-08-09 13:05:30">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2017/08/09/Gist/python/loan-calculation/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:loan calculation">py:loan calculation</span>
+            <span class="post-date" title="2017-08-09 11:26:37">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/path-define/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:用宏配置路径">c/c++:用宏配置路径</span>
+            <span class="post-date" title="2017-08-09 11:17:04">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2017/07/17/%E7%AC%94%E8%AE%B0/Motor/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B9%8B%E6%B0%B8%E7%A3%81%E5%90%8C%E6%AD%A5%E7%94%B5%E6%9C%BA%E7%9F%A2%E9%87%8F%E6%8E%A7%E5%88%B6/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="电机控制之永磁同步电机矢量控制">电机控制之永磁同步电机矢量控制</span>
+            <span class="post-date" title="2017-07-17 14:34:46">2017/07/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2017/07/16/%E7%AC%94%E8%AE%B0/Motor/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B9%8B%E7%A9%BA%E9%97%B4%E7%9F%A2%E9%87%8F/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="电机控制之空间矢量">电机控制之空间矢量</span>
+            <span class="post-date" title="2017-07-16 23:27:43">2017/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2017/07/13/%E7%AC%94%E8%AE%B0/Motor/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B9%8B%E7%94%B5%E7%A3%81%E5%9F%BA%E7%A1%80/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="电机控制之电磁基础">电机控制之电磁基础</span>
+            <span class="post-date" title="2017-07-13 16:55:27">2017/07/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/07/03/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-QtCreator/"
+           data-tag="qt"
+           data-author="" >
+            <span class="post-title" title="软件应用之 QtCreator">软件应用之 QtCreator</span>
+            <span class="post-date" title="2017-07-03 17:52:50">2017/07/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/17/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-VS/"
+           data-tag="visual studio"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Visual Studio">软件应用之 Visual Studio</span>
+            <span class="post-date" title="2017-06-17 23:19:37">2017/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/17/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Keil/"
+           data-tag="keil"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Keil">软件应用之 Keil</span>
+            <span class="post-date" title="2017-06-17 22:12:22">2017/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/17/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Office/"
+           data-tag="office"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Office">软件应用之 Office</span>
+            <span class="post-date" title="2017-06-17 01:02:08">2017/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/17/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-AltiumDesigner/"
+           data-tag="altium designer"
+           data-author="" >
+            <span class="post-title" title="软件应用之 AltiumDesigner">软件应用之 AltiumDesigner</span>
+            <span class="post-date" title="2017-06-17 00:24:49">2017/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-CCS/"
+           data-tag="ccs"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Code Composer Studio">软件应用之 Code Composer Studio</span>
+            <span class="post-date" title="2017-06-16 16:36:56">2017/06/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/16/%E6%9D%82%E8%AE%B0/%E4%BA%94%E7%AC%9486/"
+           data-tag="五笔"
+           data-author="" >
+            <span class="post-title" title="五笔86">五笔86</span>
+            <span class="post-date" title="2017-06-16 12:06:15">2017/06/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/16/%E6%9D%82%E8%AE%B0/SSD%E4%BC%98%E5%8C%96/"
+           data-tag="ssd"
+           data-author="" >
+            <span class="post-title" title="SSD优化">SSD优化</span>
+            <span class="post-date" title="2017-06-16 10:52:53">2017/06/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/15/%E6%9D%82%E8%AE%B0/ROM%E5%92%8CRAM/"
+           data-tag="单片机"
+           data-author="" >
+            <span class="post-title" title="ROM和RAM">ROM和RAM</span>
+            <span class="post-date" title="2017-06-15 21:27:13">2017/06/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 OS "
+           href="/2017/06/11/%E7%AC%94%E8%AE%B0/OS/Arch-Linux%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/"
+           data-tag="linux,arch"
+           data-author="" >
+            <span class="post-title" title="Arch Linux安装记录">Arch Linux安装记录</span>
+            <span class="post-date" title="2017-06-11 23:36:58">2017/06/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/%E4%BF%A1%E5%8F%B7%E6%A7%BD%E5%BA%93%EF%BC%9Asigslot-h%E5%92%8Csigc-%E4%BD%BF%E7%94%A8/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="信号槽库：sigslot.h和sigc++使用">信号槽库：sigslot.h和sigc++使用</span>
+            <span class="post-date" title="2017-06-09 18:09:52">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/%E4%B8%A4%E4%B8%AAgif%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E5%BA%93%E4%BD%BF%E7%94%A8/"
+           data-tag="c/c++,gif"
+           data-author="" >
+            <span class="post-title" title="两个gif图片处理库使用">两个gif图片处理库使用</span>
+            <span class="post-date" title="2017-06-09 18:00:52">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95/"
+           data-tag="ssh,teamviewer"
+           data-author="" >
+            <span class="post-title" title="跨平台远程登录(SSH,TeamViewer)">跨平台远程登录(SSH,TeamViewer)</span>
+            <span class="post-date" title="2017-06-09 17:50:02">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/Windows%E4%BD%BF%E7%94%A8mklink%E5%BB%BA%E7%AB%8B%E2%80%9C%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5%E2%80%9D/"
+           data-tag="cmd"
+           data-author="" >
+            <span class="post-title" title="Windows使用mklink建立“符号链接”">Windows使用mklink建立“符号链接”</span>
+            <span class="post-date" title="2017-06-09 17:42:53">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/Windows%E6%90%AD%E5%BB%BA%E7%B1%BBUNIX%E7%8E%AF%E5%A2%83-Msys2-MinGW-w64/"
+           data-tag="mingw"
+           data-author="" >
+            <span class="post-title" title="Windows搭建类UNIX环境: Msys2+MinGW-w64">Windows搭建类UNIX环境: Msys2+MinGW-w64</span>
+            <span class="post-date" title="2017-06-09 00:36:01">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/linux%E4%B8%8Bopencv3-1-0%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
+           data-tag="ubuntu,opencv,qt"
+           data-author="" >
+            <span class="post-title" title="linux下opencv3.1.0的基本使用">linux下opencv3.1.0的基本使用</span>
+            <span class="post-date" title="2017-06-09 00:11:05">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 OS "
+           href="/2017/06/08/%E7%AC%94%E8%AE%B0/OS/USB%E5%90%AF%E5%8A%A8%E7%AE%A1%E7%90%86/"
+           data-tag="boot,refind,grub4dos"
+           data-author="" >
+            <span class="post-title" title="USB启动管理">USB启动管理</span>
+            <span class="post-date" title="2017-06-08 23:32:50">2017/06/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2017/06/07/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BGCC%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
+           data-tag="c/c++,linux,gcc"
+           data-author="" >
+            <span class="post-title" title="工具参考书之GCC基本使用">工具参考书之GCC基本使用</span>
+            <span class="post-date" title="2017-06-07 01:05:36">2017/06/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 OS "
+           href="/2017/06/07/%E7%AC%94%E8%AE%B0/OS/Ubuntu%E5%B8%B8%E7%94%A8%E8%AE%BE%E7%BD%AE/"
+           data-tag="linux,ubuntu"
+           data-author="" >
+            <span class="post-title" title="Ubuntu常用设置">Ubuntu常用设置</span>
+            <span class="post-date" title="2017-06-07 00:38:29">2017/06/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2017/06/06/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BLinux%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0/"
+           data-tag="linux,ubuntu"
+           data-author="" >
+            <span class="post-title" title="工具参考书之Linux命令学习">工具参考书之Linux命令学习</span>
+            <span class="post-date" title="2017-06-06 14:21:13">2017/06/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2017/06/05/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BGit%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="工具参考书之Git命令行基础">工具参考书之Git命令行基础</span>
+            <span class="post-date" title="2017-06-05 23:34:57">2017/06/05</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-笔记/OS/Arch-Linux安装记录" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Arch Linux安装记录</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="笔记">笔记</a> > 
+            
+            <a  data-rel="笔记&lt;---&gt;OS">OS</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">linux</a>
+            
+            <a class="color5">arch</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2020-08-31 21:29:13'>2017-06-11 23:36</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%BC%80%E5%A4%B4"><span class="toc-text">写在开头</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ArchWiki%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="toc-text">ArchWiki参考教程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Arch%E5%90%AF%E5%8A%A8%E7%9B%98"><span class="toc-text">Arch启动盘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Arch"><span class="toc-text">安装Arch</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%AE%E7%9B%98%E5%B8%83%E5%B1%80"><span class="toc-text">键盘布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%A1%AC%E7%9B%98%E3%80%81%E5%86%85%E5%AD%98%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-text">查看硬盘、内存基本信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5"><span class="toc-text">网络连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%BD%91%E5%8D%A1%E4%BF%A1%E6%81%AF"><span class="toc-text">查看网卡信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E7%BA%BF%E7%BD%91%E9%85%8D%E7%BD%AE"><span class="toc-text">有线网配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E7%BA%BF%E7%BD%91%E9%85%8D%E7%BD%AE"><span class="toc-text">无线网配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%B6%E5%8C%BA"><span class="toc-text">时间与时区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA"><span class="toc-text">硬盘分区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="toc-text">开始安装系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%88%86%E5%8C%BA%E8%A1%A8"><span class="toc-text">生成分区表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEArch"><span class="toc-text">配置Arch</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%87%E6%8D%A2root%E7%94%A8%E6%88%B7"><span class="toc-text">切换root用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA"><span class="toc-text">设置时区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%8C%96"><span class="toc-text">本地化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="toc-text">主机名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="toc-text">网络配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Root%E5%AF%86%E7%A0%81"><span class="toc-text">Root密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Initramfs"><span class="toc-text">Initramfs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%BC%95%E5%AF%BC%E7%A8%8B%E5%BA%8F"><span class="toc-text">安装引导程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7"><span class="toc-text">创建用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%90%AF"><span class="toc-text">重启</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">基本软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#shell%E5%92%8Cvim"><span class="toc-text">shell和vim</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AUR"><span class="toc-text">AUR</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%A1%8C%E9%9D%A2%E7%8E%AF%E9%95%9C"><span class="toc-text">安装桌面环镜</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8"><span class="toc-text">显卡驱动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%9C%8D%E5%8A%A1"><span class="toc-text">显示服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">显示管理器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83"><span class="toc-text">桌面环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">窗口管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85i3"><span class="toc-text">安装i3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85awesome"><span class="toc-text">安装awesome</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E8%AE%BE%E7%BD%AE-Of-ArchLinux"><span class="toc-text">我的设置 Of ArchLinux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Font"><span class="toc-text">Font</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B0%83Esc%E5%92%8CCapsLock"><span class="toc-text">对调Esc和CapsLock</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-text">输入法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A6%E6%8E%A7%E6%9D%BF"><span class="toc-text">触控板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8B%AC%E6%98%BENvidia"><span class="toc-text">独显Nvidia</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#i3wm%E9%85%8D%E7%BD%AE"><span class="toc-text">i3wm配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%93%9D%E7%89%99-%E9%BC%A0%E6%A0%87"><span class="toc-text">蓝牙(鼠标)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E5%AE%83%E8%AE%BE%E7%BD%AE"><span class="toc-text">其它设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E6%9C%BA%E5%87%BA%E7%8E%B0%E2%80%9Cwatchdog0-watchdog-did-not-stop-%E2%80%9D"><span class="toc-text">关机出现“watchdog0: watchdog did not stop!”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Inter-i5-8250U-Nvidia-MX150%E7%9A%84%E5%85%B3%E6%9C%BA%E9%97%AE%E9%A2%98"><span class="toc-text">Inter i5 8250U + Nvidia MX150的关机问题</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>记录Arch Linux的安装过程。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h1><p>纯命令安装Arch，如果具备以下条件，安装过程会相对顺利：</p>
+<ul>
+<li>对linux的基本命令比较熟悉；</li>
+<li>有安装其他linux发行版的经验；</li>
+<li>了解引导的基本知识；</li>
+<li>在虚拟机安装一遍Arch，并记下自己的步骤。</li>
+</ul>
+<h2 id="ArchWiki参考教程"><a href="#ArchWiki参考教程" class="headerlink" title="ArchWiki参考教程"></a>ArchWiki参考教程</h2><blockquote>
+<p>注意：以下ArchWiki的教程，有些是中文，可以自己选择（左侧栏里选）语言。中文是根据英文翻译过来，一般会注明最后更新时间，看英文还是中文，自己把握。</p>
+</blockquote>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Installation_guide">Install guide</a><br> Arch安装全过程，不过具体某一项时，需要查看相应的教程。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Network_configuration">Network configuration</a><br> 有线网配置教程。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Wireless_network_configuration">Wireless network configuration</a><br> 无线网配置教程。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/General_recommendations">General recommendations</a><br> 安装完Arch后，对Arch的配置（如安装桌面环境等）教程。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Xorg">Xorg</a><br> Xorg相关教程</p>
+</li>
+</ul>
+<hr>
+<h1 id="Arch启动盘"><a href="#Arch启动盘" class="headerlink" title="Arch启动盘"></a>Arch启动盘</h1><p>最简单的方法，就是直接刻录到U盘中，然后用U盘启动就行。<br>这里我只记下自己的方法：</p>
+<ul>
+<li><p>安装环境<br> UEFI启动，硬盘使用MBR分区（没写错，就是MBR，不是GPT）。</p>
+</li>
+<li><p>多系统：<br> 已经安装了Windows，且有一个ESP分区了，所在Arch也就直接使用ESP即可。</p>
+</li>
+<li><p>启动方法：<br> 我使用 <a target="_blank" rel="noopener" href="http://www.rodsbooks.com/refind/">refind</a> 引导。将Arch.iso解到任一硬盘分区的根目录（移动硬盘也可以），然后，在refind中添加Arch的引导即可。我使用的<a target="_blank" rel="noopener" href="https://github.com/yehuohan/USBBootFiles/blob/master/EFI/boot/refind.conf">refind配置</a>。</p>
+</li>
+</ul>
+<hr>
+<h1 id="安装Arch"><a href="#安装Arch" class="headerlink" title="安装Arch"></a>安装Arch</h1><blockquote>
+<p>这里的“安装Arch”，是指按照此部分教程安装完后，会得到一个只有控制台的Arch Linux系统。同时，此部分开始的的教程，均是基于已经正确进入Arch安装环境的前提下。</p>
+</blockquote>
+<p>进入安装控制台的第一件事： <em><strong>关闭响铃</strong></em></p>
+<pre><code class="base">setterm -blength 0
+</code></pre>
+<h2 id="键盘布局"><a href="#键盘布局" class="headerlink" title="键盘布局"></a>键盘布局</h2><p>控制台键盘默认布局为us（一般不用担心键盘布局），使用下列命令更改（<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements">二位字母编码表</a>）：</p>
+<pre><code class="bash">loadkeys &lt;layou&gt;
+# 更改布局
+</code></pre>
+<h2 id="查看硬盘、内存基本信息"><a href="#查看硬盘、内存基本信息" class="headerlink" title="查看硬盘、内存基本信息"></a>查看硬盘、内存基本信息</h2><p><span id = "硬盘信息"></span></p>
+<ul>
+<li>查看硬盘分区</li>
+</ul>
+<pre><code class="bash">df -h
+# 显示磁盘相关信息
+blkid
+# 查看块设备（包括交换分区）的信息
+lsblk
+# 列出所有可用块设备信息，包括硬盘，闪存盘，CD-Rom等
+lsblk -f
+# 列出块设备的文件系统信息
+fdisk -l
+# 列出设备的分区表情况
+# 以上命令，均可查看硬盘情况
+
+free -h
+# 查看内存使用情况
+</code></pre>
+<ul>
+<li>查看是否以UEFI启动</li>
+</ul>
+<pre><code class="bash">ls /sys/firmware/efi/efivars
+# 如果提示efivars不存在，则不是UEFI启动。
+</code></pre>
+<p><span id = "网络"></span></p>
+<h2 id="网络连接"><a href="#网络连接" class="headerlink" title="网络连接"></a>网络连接</h2><p>这里先提供几种网络接入方法：</p>
+<ul>
+<li><p>如是公司或家里的有线网：<br> 那就很简单了，直接插上网线就行；</p>
+</li>
+<li><p>如果是Wifi：<br> 按照无线网配置即可；</p>
+</li>
+<li><p>如果是校园网（需要登录校园网帐号的那种）：</p>
+</li>
+<li><p>使用另一台电脑开wifi热点；</p>
+</li>
+<li><p>使用手机的USB网络共享功能，即相当于将手机当成“网线”，然后手机连接并登录校圆网（推荐这种方法）。</p>
+</li>
+</ul>
+<h3 id="查看网卡信息"><a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h3><ul>
+<li>查看网络连接设置</li>
+</ul>
+<pre><code class="bash">ip link
+# 一般有线网设备以 &quot;e&quot; (ethernet，以太)开头，无线网设备以 &quot;wl&quot; (wireless)开头
+# 如果没有显示无线设备，看下是不是关了（如：有些电脑可以使用Fn+F5打开或关闭无线网）
+# 或者在Windows系统连接一下无线网（多系统的话），再重启进入Arch安装环境
+
+lspci
+# 查看所有PCI设备，包括了网卡设备
+
+lsusb
+# 查看所有USB设备，如果是外接USB网卡，就可以此命令查看
+</code></pre>
+<ul>
+<li>启用网卡设备<br> 不管是有线还是无线，都需要启用网卡后，才能接开始配置。</li>
+</ul>
+<pre><code class="bash">ip link set &lt;dev-name&gt; up
+# 启动网卡设备，dev-name为有线或无线网卡设备名称
+# 启动后，用 ip link 查看时，会有 &quot;UP&quot; 的标记
+
+ip link set &lt;dev-name&gt; down
+# 停用网卡设备，dev-name为有线或无线网卡设备名称，重启即先down再up
+</code></pre>
+<h3 id="有线网配置"><a href="#有线网配置" class="headerlink" title="有线网配置"></a>有线网配置</h3><p>有线网配置只需要获取的IP就行；如果是静态IP，则参考<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Network_configuration">有线网配置教程</a>。</p>
+<pre><code class="bash">dhcpcd &lt;dev-name&gt;
+# 为dev-name自动获取IP地址，dev-name为有线网卡设备名称
+# dhcp是动态主机配置协义，负责管理和分配IP地址等
+
+kill &lt;pid&gt;
+# 结束进程，pid为进程的PID
+# 使用dhcpcd后，会返加一个pid，需要重新获取IP地址，则先结速dhcpcd即可
+
+ping -c 3 www.google.com
+# 检测网络是否正常
+</code></pre>
+<h3 id="无线网配置"><a href="#无线网配置" class="headerlink" title="无线网配置"></a>无线网配置</h3><p>无线网配置相对复杂一点，情况太多，这里只说下我的配置过程，具体情况参照<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Network_configuration">有线网配置教程</a>。</p>
+<pre><code class="bash">iw dev
+# 查看无线设备
+iw dev &lt;dev-name&gt; link
+# 查看无线网 dev-name 的加接状态
+iw dev &lt;dev-name&gt; scan
+# 扫描wifi热点
+wpa_passphrase &lt;your_SSID&gt; &lt;your_KEY&gt; &gt; /ws.conf
+# 生成连接配置，并保存在ws.conf，SSID和KEY为热点名称和密码
+wpa_supplicant -B -i wlp13s1 -c /ws.conf
+# 使用连接配置来连接无线网
+
+dhcpcd &lt;dev-name&gt;
+# 为dev-name自动获取IP地址，dev-name为无线网卡设备名称
+# 使用kill可结束dhcpcd
+ping -c 3 www.google.com
+# 检测网络是否正常
+
+wifi-menu
+# 自动配置wifi（使用终端UI），手动配置没成功时，可以尝试下
+</code></pre>
+<h2 id="时间与时区"><a href="#时间与时区" class="headerlink" title="时间与时区"></a>时间与时区</h2><pre><code class="bash">timedatectl
+# 查询和更改系统时钟设置
+timedatectl status
+# 查看当前Time状态
+timedatectl set-ntp true
+# 远程NTP服务器时间同步
+</code></pre>
+<h2 id="硬盘分区"><a href="#硬盘分区" class="headerlink" title="硬盘分区"></a>硬盘分区</h2><p>先确定好分区情况，我的分区设置如下：</p>
+<pre><code>/dev/sda1 : ESP分区，fat32格式，refind引导所在分区
+/dev/sdb1 : / 分区，ext4格式
+/dev/sdb2 : swap分区，如果是多Linux系统，则swap分区共用
+</code></pre>
+<ul>
+<li><p>分区<br> 先查看<a href="#%E7%A1%AC%E7%9B%98%E4%BF%A1%E6%81%AF">硬盘相关信息</a>，使后使用相应软件分区。</p>
+</li>
+<li><p>cfdisk<br>  硬盘分区工具，支持GPT和MBR，可以直接创建EFI分区，推荐此工具，拥有简单的UI，相对比较直观，分区不易出错。</p>
+</li>
+</ul>
+<pre><code class="bash">cfdisk /dev/sdb
+# 对sdb硬盘进行分区操作
+</code></pre>
+<ul>
+<li><p>fidsk, cfdisk, sfdisk, parted : 均支持GPT和MBR</p>
+</li>
+<li><p>gdisk, cgdisk, sgdisk : 只支持GPT</p>
+</li>
+<li><p>格式化分区</p>
+</li>
+</ul>
+<pre><code class="bash">mkfs.ext4 /dev/sdb1
+# mkfs即make file system，创建文件系统，将sdb1格式化成ext4，这里sdb1作为&#39;/&#39;目录
+
+mkswap /dev/sdb2
+# 格式化Swap分区
+
+swapon /dev/sdb2
+# 激活Swap分区
+
+mkfs.fat -F32 /dev/sda1
+# 格式化成Fat32，作为ESP分区；mkfs.vfat与mkfs.fat等价
+# 如果是多系统，已经有ESP分区，则不需要格式化，直接使用即可
+</code></pre>
+<ul>
+<li>挂载分区</li>
+</ul>
+<pre><code class="bash">mount /dev/sdb1 /mnt
+mkdir /mnt/boot
+mkdir /mnt/boot/efi
+mount /dev/sda1 /mnt/boot/efi
+# 将sdb1挂载到/mnt，这时，/mnt就相当于新系统的根目录，ESP分区也挂载到新系统的boot/efi目录下
+# 如果还其分区，也挂载到相应位置即可
+</code></pre>
+<h2 id="开始安装系统"><a href="#开始安装系统" class="headerlink" title="开始安装系统"></a>开始安装系统</h2><p>此部分需要联网下载，大概200~300Mb的样子。</p>
+<pre><code class="bash">vim /etc/pacman.d/mirrorlist
+# 更改镜像源，将其中China的放在文件开头，其它的可以删了（有一个HongKong的可以留着）
+
+pacstrap /mnt base linux linux-firmware
+# 安装ArchLinux基本系统
+</code></pre>
+<h2 id="生成分区表"><a href="#生成分区表" class="headerlink" title="生成分区表"></a>生成分区表</h2><pre><code class="bash">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+# 生成fstab文件，保存系统分区表
+</code></pre>
+<p>到了这，系统已经基本安装完了，接下来就要配置系统，至少现在Arch还不知道如何启动。</p>
+<hr>
+<h1 id="配置Arch"><a href="#配置Arch" class="headerlink" title="配置Arch"></a>配置Arch</h1><p>现在开始配置安装完的Arch Linux。</p>
+<h2 id="切换root用户"><a href="#切换root用户" class="headerlink" title="切换root用户"></a>切换root用户</h2><pre><code class="bash">arch-chroot /mnt
+# 转到新系统的root用户，使用bash，即此后的命令都是对以/mnt作为根目录的系统操作
+
+alias vim=vi
+# 新系统中暂时没有vim，添加一个吧
+alias ll=&#39;ls -l&#39;
+# 查看目录，控制台下方便点
+</code></pre>
+<h2 id="设置时区"><a href="#设置时区" class="headerlink" title="设置时区"></a>设置时区</h2><pre><code class="bash">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+# 设置时区，Shanghai即为东八时区（北京时间）
+
+hwclock --systohc --utc
+# 设置成UTC时间标准，即本地时间 = Bios时间 + 时区数(北京为+0800)
+hwclock --systohc --localtime
+# 设置使用本地时间标准，即本地时间 = Bios时间
+</code></pre>
+<h2 id="本地化"><a href="#本地化" class="headerlink" title="本地化"></a>本地化</h2><pre><code class="bash">vim /etc/locale.gen
+# 设置本地化类型为UTF-8编码，添加：
+zh_CN.UTF-8 UTF-8
+en_US.UTF-8 UTF-8
+
+locale-gen
+# 生成locale信息
+echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+# 添加本地化文件locale.conf，用英文，使用zh_CN会导致tty中文乱码
+</code></pre>
+<h2 id="主机名"><a href="#主机名" class="headerlink" title="主机名"></a>主机名</h2><pre><code class="bash">echo myhostname &gt; /etc/hostname
+# 设置主机名称，myhostname会出现在终端的提示符中
+vim /etc/hosts
+# 添加对应的信息，如下：
+127.0.0.1	      localhost
+::1		          localhost
+127.0.1.1	      myhostname.localdomain	myhostname
+</code></pre>
+<h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><pre><code class="bash">pacman -S iw wpa_supplicant dialog dhcpcd
+# 安装网络相关工具
+</code></pre>
+<p>用<a href="#%E7%BD%91%E7%BB%9C">前面</a>的方法即可。<br>不过有趣的是，新安装的Arch系统里没有iw等无线网式具，需要先安装</p>
+<p>但是，安装软件就需要先联网，所以，如果只联网。。。好像循环了。。。应该可以从Arch安装环境中拷吧（我没试过）<br>好了，我反正用手机USB共享的网络，既然有网了，当然得学会pacman的的基本用法：</p>
+<pre><code class="bash">pacman -S &lt;packge-name&gt;     # 安装软件(install)
+pacman -U &lt;pkg-file&gt;        # 安装本地包(unpack)，其扩展名为 *.tar.gz, *.tar.xz
+pacman -U &lt;http://pkg-file&gt; # 安装远程包
+
+pacman -Sy                  # 同步(synchronize)软件数据库，先比较是否为最新的，是的话不再下载数据库
+pacman -Syy                 # 强制同步软件数据库，无论是否为最新的，都重新下载数据库
+                            # 将数据库理解成一个软件列表，从中可以知道有哪些软件
+pacman -Su                  # 更新(update)整个系统，即比对数据库，有更新版本的软件，则更新
+pacman -Syu                 # 先同步数据库，然后再更新系统
+pacman -Syyu                # 先强制同步数据库，然后再更新系统
+pacman -Sy &lt;packge-name&gt;    # 先同步数据库，然后安装软件
+pacman -Ss &lt;keywords&gt;       # 在数据库和已安装软件包中查询(search)软件
+pacman -Si &lt;keywords&gt;       # 显示软件包信息(information)
+pacman -Sw &lt;keywords&gt;       # 下载(download)软件包，但不安装
+pacman -Sc                  # 清理(clean)未安装的软件包缓存
+                            # 包文件位于 /var/cache/pacman/pkg（有软件包缓存时，下次重新安装则不用再下载）
+pacman -Scc                 # 清理所有缓存软件包
+
+pacman -Qs &lt;packge-name&gt;    # 查询已安装的软件包
+pacman -Qi &lt;packge-name&gt;    # 查询已安装软件包的信息
+
+pacman -R &lt;packge-name&gt;     # 删除(remove)单个软件包，保留该软件包全部的依赖
+pacman -Rs &lt;packge-name&gt;    # 删除(remove)单个软件包，删除该软件包的依赖（如果该依赖没有与其它软件存在依赖关系）
+pacman -Rsc &lt;packge-name&gt;   # 删除(remove)单个软件包，删除该软件包的依赖，和所以依赖该软件包的程序
+</code></pre>
+<h2 id="Root密码"><a href="#Root密码" class="headerlink" title="Root密码"></a>Root密码</h2><pre><code class="bash">passwd root
+# 设置root密码
+</code></pre>
+<h2 id="Initramfs"><a href="#Initramfs" class="headerlink" title="Initramfs"></a>Initramfs</h2><pre><code class="bash">mkinitcpio -P
+# 初始化Initramfs(init ram fs)
+</code></pre>
+<h2 id="安装引导程序"><a href="#安装引导程序" class="headerlink" title="安装引导程序"></a>安装引导程序</h2><p>UEFI引导可以使用<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/GRUB">grub</a>、<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/GRUB">refind</a>等。</p>
+<ul>
+<li>使用grub</li>
+</ul>
+<pre><code class="bash">pacman -S grub efibootmgr
+# 安装引导程序grub和创建efi启动项程序efibootmgr
+
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grubname
+# 安装efi程序到/boot/efi/grub，grubname为存放grub.efi文件的目录名称
+
+grub-mkconfig -o /boot/grub/grub.cfg
+# 生成引导配置文件grub.cfg
+
+efibootmgr
+# 显示efi启动项
+</code></pre>
+<ul>
+<li>使用refind<br>refind也可以使用pacman安装，不过最好到<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/GRUB">官方网站</a>下载最新版，并按照官方教程复制所需要的文件到指定目录。然后用efibootmgr添加启动项。</li>
+</ul>
+<pre><code class="bash">efibootmgr -c -l /boot/efi/refind/refind_x64.efi -L &#39;refind boot manager&#39;
+# 创建refind启动（需要自己添加refind文件）
+</code></pre>
+<ul>
+<li>生成引导初始化文件</li>
+</ul>
+<p>若是不小心将vmlinuz等文件给删了，可以使用下列命令重新生成：</p>
+<pre><code class="bash">pacman -S linux
+# 安装linux内核，也可以使用其它的，如linux-lts, linux-zen等
+mkinitcpio -p linux
+</code></pre>
+<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><pre><code class="bash">pacman -S zsh sudo
+# 安装zsh，新用户使用zsh
+cp /etc/sudoers /etc/sudoers_bak
+vim /etc/sudoers
+# 修改sudoers文件，启用wheel组(去掉&#39;#%wheel ALL=(ALL) ALL&#39;前的#即可)
+
+useradd -m -G wheel -s /bin/zsh username
+# 创建用户，同时创建与username同名的用户组，所属的附加组为wheel组，使用zsh
+useradd -m -g usergroup -G wheel -s /bin/zsh username
+# 创建用户，属于usergroup组（需要先创建用户组），所属的附加组为wheel组，使用zsh
+passwd username
+# 设定密码
+su root
+chsh -s /bin/zsh
+# root用户也可使用zsh
+</code></pre>
+<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><pre><code class="bash">exit
+# 退出chroot
+cd /
+umount -R /mnt
+reboot
+</code></pre>
+<p>Arch系统的安装就结束了，接下来就是个性化的配置了。</p>
+<hr>
+<h1 id="基本软件安装"><a href="#基本软件安装" class="headerlink" title="基本软件安装"></a>基本软件安装</h1><h2 id="shell和vim"><a href="#shell和vim" class="headerlink" title="shell和vim"></a>shell和vim</h2><pre><code class="bash">sudo pacman -S vim git
+sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
+</code></pre>
+<h2 id="AUR"><a href="#AUR" class="headerlink" title="AUR"></a>AUR</h2><p>AUR是为用户而建、由用户主导的Arch软件仓库。AUR中的软件包以软件包生成脚本（PKGBUILD）的形式提供，用户自己通过makepkg生成包，再由pacman安装；也可以使用AUR工具来完成。</p>
+<pre><code class="bash">sudo vim /etc/pacman.conf
+# 添加（使用国内源快些）：
+
+[archlinuxcn]
+#Server = http://repo.archlinuxcn.org/$arch
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+
+# 然后：
+sudo pacman -S archlinuxcn-keyring
+
+# 安装AUR工具：yay
+sudo pacman -S yay
+# 或
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+</code></pre>
+<hr>
+<h1 id="安装桌面环镜"><a href="#安装桌面环镜" class="headerlink" title="安装桌面环镜"></a>安装桌面环镜</h1><p>从头到尾安装桌面环境，包括：</p>
+<ul>
+<li>显卡驱动(Display Driver)</li>
+<li>显示服务(Display Server)</li>
+<li>显示管理器(Display Manager)</li>
+<li>桌面环境(Desktop Environment)</li>
+<li>窗口管理器(Window Manager)</li>
+</ul>
+<h2 id="显卡驱动"><a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h2><pre><code class="bash">lspci -v | grep VGA
+# 查看显示型号
+
+sudo pacman -S &lt;显卡驱动&gt;
+# 根据自己的显卡，查找相应的显卡驱，开源驱动（也有闭源的，推荐使用开源的）如下：
+# 通用   : xf86-video-vesa
+# AMD    : xf86-video-amdgpu
+# ATI    : xf86-video-ait
+# Intel  : xf86-video-intel
+# Nvidia : xf86-video-nouveau
+# VMWare : xf86-video-vmware
+</code></pre>
+<h2 id="显示服务"><a href="#显示服务" class="headerlink" title="显示服务"></a>显示服务</h2><p>X窗口管理系统（X11）是一种显示协议提供的GUI环境的基本框架，如屏幕绘制、鼠标键盘交互等；而Xorg是X11的开源实现。</p>
+<ul>
+<li>安装Xorg-server</li>
+</ul>
+<pre><code class="bash">sudo pacman -S xorg-server
+# 安装xorg服务
+sudo pacman -S xorg-server-utils
+# 鼠标加速
+sudo pacman -S xf86-input-synaptics
+sudo pacman -S xf86-input-libinput
+# 触摸板,synaptics和libinput选一个（推荐libinput）
+sudo pacman -S xorg-xinput
+# 实时配置触板的命令行工具
+</code></pre>
+<p>现在安装好了X11，启动X11可以使用登录管理器（也即 显示管理器），也可以使用xorg-init（即 通过startx命令启动X11）。<br>推荐用登录管理器，xorg-init也可以同时安装。</p>
+<ul>
+<li>安装xorg-init</li>
+</ul>
+<pre><code class="bash">sudo pacman -S xorg-xinit xorg-twm xorg-xclock xterm
+# 安装xorg-init和twm窗器管理器
+cp /etc/X11/xinit/xintrc ~/.xinitrc
+# 桌面环境配置文件
+startx
+# 测试xorg
+</code></pre>
+<h2 id="显示管理器"><a href="#显示管理器" class="headerlink" title="显示管理器"></a>显示管理器</h2><p>显示管理器即是登录管理器，登录时的界面，常用的显示管理器有sddm,LightDM等，这里安装sddm。</p>
+<pre><code class="bash">sudo pacman -S sddm
+# 安装sddm
+sddm --example-config &gt; /etc/sddm.conf
+# (使用root用户)创建sddm配置文件，初始创建的为默认配置
+# sddm默认使用tty1开启形会话，可以配置成tty7，但tty1还是没法进行命令交互
+# 不过tty2~tty6还是可以作为文本控制台用
+
+sudo systemctl enable sddm.service
+# 开机启动sddm
+ls -l /etc/systemd/system/display-manager.service
+# 查看当前使用的是那个登录管理器
+pacman -S gst-libav phonon-qt5-gstreamer gst-plugins-good
+git clone https://github.com/3ximus/aerial-sddm-theme
+sudo mv aerial-sddm-theme /usr/share/sddm/themes
+# 一个不错的sddm主题，可能需要安装qt5-multimedia和qt5-svg
+</code></pre>
+<h2 id="桌面环境"><a href="#桌面环境" class="headerlink" title="桌面环境"></a>桌面环境</h2><p>桌面环境最好安装通用的，常用的如KDE, xfce等，安装示例：</p>
+<pre><code class="bash">sudo vim /etc/locale.conf
+# 修改： LANG=zh_CN.UTF-8
+# 修改本地化为中文
+sudo pacman -S xfce4 xfce4-goodies
+# 安装xfce桌面，goodies为一些基本工具软件，同时默认安装xfwm4窗口管理器
+exec startxfce4
+# 修改xinitrc，通过startx启动X11
+# 如果使用显示管理器，如sddm，则可以选择要使用的桌面环境
+</code></pre>
+<h2 id="窗口管理器"><a href="#窗口管理器" class="headerlink" title="窗口管理器"></a>窗口管理器</h2><p>窗口管理器负责绘制窗口的边框和背景等，处理窗口的移动、最大&#x2F;小化等行为。桌面环境是窗口管理器的超集，使用窗口管理器和其它一些常用软件组成一个完整的桌面工作环境。<br>所以说，只安装窗口管理器，而不安装桌面环境也是可以的。（还是推荐一个桌面环境，这样好多软件，如文件管理器等，就不用自己挨个找了）<br>窗口管理器可以用桌面环境默认自带的，也可以自己选择，如平铺式有i3, awesome等。</p>
+<h3 id="安装i3"><a href="#安装i3" class="headerlink" title="安装i3"></a>安装i3</h3><pre><code class="bash">sudo pacman -S i3 dmenu
+# 安装i3窗口管理器，dmenu为i3程充启动器
+cp /etc/i3/config ~/.i3/config
+# 创建i3配置文件，.i3没有则自己mkdir
+# 如果使用xorg-init，则添加 &quot;exec i3&quot; 到.xinitrc，通过startx则可以启动ie
+</code></pre>
+<h3 id="安装awesome"><a href="#安装awesome" class="headerlink" title="安装awesome"></a>安装awesome</h3><pre><code class="bash">sudo pacman -S awesome
+mkdir -p ~/.config/awesome/
+cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
+# 安装awesome，并创建配置文件rc.lua
+# 如果使用xorg-init，则添加 &quot;exec awesome&quot; 到.xinitrc，通过startx则可以启动ie
+</code></pre>
+<hr>
+<h1 id="我的设置-Of-ArchLinux"><a href="#我的设置-Of-ArchLinux" class="headerlink" title="我的设置 Of ArchLinux"></a>我的设置 Of ArchLinux</h1><p>现在才是像其它Linux发行版安装完后，开始进行配置了。</p>
+<h2 id="Font"><a href="#Font" class="headerlink" title="Font"></a>Font</h2><pre><code class="bash"># 安装字体
+sudo pacman -S ttf-dejavu
+sudo pacman -S ttf-ubuntu-font-family
+sudo pacman -S wqy-*
+sudo pacman -S nerd-*
+sudo pacman -S tts-ms-win10             # 安装yahei等字体或https://github.com/fphoenix88888/ttf-mswin10-arch
+yay -S freetype2-ultimate5              # 优化字体渲染
+yay -S lib32-freetype2-ultimate5        # 优化字体渲染（32位程序）
+yay -S fontconfig-infinality-ultimate   # 优化字体配置
+
+# 查看字体名称
+fc-list
+
+# 手动安装字体
+cd /usr/share/fonts
+mkdir my-fonts
+# copy my-fonts to /usr/share/fonts/myfonts
+cd my-fonts
+sudo chmod 664 *.ttf
+sudo mkfontscale
+sudo mkfontdir
+sudo fc-cache -fv
+</code></pre>
+<h2 id="对调Esc和CapsLock"><a href="#对调Esc和CapsLock" class="headerlink" title="对调Esc和CapsLock"></a>对调Esc和CapsLock</h2><p>（方便Vim使用）</p>
+<ul>
+<li>Console环境</li>
+</ul>
+<pre><code class="bash">cd /usr/share/kbd/keymaps/i386/qwerty/
+cp us.map.gz custom.map.gz
+# 修改custom中的Esc和CapsLock键位映射
+vim /etc/vconsole.conf
+# 添加以下内容可以变tty下的键盘布局：
+KEYMAP=custom
+</code></pre>
+<ul>
+<li>X11环境</li>
+</ul>
+<pre><code class="bash">vim .Xmodmap
+# 添加以下内容：
+clear Lock
+keysym Caps_Lock = Escape
+keysym Escape = Caps_Lock
+add Lock = Caps_Lock
+
+vim .zprofile
+# zsh用.zprofile，bash用.xprofile
+# 添加以下内容：
+add xmodmap ./.Xmodmap
+</code></pre>
+<h2 id="输入法"><a href="#输入法" class="headerlink" title="输入法"></a>输入法</h2><pre><code class="bash">sudo pacman -S fcitx-im
+# 安装fcitx集成包，提供对Gtk+/Qt的支持，包括gtk2/3和qt4/5
+sudo pacman -S fcitx-table-extra
+# 添加对五笔的支持
+sudo pacman -S fcitx-configtool
+# fcitx图形界面配置程序
+# 配置fcitx字体为中文字体wqy-microhei，不然乱码
+
+# 配置对X11环境支持，添加以下内容：
+# 使用登录管理器(如sddm)启动X11，则编辑.xprofile（zsh则为.zprofile）
+# 使用startx启动X11，则编辑.xinitrc
+vim ~/.xprofile
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+</code></pre>
+<h2 id="触控板"><a href="#触控板" class="headerlink" title="触控板"></a>触控板</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Touchpad_Synaptics">参数配置解释</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/bulletmark/libinput-gestures">手势管理</a></li>
+</ul>
+<pre><code class="bash">sudo pacman -S xf86-input-libinput
+cp /usr/share/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/30-touchpad.conf
+# 配置触控板，/usr/share中的为默认配置，/etc/中的用户自定义配置
+
+sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf
+# 触控板配置内容如下：
+Section &quot;InputClass&quot;
+        Identifier &quot;libinput touchpad catchall&quot;
+        MatchIsTouchpad &quot;on&quot;
+        MatchDevicePath &quot;/dev/input/event*&quot;
+        Driver &quot;libinput&quot;
+        Option &quot;Tapping&quot; &quot;on&quot;
+        Option &quot;TapButton1&quot; &quot;1&quot;
+        Option &quot;TapButton2&quot; &quot;3&quot;
+        Option &quot;TapButton3&quot; &quot;2&quot;
+        Option &quot;VertEdgeScroll&quot; &quot;on&quot;
+        Option &quot;VertTwoFingerScroll&quot; &quot;on&quot;
+        Option &quot;HorizEdgeScroll&quot; &quot;on&quot;
+        Option &quot;HorizTwoFingerScroll&quot; &quot;on&quot;
+        Option &quot;NaturalScrolling&quot; &quot;on&quot;
+EndSection
+</code></pre>
+<h2 id="独显Nvidia"><a href="#独显Nvidia" class="headerlink" title="独显Nvidia"></a>独显Nvidia</h2><p> <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Nouveau">开源独显Nouveau</a><br> <a target="_blank" rel="noopener" href="https://nouveau.freedesktop.org/wiki/CodeNames/">Nouveau支持查询</a><br> <a target="_blank" rel="noopener" href="https://nouveau.freedesktop.org/wiki/FeatureMatrix/">Nouveau支持功能查询</a><br> <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/NVIDIA">闭原独显Nvidia</a><br> <del><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Bumblebee">Bumblebee</a></del><br> <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Nvidia-xrun">nvidia-xrun</a></p>
+<p> 这里简单写下nvidia-xrun的安装流程（因为Bumblebee有大问题，其官方更推荐用nvidia-xrun）：</p>
+<pre><code class="bash">sudo pacman -S mesa xf86-video-intel nvidia
+# mesa             : 开源的OpenGL标准实现。
+# xf86-video-intel : Intel 驱动。
+# nvidia           : NVIDIA 驱动，注意，如果使用nvidia-lts版，内核也要使用linux-lts版。
+sudo pacman -S bbswitch
+# bbswitch用于禁用和打开nvidia显卡，linux-lts安装bbswitch-dkms
+yay nvidia-xrun
+# nvidia-xrun需要从AUR安装，用于实现集显与N卡的切换
+# 使用独显时，在新的tty(Ctrl+Alt+F1~F7)，使用nvidia-xrun命令运行一个新的Xorg服务
+</code></pre>
+<p>同样需要为使用独显的Xorg服务配置，具体可以参考<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Nvidia-xrun">nvidia-xrun</a>。首先使用独显的Xorg的配置文件为<code>/etc/X11/nvidia-xorg.conf</code>，需要更改里面的BusID为自己电脑的，然后将自己的<code>xorg.conf.d</code>中的touchpach.conf等配置复制一份到<code>nvidia-xorg.conf.d</code>中，如果需要要可以建一个<code>~/.nvidia-xinitrc</code>作为使用独显的图形窗口配置文件，然后继续进行以下设置：</p>
+<pre><code class="bash">echo &#39;bbswitch &#39; &gt; /etc/modules-load.d/bbswitch.conf
+# 加载bbswitch驱动
+echo &#39;options bbswitch load_state=0 unload_state=1&#39; &gt; /etc/modprobe.d/bbswitch.conf
+# 开机禁用nvidia驱动
+blacklist nvidia
+blacklist nvidia-drm
+blacklist nvidia-modeset
+blacklist nvidia-uv
+blacklist nvidia_uvm
+blacklist nouveau
+# 在/etc/modprobe.d/nvidia-xrun.conf中加入以上内容，用来禁止加载nvidia驱动
+</code></pre>
+<p>查看独显关闭与否，可以用如下方法：</p>
+<pre><code class="bash">lspci | grep VGA
+# 查看独显示状态，(rev ff)表示关闭，否则为打开状态
+cat /proc/acpi/bbswitch
+# 会显示ON/OFF表示独显打开与否
+tee /proc/acpi/bbswitch &lt;&lt;&lt;OFF
+tee /proc/acpi/bbswitch &lt;&lt;&lt;ON
+# 这两条命令可以强制性关闭与打开独显
+</code></pre>
+<p>附付说下cuda的安装cuda，一条命令就搞定，很是方便：</p>
+<pre><code class="bash">sudo pacman -S cuda cudnn
+# 安装CUDA, CUDNN，安装在/opt/cuda，里面有samples可以运行
+sudo pacman -S python-tensorflow-cuda
+# 安装tensorflow
+# 注意：同样会安装numpy等包，如果已经用pip安装，需要先删了，不然会提示文件冲突
+</code></pre>
+<h2 id="i3wm配置"><a href="#i3wm配置" class="headerlink" title="i3wm配置"></a>i3wm配置</h2><p>i3的配置比较容易，找一份详细的配置和教程，仔细看一看就可以配置自己所想要的。<br><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/I3">i3wm ArchWiki</a><br><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/HiDPI">HiDPI ArchWiki</a><br><a target="_blank" rel="noopener" href="https://github.com/yehuohan/dotconfigs/tree/master/cf-arch">我的i3wm置文件</a><br><a target="_blank" rel="noopener" href="http://fontawesome.io/cheatsheet/">awesome-font图标字体，直接复制使用</a></p>
+<pre><code class="bash">sudo pacman -S i3-gaps
+# 换用i3-gaps，可以设置透明i3bar
+sudo pacman -S i3lock
+# 锁屏
+sudo pacman -S rofi
+# 可用于窗口切换和程序启动，可代替dmenu
+sudo pacman -S feh
+# 壁纸
+sudo pacman -S compton
+# 透明效果设置
+sudo pacman -S conky
+sudo pacman -S ttf-nerd-fonts-symbols
+# 用conky配置i3status，并安装图标字体
+sudo pacman -S flameshot
+# 截图软件
+sudo pacman -S alsa-utils volumeicon pulseaudio ffmpeg
+# 音量管理，浏览器在线播放也需要
+sudo pacman -S networkmanager network-manager-applet nm-connection-editor
+sudo systemctl start NetworkManager
+sudo systemctl enable NetworkManager
+# 网络管理及托盘图标
+sudo pacman -S xfce4-power-manager
+sudo pacman -S mate-power-manager
+# 电源理软件，包括对屏幕亮度调节，xfce4或mate的任选一个
+sudo pacman -S xfce4-terminal
+# xfce4的终端
+</code></pre>
+<ul>
+<li>DPI设置</li>
+</ul>
+<pre><code># firefox
+about:config -&gt; layout.css.devPixelsPerPx = 1.2
+# chrome
+google-chrome-stable --force-device-scale-factor=1.15
+</code></pre>
+<h2 id="蓝牙-鼠标"><a href="#蓝牙-鼠标" class="headerlink" title="蓝牙(鼠标)"></a>蓝牙(鼠标)</h2><p>先安装蓝牙驱动，然后加载驱动，启动蓝牙服务，之后就是正常的蓝牙连接过程了；</p>
+<pre><code class="bash">sudo pacman -S bluez bluez-utils
+# bluez 软件包提供蓝牙协议栈
+# bluez-utils软件包提供bluetoothctl工具（蓝牙配置工具）
+sudo pacman blueberry
+# 一个小巧的蓝牙图形端配置工具
+modprobe btusb
+# 加载蓝牙驱动
+systemctl start bluetooth.service
+# 启动蓝牙服务（如果需要，可以设成开机启动）
+</code></pre>
+<p>蓝牙连接配置可以用图形端工具，也可以用命令行交互式工具bluetoothctl，这里简单说下bluetoothctl的使用；</p>
+<pre><code class="bash">bluetoothctl        # 进入命令行交互
+help                # 帮助命令
+power on/off        # 打开/关闭控制电源
+scan on/off         # 开启/关闭扫描
+devices             # 显示设备MAC地址和名称
+pair MAC_addr       # 配对设备（Tab可补全），然后会提示输出配对码
+trust MAC_addr      # 信任设备，再次连接不需要认证
+connect MAC_addr    # 连接设备
+</code></pre>
+<h2 id="其它设置"><a href="#其它设置" class="headerlink" title="其它设置"></a>其它设置</h2><ul>
+<li>mtp</li>
+</ul>
+<pre><code class="bash">sudo pacman -S gvfs-mtp
+# 安装mtp，支持移动设备挂载；
+# 安装后xfce-thunar可以自动识别windows-ntfs硬盘和手机u盘等设备。
+</code></pre>
+<ul>
+<li>ntf-3g</li>
+</ul>
+<pre><code class="bash">sudo pacman -S ntfs-3g
+# Linux内核目前只支持对微软NTFS文件系统的读取；
+# NTFS-3G是微软NTFS文件系统的一个开源实现，同时支持读和写；
+# NTFS-3G 开发者使用 FUSE 文件系统来辅助开发，同时对可移植性有益。
+</code></pre>
+<hr>
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="关机出现“watchdog0-watchdog-did-not-stop-”"><a href="#关机出现“watchdog0-watchdog-did-not-stop-”" class="headerlink" title="关机出现“watchdog0: watchdog did not stop!”"></a>关机出现“watchdog0: watchdog did not stop!”</h2><p><a target="_blank" rel="noopener" href="https://bbs.archlinux.org/viewtopic.php?pid=1195597#p1195597">相同问题：watchdog did not stop on reboot</a><br><a target="_blank" rel="noopener" href="https://bbs.archlinux.org/viewtopic.php?pid=1372562#p1372562">对systemd关机过程的说明：cgroup : option or name mismatch, new: 0x0””, old: 0x4 “systemd”</a></p>
+<p>根据以上查到的资料，这是正常的。</p>
+<h2 id="Inter-i5-8250U-Nvidia-MX150的关机问题"><a href="#Inter-i5-8250U-Nvidia-MX150的关机问题" class="headerlink" title="Inter i5 8250U + Nvidia MX150的关机问题"></a>Inter i5 8250U + Nvidia MX150的关机问题</h2><p>我自己电脑遇到的关机问题，感觉像MX150使用nouveau驱动的问题（201804时遇到的，可能后来的更新会修复错误），主要表现如下：</p>
+<ul>
+<li>未禁用nouveau前，每次进xorg+i3wm，关机都会出现问题，关机时会卡在一个地方，出现不同的错误提示，遇到过的有以下几个(具体的没记下，只记得一些大概的文字)：<ul>
+<li><code>watchdog: BUG: soft lockup - CPU#1 stuck for 22s</code></li>
+<li><code>[drm:drm_atomic_helper_wait_for_dependencies [drm_kms_helper]] *ERROR* [CRTC:26:pipe A] flip_done timed out</code></li>
+</ul>
+</li>
+<li>禁用nouveau，安装 nvidia+bumblebee，xorg使用intel集显驱动，关机正常。</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 [ yehuohan@gmail.com ] </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Arch Linux安装记录</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="Y">Y</a></p>
+    <p><span class="copy-title">发布时间:</span>2017-06-11, 23:36:58</p>
+    <p><span class="copy-title">最后更新:</span>2020-08-31, 21:29:13</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2017/06/11/%E7%AC%94%E8%AE%B0/OS/Arch-Linux%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" title="Arch Linux安装记录">http://yehuohan.github.io/2017/06/11/%E7%AC%94%E8%AE%B0/OS/Arch-Linux%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2017 Y
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

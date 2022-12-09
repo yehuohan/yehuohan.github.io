@@ -1,0 +1,99 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{bm}
+
+\usetikzlibrary{arrows,automata}
+
+\input{motor.tex}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+% d轴角度
+\newcommand {\tr} {20}
+% psi轴角度
+\newcommand {\trpsiAgl} {30}
+\newcommand {\trpsi} {\tr+\trpsiAgl}
+% is轴角度
+\newcommand {\trisAgl} {115}
+\newcommand {\tris} {\tr+\trisAgl}
+% us轴角度
+\newcommand {\trusAgl} {130}
+\newcommand {\trus} {\tr+\trusAgl}
+
+\coordinate (O1) at (5,0);
+
+% 插入式
+\draw [line width=2pt] (O1) circle(3);
+\draw [line width=2pt] (O1) circle(1.5);
+\draw [line width=2pt] (O1) circle(1);
+
+% 磁铁
+\sector{(O1)}{0.8}{1}{90}{\tr-45};
+\sector{(O1)}{0.8}{1}{90}{\tr-45+180};
+
+% A轴
+\draw [line width=2pt] [-latex] (O1) -- +(0:7.8) node [right] {\LARGE \textbf{A}};
+
+% dq轴
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr:7)
+	node [right] {\LARGE \bm{$d$}};
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr:5.2) 
+	node [below] {\LARGE \bm{$\psi_f$}};
+\draw [line width=1.5pt] [-latex] (O1)+(0:3.7) arc(0:\tr:3.7);
+\draw (O1)+(\tr-7:3) node [right] {\Large \bm{$\theta_r$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr-10:7.7) arc(\tr-10:\tr+10:7.7);
+\draw (O1)+(\tr:7.7) node [right] {\LARGE \bm{$\omega_r$}};
+
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr+90:8) 
+	node [above] {\LARGE\bm{$q$}}
+	node [below left] {\LARGE \bm{$j$}};
+	
+% psi轴
+\draw [line width=1.5pt] [-latex] (O1)--+(\trpsi:4.5);
+\draw (O1)++(\trpsi:4.5)+(-0.3,0) node [left] {\LARGE \bm{$\psi_s$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr:3.9) arc(\tr:\trpsi:3.9);
+\draw (O1)+(\tr+20:4) node [right] {\LARGE \bm{$\delta_{sf}$}};
+
+% psi矢量合成
+\draw [line width=1.5pt] [-latex] (O1)++(\tr:5.2)--++(\tr+90:2.25) coordinate (psi0)
+	node [right] {\Large \bm{$L_qi_q$}};
+\draw [line width=1.5pt] [latex-] (O1)+(\trpsi:4.5)--(psi0);
+\draw (O1)++(\trpsi:4.5)+(0.5,0.4) node [above] {\Large \bm{$L_di_d$}};
+
+% is轴
+\newcommand {\trisLen} {5}
+\draw [line width=1.5pt] [-latex] (O1)--+(\tris:\trisLen) 
+	node [above left] {\LARGE \bm{$i_s$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr:3.2) arc(\tr:\tris:3.2);
+\draw (O1)+(\tr+60:3.5) node [right] {\Large \bm{$\beta$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr+90:2.1) arc(\tr+90:\tris:2.1);
+\draw (O1)+(\tris-10:2.6) node [right] {\LARGE \bm{$\gamma$}};
+
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr:\trisLen*cos{\trisAgl}) node [below]{\Large \bm{$i_d$}};
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr+90:\trisLen*sin{\trisAgl}) node [above right]{\Large \bm{$i_q$}};
+\draw [line width=1.5pt] [dashed] (O1)+(\tris:\trisLen)--+(\tr:\trisLen*cos{\trisAgl});
+\draw [line width=1.5pt] [dashed] (O1)+(\tris:\trisLen)--+(\tr+90:\trisLen*sin{\trisAgl});
+
+
+% us轴
+\draw [line width=1.5pt] [-latex] (O1)--+(\trus:5) 
+	node [below left] {\LARGE \bm{$u_s$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tris:2.1) arc(\tris:\trus:2.1);
+\draw (O1)+(\trus-3:2.8) node [right] {\LARGE \bm{$\phi$}};
+
+% us矢量合成
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr+90:6) coordinate (us0) 
+	node [right]{\LARGE \bm{$e_0$}};	
+\draw [line width=1.5pt] [-latex] (us0)--++(\tris:1.2) coordinate (us1);
+\draw (us1)+(-0,-0.8) node {\Large \bm{$R_si_s$}};
+\draw [line width=1.5pt] [-latex] (us1)--++(\tr+90+90:2.65) coordinate (us2);
+\draw (us2)+(2,0.8) node [above left]{\Large \bm{$\omega_sL_qi_q$}};
+\draw [line width=1.5pt] [latex-] (O1)+(\trus:5)--(us2);
+\draw (O1)++(\trus:5)+(-0.5,0.9) node [above left]{\Large \bm{$\omega_sL_di_d$}};
+
+\end{tikzpicture}
+
+\end{document}
+

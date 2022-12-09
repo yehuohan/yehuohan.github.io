@@ -1,0 +1,74 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{bm}
+
+\usetikzlibrary{arrows,automata}
+
+\input{motor.tex}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+% d轴角度
+\newcommand {\tr} {0}
+% psi轴角度
+\newcommand {\trgAgl} {50}
+\newcommand {\trg} {\tr+\trgAgl}
+
+% 三相绕组
+% #1 中心位置
+% #2 环绕半径
+\newcommand {\threeWindd}[2] {
+\currentIn{#1 ++(30:#2)};
+\draw #1 ++(30:#2+0.2) node [right] {\large \textbf{B}};
+\currentOut{#1 ++(90:#2)};
+\draw #1 ++(90:#2+0.2) node [above left] {\large \textbf{X}};
+\currentIn{#1 ++(150:#2)};
+\draw #1 ++(150:#2+0.1) node [above left] {\large \textbf{C}};
+\currentOut{#1 ++(-30:#2)};
+\draw #1 ++(-30:#2+0.1) node [below right] {\large \textbf{Z}};
+\currentIn{#1 ++(-90:#2)};
+\draw #1 ++(-90:#2+0.2) node [below] {\large \textbf{A}};
+\currentOut{#1 ++(-150:#2)};
+\draw #1 ++(-150:#2+0.1) node [below left] {\large \textbf{Y}};
+}
+
+\coordinate (O1) at (5,0);
+
+\draw [line width=2pt] (O1) circle(3);
+\draw [line width=2pt] (O1) circle(1.8);
+\draw [line width=2pt] (O1) circle(1.3);
+
+% ABC Re Im
+\abcAxis{(O1)}{6};
+\draw (O1)+(6.5,-0.3)node [below] {\LARGE \bm{$Re$}};
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr+90:6) 
+	node [above] {\LARGE\bm{$Im$}}
+	node [below left] {\LARGE \bm{$j$}};
+	
+% G轴
+\newcommand {\trgLen} {6}
+\draw [line width=1.5pt] [-latex] (O1)--+(\trg:\trgLen);
+\draw (O1)++(\trg:5.5)+(-0.3,0) node [left] {\LARGE \bm{$G$}};
+\draw (O1)++(\trg:5.5)+(1.1,0) node [left] {\huge \bm{$r$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr:3.3) arc(\tr:\trg:3.3);
+\draw (O1)+(\tr+20:3.3) node [right] {\LARGE \bm{$\theta$}};
+
+\draw [line width=1.5pt] [-latex] (O1)+(\trg-10:6.4) arc(\trg-10:\trg+10:6.4);
+\draw (O1)+(\trg:6.5) node [right] {\LARGE \bm{$\omega$}};
+
+\draw [line width=1.5pt] [-latex] (O1)--+(0:\trgLen*cos{\trgAgl}) node [below]{\LARGE \bm{$a$}};
+\draw [line width=1.5pt] [-latex] (O1)--+(90:\trgLen*sin{\trgAgl}) node [above right]{\LARGE \bm{$b$}};
+\draw [line width=1.5pt] [dashed] (O1)+(\trg:\trgLen)--+(\tr:\trgLen*cos{\trgAgl});
+\draw [line width=1.5pt] [dashed] (O1)+(\trg:\trgLen)--+(\tr+90:\trgLen*sin{\trgAgl});
+
+
+% 绕组
+\threeWindd{(O1)}{2};
+
+
+\end{tikzpicture}
+
+\end{document}
+

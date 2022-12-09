@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>工具参考书之OpenCv基本使用 | Y</title>
+  <meta name="keywords" content=" opencv ">
+  <meta name="description" content="工具参考书之OpenCv基本使用 | Y">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y">
+<meta property="og:url" content="http://yehuohan.github.io/archives/">
+<meta property="og:site_name" content="Y">
+<meta property="og:locale">
+<meta property="article:author" content="Y">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/1.png">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/github.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="false" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/1.png"/>
+</a>
+<div class="author">
+    <span>Y</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/yehuohan"
+               target="_blank">
+                
+                    <i class="iconfont icon-github"></i>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:yehuohan@qq.com"
+               target="_blank">
+                
+                    <i class="iconfont icon-email"></i>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(113)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="笔记">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        笔记
+                        <small>(29)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="笔记<--->DOC">
+                                        
+                                        DOC
+                                        
+                                            <small>(12
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="笔记<--->DSA">
+                                        
+                                        DSA
+                                        
+                                            <small>(7
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="笔记<--->OS">
+                                        
+                                        OS
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="杂记">
+                        
+                        杂记
+                        <small>(34)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Gist">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        Gist
+                        <small>(50)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="Gist<--->c-cpp">
+                                        
+                                        c-cpp
+                                        
+                                            <small>(27
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Gist<--->linux">
+                                        
+                                        linux
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Gist<--->others">
+                                        
+                                        others
+                                        
+                                            <small>(8
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Gist<--->python">
+                                        
+                                        python
+                                        
+                                            <small>(12
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+    </div>
+    <div>
+        
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="113">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>单片机</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>电机控制</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>电路</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据结构(dsa)</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>五笔</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>altium designer</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>arch</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>arm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>boot</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>c/c++</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ccs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cmd</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>dsp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>gcc</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>gif</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>grub4dos</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>gsp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>keil</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>makefile</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mathjax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>matlab</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>matplotlib</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mingw</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>node.js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>numpy</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>office</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>opencv</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>python</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>qt</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>refind</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>reStructuredText</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ssd</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ssh</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>teamviewer</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>tensorflow</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ubuntu</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>visual studio</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 笔记 "
+           href="/2018/03/06/%E7%AC%94%E8%AE%B0/0%E7%AC%94%E8%AE%B0%E7%9B%AE%E5%BD%95%E5%85%A8%E8%A7%88/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="笔记目录全览">笔记目录全览</span>
+            <span class="post-date" title="2018-03-06 11:08:37">2018/03/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Python/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Python">软件应用之 Python</span>
+            <span class="post-date" title="2020-07-16 18:59:06">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/android-ndk/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Android NDK">Android NDK</span>
+            <span class="post-date" title="2020-07-16 13:41:18">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-CMake/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="软件应用之 CMake">软件应用之 CMake</span>
+            <span class="post-date" title="2020-07-16 13:40:43">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Sphinx/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="软件应用之 Sphinx">软件应用之 Sphinx</span>
+            <span class="post-date" title="2020-07-16 13:40:00">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-SVN/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="软件应用之 SVN">软件应用之 SVN</span>
+            <span class="post-date" title="2020-07-16 13:39:52">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/07/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-VirtualBox/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="软件应用之 VirtualBox">软件应用之 VirtualBox</span>
+            <span class="post-date" title="2020-07-16 12:05:02">2020/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2020/03/16/%E6%9D%82%E8%AE%B0/ARM%E5%AF%84%E5%AD%98%E5%99%A8/"
+           data-tag="dsp,arm"
+           data-author="" >
+            <span class="post-title" title="ARM寄存器">ARM寄存器</span>
+            <span class="post-date" title="2020-03-16 19:15:09">2020/03/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/10/18/Gist/python/py-numpy%E6%95%B0%E7%BB%84%E4%BB%A3%E6%9B%BFfor/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:numpy数组代替for">py:numpy数组代替for</span>
+            <span class="post-date" title="2019-10-18 09:00:49">2019/10/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/10/02/Gist/python/py-%E5%8D%8F%E7%A8%8B/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:协程">py:协程</span>
+            <span class="post-date" title="2019-10-02 22:35:31">2019/10/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2019/09/21/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Docker/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Docker">软件应用之 Docker</span>
+            <span class="post-date" title="2019-09-21 16:41:43">2019/09/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist "
+           href="/2019/08/15/Gist/python/py-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%BD%BF%E7%94%A8/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:多线程使用">py:多线程使用</span>
+            <span class="post-date" title="2019-08-15 16:57:39">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist linux "
+           href="/2019/04/11/Gist/linux/linux-socket%E6%9C%AC%E5%9C%B0%E9%80%9A%E4%BF%A1/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux:socket本地通信">linux:socket本地通信</span>
+            <span class="post-date" title="2019-04-11 14:59:18">2019/04/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist linux "
+           href="/2019/04/03/Gist/linux/hidraw%E8%AF%BB%E5%86%99/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux:hidraw读写">linux:hidraw读写</span>
+            <span class="post-date" title="2019-04-03 20:46:05">2019/04/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2019/03/26/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BB%E7%BA%BF%E6%80%A7%E5%AE%B9%E5%99%A8/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画线性容器">字符画之画线性容器</span>
+            <span class="post-date" title="2019-03-26 20:10:17">2019/03/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/03/26/Gist/python/py-%E9%81%8D%E5%8E%86%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:遍历指定目录">py:遍历指定目录</span>
+            <span class="post-date" title="2019-03-26 19:53:30">2019/03/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/03/26/Gist/python/py-serialport-transmission/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:serialport transmission">py:serialport transmission</span>
+            <span class="post-date" title="2019-03-26 19:48:20">2019/03/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/03/26/Gist/python/py-create-wave-audio/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:create wave audio">py:create wave audio</span>
+            <span class="post-date" title="2019-03-26 19:44:28">2019/03/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2019/03/26/Gist/python/py-change-file-name/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:change file name">py:change file name</span>
+            <span class="post-date" title="2019-03-26 19:40:30">2019/03/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2019/03/21/%E6%9D%82%E8%AE%B0/0Usage/android-adb/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="[转]Android-ADB">[转]Android-ADB</span>
+            <span class="post-date" title="2019-03-21 21:58:03">2019/03/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/12/11/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8Bshell%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="[转]工具参考书之Shell语法">[转]工具参考书之Shell语法</span>
+            <span class="post-date" title="2018-12-11 20:18:24">2018/12/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/11/09/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BMakefile%E4%BD%BF%E7%94%A8/"
+           data-tag="makefile"
+           data-author="" >
+            <span class="post-title" title="[转]工具参考书之Makefile使用">[转]工具参考书之Makefile使用</span>
+            <span class="post-date" title="2018-11-09 11:45:01">2018/11/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2018/09/24/%E6%9D%82%E8%AE%B0/%E5%A0%86%E5%92%8C%E6%A0%88%E7%9A%84%E5%8C%BA%E5%88%AB/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="[转]堆和栈的区别">[转]堆和栈的区别</span>
+            <span class="post-date" title="2018-09-24 15:15:39">2018/09/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/07/14/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BB%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画优先级队列">字符画之画优先级队列</span>
+            <span class="post-date" title="2018-07-14 01:20:36">2018/07/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/07/14/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BBBitmap/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画Bitmap">字符画之画Bitmap</span>
+            <span class="post-date" title="2018-07-14 00:55:05">2018/07/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2018/07/13/Gist/gsp/%E5%9B%BE%E7%A4%BA%E7%9F%A9%E9%98%B5%E7%89%B9%E5%BE%81%E5%80%BC%E5%92%8C%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/"
+           data-tag="gsp"
+           data-author="" >
+            <span class="post-title" title="gsp:图示矩阵特征值和特征向量">gsp:图示矩阵特征值和特征向量</span>
+            <span class="post-date" title="2018-07-13 10:08:59">2018/07/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/07/02/Gist/c&c++/c-c-printf%E5%92%8Cscanf%E8%BE%A8%E6%9E%90/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:printf和scanf辨析">c/c++:printf和scanf辨析</span>
+            <span class="post-date" title="2018-07-02 12:39:28">2018/07/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/06/29/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BB%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画字符串匹配">字符画之画字符串匹配</span>
+            <span class="post-date" title="2018-06-29 23:02:02">2018/06/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2018/06/12/Gist/python/py-%E7%94%A8moviepy%E7%94%9F%E6%88%90%E5%8A%A8%E7%94%BB/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:用moviepy生成动画">py:用moviepy生成动画</span>
+            <span class="post-date" title="2018-06-12 23:33:10">2018/06/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/06/09/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BTensorFlow%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
+           data-tag="tensorflow"
+           data-author="" >
+            <span class="post-title" title="工具参考书之TensorFlow基本使用">工具参考书之TensorFlow基本使用</span>
+            <span class="post-date" title="2018-06-09 01:27:28">2018/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/05/29/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BOpenCv%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
+           data-tag="opencv"
+           data-author="" >
+            <span class="post-title" title="工具参考书之OpenCv基本使用">工具参考书之OpenCv基本使用</span>
+            <span class="post-date" title="2018-05-29 17:31:15">2018/05/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2018/04/26/%E6%9D%82%E8%AE%B0/%E5%BD%BB%E5%BA%95%E7%A6%81%E7%94%A8Win10%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="彻底禁用Win10自动更新">彻底禁用Win10自动更新</span>
+            <span class="post-date" title="2018-04-26 00:45:18">2018/04/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2018/04/20/%E6%9D%82%E8%AE%B0/%E5%AE%9E%E6%88%98SSH%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"
+           data-tag="ssh"
+           data-author="" >
+            <span class="post-title" title="[转]实战SSH端口转发">[转]实战SSH端口转发</span>
+            <span class="post-date" title="2018-04-20 10:49:40">2018/04/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2018/04/10/%E7%AC%94%E8%AE%B0/Motor/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B9%8B%E7%9F%A2%E9%87%8F%E6%8E%A7%E5%88%B6%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="电机控制之矢量控制的基本方法">电机控制之矢量控制的基本方法</span>
+            <span class="post-date" title="2018-04-10 17:28:54">2018/04/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/04/03/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BreStructuredText%E8%AF%AD%E6%B3%95/"
+           data-tag="reStructuredText"
+           data-author="" >
+            <span class="post-title" title="[转]工具参考书之reStructuredText语法">[转]工具参考书之reStructuredText语法</span>
+            <span class="post-date" title="2018-04-03 00:14:32">2018/04/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/04/03/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BMarkDown%E8%AF%AD%E6%B3%95/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="[转]工具参考书之MarkDown语法">[转]工具参考书之MarkDown语法</span>
+            <span class="post-date" title="2018-04-03 00:14:01">2018/04/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2018/04/02/%E6%9D%82%E8%AE%B0/%E5%85%B3%E4%BA%8E%E8%BE%93%E5%85%A5%E9%98%BB%E6%8A%97%E5%92%8C%E8%BE%93%E5%87%BA%E9%98%BB%E6%8A%97%E7%9A%84%E7%90%86%E8%A7%A3/"
+           data-tag="电路"
+           data-author="" >
+            <span class="post-title" title="[转]关于输入阻抗和输出阻抗的理解">[转]关于输入阻抗和输出阻抗的理解</span>
+            <span class="post-date" title="2018-04-02 11:02:19">2018/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/03/19/Gist/c&c++/cin-tie%E4%B8%8Esync-with-stdio%E5%8A%A0%E9%80%9F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="[转]c/c++:cin.tie与sync_with_stdio加速输入输出">[转]c/c++:cin.tie与sync_with_stdio加速输入输出</span>
+            <span class="post-date" title="2018-03-19 00:00:00">2018/03/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/03/18/Gist/c&c++/c-c-%E5%9C%A8main%E4%B9%8B%E5%89%8D%E8%BF%90%E8%A1%8C%E6%8C%87%E5%AE%9A%E4%BB%A3%E7%A0%81/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:在main之前运行指定代码">c/c++:在main之前运行指定代码</span>
+            <span class="post-date" title="2018-03-18 23:40:05">2018/03/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/03/09/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8Bmatplotlib%E4%BD%BF%E7%94%A8/"
+           data-tag="matplotlib"
+           data-author="" >
+            <span class="post-title" title="工具参考书之Matplotlib使用">工具参考书之Matplotlib使用</span>
+            <span class="post-date" title="2018-03-09 12:10:10">2018/03/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2018/03/08/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8Bnumpy%E4%BD%BF%E7%94%A8/"
+           data-tag="numpy"
+           data-author="" >
+            <span class="post-title" title="工具参考书之NumPy使用">工具参考书之NumPy使用</span>
+            <span class="post-date" title="2018-03-08 14:15:12">2018/03/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/02/02/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BBb-tree/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画b-tree">字符画之画b-tree</span>
+            <span class="post-date" title="2018-02-02 15:10:33">2018/02/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/02/01/Gist/c&c++/c-%E7%B1%BB%E7%9A%84%E5%90%84%E7%B1%BB%E5%9E%8B%E6%88%90%E5%91%98%E5%88%9D%E5%A7%8B%E5%8C%96/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:类的各类型成员初始化">c/c++:类的各类型成员初始化</span>
+            <span class="post-date" title="2018-02-01 16:44:10">2018/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/02/01/Gist/c&c++/c-%E7%94%A8using%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:用using定义类型别名">c/c++:用using定义类型别名</span>
+            <span class="post-date" title="2018-02-01 16:14:03">2018/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/01/25/Gist/c&c++/c-c-CountBits%E8%AE%A1%E7%AE%97/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:CountBits计算">c/c++:CountBits计算</span>
+            <span class="post-date" title="2018-01-25 20:07:48">2018/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/01/25/Gist/c&c++/c-c-getopt%E8%A7%A3%E6%9E%90%E5%8F%82%E6%95%B0/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:getopt解析参数">c/c++:getopt解析参数</span>
+            <span class="post-date" title="2018-01-25 10:44:23">2018/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/01/25/Gist/c&c++/c-%E4%BD%BF%E7%94%A8std%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:使用std的多线程">c/c++:使用std的多线程</span>
+            <span class="post-date" title="2018-01-25 10:26:09">2018/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2018/01/24/Gist/python/py-%E7%B1%BB%E7%9A%84%E5%88%97%E8%A1%A8%E6%88%90%E5%91%98%E7%B1%BB%E5%9E%8B/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:类的列表成员类型">py:类的列表成员类型</span>
+            <span class="post-date" title="2018-01-24 15:24:53">2018/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/01/24/Gist/c&c++/c-auto%E5%9C%A8%E9%81%8D%E5%8E%86%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:auto在遍历中的使用">c/c++:auto在遍历中的使用</span>
+            <span class="post-date" title="2018-01-24 15:22:12">2018/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2018/01/21/Gist/html/markdown%E4%B8%AD%E5%B5%8C%E5%85%A5html/"
+           data-tag="html"
+           data-author="" >
+            <span class="post-title" title="html:markdown中嵌入html">html:markdown中嵌入html</span>
+            <span class="post-date" title="2018-01-21 23:18:46">2018/01/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2018/01/18/Gist/c&c++/c-lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:lambda表达式">c/c++:lambda表达式</span>
+            <span class="post-date" title="2018-01-18 15:46:56">2018/01/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/01/15/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BB%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画二叉搜索树">字符画之画二叉搜索树</span>
+            <span class="post-date" title="2018-01-15 17:35:07">2018/01/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DSA "
+           href="/2018/01/11/%E7%AC%94%E8%AE%B0/DSA/%E5%AD%97%E7%AC%A6%E7%94%BB%E4%B9%8B%E7%94%BB%E6%8E%92%E5%BA%8F/"
+           data-tag="数据结构(dsa)"
+           data-author="" >
+            <span class="post-title" title="字符画之画排序">字符画之画排序</span>
+            <span class="post-date" title="2018-01-11 17:33:19">2018/01/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/12/19/Gist/matlab/Python-Matlab%E7%BB%98%E5%88%B6%E7%9B%B8%E5%B9%B3%E9%9D%A2%E8%BD%A8%E8%BF%B9/"
+           data-tag="python,matlab"
+           data-author="" >
+            <span class="post-title" title="py/matlab:绘制相平面轨迹">py/matlab:绘制相平面轨迹</span>
+            <span class="post-date" title="2017-12-19 11:20:00">2017/12/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2017/10/30/%E7%AC%94%E8%AE%B0/Motor/%E6%BB%91%E6%A8%A1%E5%8F%98%E7%BB%93%E6%9E%84%E6%8E%A7%E5%88%B6%E5%88%9D%E6%AD%A5/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="滑模变结构控制初步">滑模变结构控制初步</span>
+            <span class="post-date" title="2017-10-30 13:34:12">2017/10/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2017/10/29/%E7%AC%94%E8%AE%B0/Motor/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B9%8BSVPWM/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="电机控制之SVPWM">电机控制之SVPWM</span>
+            <span class="post-date" title="2017-10-29 23:20:43">2017/10/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2017/10/10/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BMathjax%E5%B8%B8%E7%94%A8%E7%AC%A6%E5%8F%B7/"
+           data-tag="mathjax"
+           data-author="" >
+            <span class="post-title" title="工具参考书之Mathjax常用符号">工具参考书之Mathjax常用符号</span>
+            <span class="post-date" title="2017-10-10 21:22:55">2017/10/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/10/10/%E6%9D%82%E8%AE%B0/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9A%84%E6%95%85%E4%BA%8B-ASCII-ANSI-Unicode-Utf-8%E7%9A%84%E5%8C%BA%E5%88%AB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="[转]字符编码的故事(ASCII, ANSI, UNICODE, UTF-8的区别)">[转]字符编码的故事(ASCII, ANSI, UNICODE, UTF-8的区别)</span>
+            <span class="post-date" title="2017-10-10 15:39:47">2017/10/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/10/09/Gist/qt/Qt%E7%BB%93%E6%9D%9F%E7%BA%BF%E7%A8%8B/"
+           data-tag="qt"
+           data-author="" >
+            <span class="post-title" title="qt:结束线程">qt:结束线程</span>
+            <span class="post-date" title="2017-10-09 18:59:23">2017/10/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/10/02/Gist/c&c++/Cpp%E4%B8%ADenum%E4%B8%8Eclass%E9%87%8D%E5%90%8D%E9%97%AE%E9%A2%98/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:enum和class重名问题">c/c++:enum和class重名问题</span>
+            <span class="post-date" title="2017-10-02 23:10:37">2017/10/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/09/30/%E6%9D%82%E8%AE%B0/%E4%BD%BF%E7%94%A8curl%E8%BF%9B%E8%A1%8C%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%99%BB%E5%BD%95/"
+           data-tag="shell"
+           data-author="" >
+            <span class="post-title" title="使用curl进行校园网登录">使用curl进行校园网登录</span>
+            <span class="post-date" title="2017-09-30 00:22:13">2017/09/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/09/29/%E6%9D%82%E8%AE%B0/Cpp%E7%B1%BB%E7%AC%94%E8%AE%B0/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="C++ Class笔记">C++ Class笔记</span>
+            <span class="post-date" title="2017-09-29 21:50:32">2017/09/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/09/29/Gist/c&c++/%E6%8C%87%E9%92%88%E9%87%8A%E6%94%BE%E9%97%AE%E9%A2%98/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:指针释放问题">c/c++:指针释放问题</span>
+            <span class="post-date" title="2017-09-29 21:32:02">2017/09/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/09/29/Gist/qt/Qt%E7%95%8C%E9%9D%A2%E8%AF%AD%E8%A8%80%E5%8A%A8%E6%80%81%E5%88%87%E6%8D%A2/"
+           data-tag="qt"
+           data-author="" >
+            <span class="post-title" title="qt:界面语言动态切换">qt:界面语言动态切换</span>
+            <span class="post-date" title="2017-09-29 21:18:18">2017/09/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/09/28/%E6%9D%82%E8%AE%B0/Linux%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux自动挂载权限问题">Linux自动挂载权限问题</span>
+            <span class="post-date" title="2017-09-28 19:56:50">2017/09/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/09/08/%E6%9D%82%E8%AE%B0/DSP-FlashToRAM%E8%BF%90%E8%A1%8C/"
+           data-tag="dsp"
+           data-author="" >
+            <span class="post-title" title="DSP Flash to RAM运行">DSP Flash to RAM运行</span>
+            <span class="post-date" title="2017-09-08 19:15:09">2017/09/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/09/01/Gist/gsp/%E5%9B%BE%E7%A4%BA%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/"
+           data-tag="gsp"
+           data-author="" >
+            <span class="post-title" title="gsp:图示贝塞尔曲线">gsp:图示贝塞尔曲线</span>
+            <span class="post-date" title="2017-09-01 10:08:59">2017/09/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2017/08/21/Gist/python/FFT%E5%92%8C%E6%BB%A4%E6%B3%A2%E6%BC%94%E7%A4%BA/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:FFT和滤波演示">py:FFT和滤波演示</span>
+            <span class="post-date" title="2017-08-21 21:45:09">2017/08/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/08/17/Gist/gsp/%E4%BB%8E%E4%B8%89%E8%A7%92%E5%8D%95%E4%BD%8D%E5%9C%86%E7%9C%8BFourier/"
+           data-tag="gsp"
+           data-author="" >
+            <span class="post-title" title="gsp:从三角单位圆看Fourier">gsp:从三角单位圆看Fourier</span>
+            <span class="post-date" title="2017-08-17 15:07:56">2017/08/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist others "
+           href="/2017/08/15/Gist/matlab/Simulink-Integrator%E7%9A%84%E7%90%86%E8%A7%A3/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="matlab:Simulink Integrator的理解">matlab:Simulink Integrator的理解</span>
+            <span class="post-date" title="2017-08-15 19:26:30">2017/08/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2017/08/15/Gist/python/implement-atan2-from-atan/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:implement atan2 from atan">py:implement atan2 from atan</span>
+            <span class="post-date" title="2017-08-15 17:42:53">2017/08/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/08/11/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Nodejs/"
+           data-tag="node.js"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Node.js">软件应用之 Node.js</span>
+            <span class="post-date" title="2017-08-11 23:02:41">2017/08/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2017/08/09/Gist/python/python-function-decorator/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:function decorator">py:function decorator</span>
+            <span class="post-date" title="2017-08-09 21:16:24">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/make-dll/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:dll动态库生成">c/c++:dll动态库生成</span>
+            <span class="post-date" title="2017-08-09 15:50:46">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/throw-and-catch/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:异常抛出(throw and catch)">c/c++:异常抛出(throw and catch)</span>
+            <span class="post-date" title="2017-08-09 15:48:39">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/const-value-as-address-pointer/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:常量作为地址">c/c++:常量作为地址</span>
+            <span class="post-date" title="2017-08-09 13:38:49">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/pointer-parameter/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:指针作为函数参数">c/c++:指针作为函数参数</span>
+            <span class="post-date" title="2017-08-09 13:37:27">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/variable-list/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:可变参数用法">c/c++:可变参数用法</span>
+            <span class="post-date" title="2017-08-09 13:35:17">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/main-parameter/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:主函数参数使用">c/c++:主函数参数使用</span>
+            <span class="post-date" title="2017-08-09 13:33:18">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/inherited-variable/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:关于类成员变量的继承">c/c++:关于类成员变量的继承</span>
+            <span class="post-date" title="2017-08-09 13:30:56">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/function-pointer/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:function pointer">c/c++:function pointer</span>
+            <span class="post-date" title="2017-08-09 13:28:41">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/define-usage/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:define usage">c/c++:define usage</span>
+            <span class="post-date" title="2017-08-09 13:23:36">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/const-decoration/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:const修饰函数">c/c++:const修饰函数</span>
+            <span class="post-date" title="2017-08-09 13:22:04">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/callback-function/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:回调函数">c/c++:回调函数</span>
+            <span class="post-date" title="2017-08-09 13:20:28">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/pointer-and-array/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:指针与数组">c/c++:指针与数组</span>
+            <span class="post-date" title="2017-08-09 13:17:57">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/sizeof-pointer-arrray/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:sizeof pointer and array">c/c++:sizeof pointer and array</span>
+            <span class="post-date" title="2017-08-09 13:08:56">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/time-as-name-string/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:生成时间string">c/c++:生成时间string</span>
+            <span class="post-date" title="2017-08-09 13:05:30">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist python "
+           href="/2017/08/09/Gist/python/loan-calculation/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="py:loan calculation">py:loan calculation</span>
+            <span class="post-date" title="2017-08-09 11:26:37">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 Gist c-cpp "
+           href="/2017/08/09/Gist/c&c++/path-define/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="c/c++:用宏配置路径">c/c++:用宏配置路径</span>
+            <span class="post-date" title="2017-08-09 11:17:04">2017/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2017/07/17/%E7%AC%94%E8%AE%B0/Motor/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B9%8B%E6%B0%B8%E7%A3%81%E5%90%8C%E6%AD%A5%E7%94%B5%E6%9C%BA%E7%9F%A2%E9%87%8F%E6%8E%A7%E5%88%B6/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="电机控制之永磁同步电机矢量控制">电机控制之永磁同步电机矢量控制</span>
+            <span class="post-date" title="2017-07-17 14:34:46">2017/07/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2017/07/16/%E7%AC%94%E8%AE%B0/Motor/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B9%8B%E7%A9%BA%E9%97%B4%E7%9F%A2%E9%87%8F/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="电机控制之空间矢量">电机控制之空间矢量</span>
+            <span class="post-date" title="2017-07-16 23:27:43">2017/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 "
+           href="/2017/07/13/%E7%AC%94%E8%AE%B0/Motor/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B9%8B%E7%94%B5%E7%A3%81%E5%9F%BA%E7%A1%80/"
+           data-tag="电机控制"
+           data-author="" >
+            <span class="post-title" title="电机控制之电磁基础">电机控制之电磁基础</span>
+            <span class="post-date" title="2017-07-13 16:55:27">2017/07/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/07/03/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-QtCreator/"
+           data-tag="qt"
+           data-author="" >
+            <span class="post-title" title="软件应用之 QtCreator">软件应用之 QtCreator</span>
+            <span class="post-date" title="2017-07-03 17:52:50">2017/07/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/17/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-VS/"
+           data-tag="visual studio"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Visual Studio">软件应用之 Visual Studio</span>
+            <span class="post-date" title="2017-06-17 23:19:37">2017/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/17/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Keil/"
+           data-tag="keil"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Keil">软件应用之 Keil</span>
+            <span class="post-date" title="2017-06-17 22:12:22">2017/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/17/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-Office/"
+           data-tag="office"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Office">软件应用之 Office</span>
+            <span class="post-date" title="2017-06-17 01:02:08">2017/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/17/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-AltiumDesigner/"
+           data-tag="altium designer"
+           data-author="" >
+            <span class="post-title" title="软件应用之 AltiumDesigner">软件应用之 AltiumDesigner</span>
+            <span class="post-date" title="2017-06-17 00:24:49">2017/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/16/%E6%9D%82%E8%AE%B0/0Usage/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8%E4%B9%8B-CCS/"
+           data-tag="ccs"
+           data-author="" >
+            <span class="post-title" title="软件应用之 Code Composer Studio">软件应用之 Code Composer Studio</span>
+            <span class="post-date" title="2017-06-16 16:36:56">2017/06/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/16/%E6%9D%82%E8%AE%B0/%E4%BA%94%E7%AC%9486/"
+           data-tag="五笔"
+           data-author="" >
+            <span class="post-title" title="五笔86">五笔86</span>
+            <span class="post-date" title="2017-06-16 12:06:15">2017/06/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/16/%E6%9D%82%E8%AE%B0/SSD%E4%BC%98%E5%8C%96/"
+           data-tag="ssd"
+           data-author="" >
+            <span class="post-title" title="SSD优化">SSD优化</span>
+            <span class="post-date" title="2017-06-16 10:52:53">2017/06/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/15/%E6%9D%82%E8%AE%B0/ROM%E5%92%8CRAM/"
+           data-tag="单片机"
+           data-author="" >
+            <span class="post-title" title="ROM和RAM">ROM和RAM</span>
+            <span class="post-date" title="2017-06-15 21:27:13">2017/06/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 OS "
+           href="/2017/06/11/%E7%AC%94%E8%AE%B0/OS/Arch-Linux%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/"
+           data-tag="linux,arch"
+           data-author="" >
+            <span class="post-title" title="Arch Linux安装记录">Arch Linux安装记录</span>
+            <span class="post-date" title="2017-06-11 23:36:58">2017/06/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/%E4%BF%A1%E5%8F%B7%E6%A7%BD%E5%BA%93%EF%BC%9Asigslot-h%E5%92%8Csigc-%E4%BD%BF%E7%94%A8/"
+           data-tag="c/c++"
+           data-author="" >
+            <span class="post-title" title="信号槽库：sigslot.h和sigc++使用">信号槽库：sigslot.h和sigc++使用</span>
+            <span class="post-date" title="2017-06-09 18:09:52">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/%E4%B8%A4%E4%B8%AAgif%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E5%BA%93%E4%BD%BF%E7%94%A8/"
+           data-tag="c/c++,gif"
+           data-author="" >
+            <span class="post-title" title="两个gif图片处理库使用">两个gif图片处理库使用</span>
+            <span class="post-date" title="2017-06-09 18:00:52">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95/"
+           data-tag="ssh,teamviewer"
+           data-author="" >
+            <span class="post-title" title="跨平台远程登录(SSH,TeamViewer)">跨平台远程登录(SSH,TeamViewer)</span>
+            <span class="post-date" title="2017-06-09 17:50:02">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/Windows%E4%BD%BF%E7%94%A8mklink%E5%BB%BA%E7%AB%8B%E2%80%9C%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5%E2%80%9D/"
+           data-tag="cmd"
+           data-author="" >
+            <span class="post-title" title="Windows使用mklink建立“符号链接”">Windows使用mklink建立“符号链接”</span>
+            <span class="post-date" title="2017-06-09 17:42:53">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/Windows%E6%90%AD%E5%BB%BA%E7%B1%BBUNIX%E7%8E%AF%E5%A2%83-Msys2-MinGW-w64/"
+           data-tag="mingw"
+           data-author="" >
+            <span class="post-title" title="Windows搭建类UNIX环境: Msys2+MinGW-w64">Windows搭建类UNIX环境: Msys2+MinGW-w64</span>
+            <span class="post-date" title="2017-06-09 00:36:01">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 杂记 "
+           href="/2017/06/09/%E6%9D%82%E8%AE%B0/linux%E4%B8%8Bopencv3-1-0%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
+           data-tag="ubuntu,opencv,qt"
+           data-author="" >
+            <span class="post-title" title="linux下opencv3.1.0的基本使用">linux下opencv3.1.0的基本使用</span>
+            <span class="post-date" title="2017-06-09 00:11:05">2017/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 OS "
+           href="/2017/06/08/%E7%AC%94%E8%AE%B0/OS/USB%E5%90%AF%E5%8A%A8%E7%AE%A1%E7%90%86/"
+           data-tag="boot,refind,grub4dos"
+           data-author="" >
+            <span class="post-title" title="USB启动管理">USB启动管理</span>
+            <span class="post-date" title="2017-06-08 23:32:50">2017/06/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2017/06/07/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BGCC%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
+           data-tag="c/c++,linux,gcc"
+           data-author="" >
+            <span class="post-title" title="工具参考书之GCC基本使用">工具参考书之GCC基本使用</span>
+            <span class="post-date" title="2017-06-07 01:05:36">2017/06/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 OS "
+           href="/2017/06/07/%E7%AC%94%E8%AE%B0/OS/Ubuntu%E5%B8%B8%E7%94%A8%E8%AE%BE%E7%BD%AE/"
+           data-tag="linux,ubuntu"
+           data-author="" >
+            <span class="post-title" title="Ubuntu常用设置">Ubuntu常用设置</span>
+            <span class="post-date" title="2017-06-07 00:38:29">2017/06/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2017/06/06/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BLinux%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0/"
+           data-tag="linux,ubuntu"
+           data-author="" >
+            <span class="post-title" title="工具参考书之Linux命令学习">工具参考书之Linux命令学习</span>
+            <span class="post-date" title="2017-06-06 14:21:13">2017/06/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 笔记 DOC "
+           href="/2017/06/05/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BGit%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="工具参考书之Git命令行基础">工具参考书之Git命令行基础</span>
+            <span class="post-date" title="2017-06-05 23:34:57">2017/06/05</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-笔记/DOC/工具参考书之OpenCv基本使用" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">工具参考书之OpenCv基本使用</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="笔记">笔记</a> > 
+            
+            <a  data-rel="笔记&lt;---&gt;DOC">DOC</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">opencv</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2019-05-21 20:48:48'>2018-05-29 17:31</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Include%E5%92%8CLib"><span class="toc-text">Include和Lib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">常用数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAcv-Mat"><span class="toc-text">创建cv::Mat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cv-Mat%E8%BF%90%E7%AE%97"><span class="toc-text">cv::Mat运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%85%83%E7%B4%A0"><span class="toc-text">访问元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97"><span class="toc-text">矩阵基本计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C%E6%8E%A5%E5%8F%A3"><span class="toc-text">C接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-text">图像基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E8%AF%BB%E5%86%99"><span class="toc-text">图片读写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA"><span class="toc-text">图片显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E8%AF%BB%E5%86%99"><span class="toc-text">视频读写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E7%BB%98%E5%88%B6"><span class="toc-text">图像绘制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Python%E4%B8%AD%E4%BD%BF%E7%94%A8OpenCv"><span class="toc-text">Python中使用OpenCv</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%A0%E4%B8%AA%E5%B0%8Fdemo"><span class="toc-text">几个小demo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E7%95%B8%E5%8F%98%E6%A0%A1%E6%AD%A3"><span class="toc-text">图像畸变校正</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DPM%E4%BA%BA%E7%89%A9%E6%A3%80%E6%B5%8B"><span class="toc-text">DPM人物检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tracker%E7%89%A9%E4%BD%93%E8%B7%9F%E8%B8%AA"><span class="toc-text">Tracker物体跟踪</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97"><span class="toc-text">常用模块</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>复习一遍学过的OpenCv相关模块内容，具体参考<a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/">官方文档</a>；安装和开发环境配置<a target="_blank" rel="noopener" href="http://yhhx.tech/2017/06/09/%E7%AC%94%E8%AE%B0/linux%E4%B8%8Bopencv3-1-0%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">可参考这</a>。</p>
+<h1 id="Include和Lib"><a href="#Include和Lib" class="headerlink" title="Include和Lib"></a>Include和Lib</h1><p>使用OpenCv前必须设置好头文件和库文件路径，不同的环境有不同的语法，但本质不会变。如果使用C++开发，一般来说，包含opencv2中的头文件更方便，opencv2基于C++进行接口封装，分模块管理，使用更方便。而库文件同样分模块，幸运的是，OpenCv3.0后只需要添加opencv_world这一个库文件路径。<br>这里附上qmake主要设置：</p>
+<pre><code>INCLUDEPATH += C:/MyApps/opencv310/build/include/
+LIBS        += \
+    -L$$&quot;C:/MyApps/opencv310/build/x64/vc14/lib&quot; \
+    -lopencv_world310d
+</code></pre>
+<p>对于头文件，分不清模块间区别，就直接包含<code>opencv2/opencv.hpp</code>吧。</p>
+<hr>
+<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="常用数据类型"><a href="#常用数据类型" class="headerlink" title="常用数据类型"></a>常用数据类型</h2><ul>
+<li><code>cv::Mat</code>：N维数组类，也是一个通用的矩阵类和图像类；</li>
+<li><code>type</code>：表示数组类每个元素的类型，或表示图像每个像素的类型，通过宏定义<code>CV_MAKE_TYPE</code>实现；</li>
+<li><code>cv::Point</code>：点坐标，包含x,y两个元素；</li>
+<li><code>cv::Size</code>：尺寸，包含width,height两个元素；<br>（Point和Size均只有两个成员变量，貌似相同，但是两个类中封装的函数不一样，Point可以进行点乘等运算，而Size可以计算面积等）</li>
+<li><code>cv::Rect</code>：长方形结构体，包括长方形的左上角坐标和大小；</li>
+<li><code>cv::Range</code>：范围或区间，用于表示子序列(subsequence)或切片(slice)；</li>
+<li><code>cv::Scalar</code>：4元素向量；</li>
+<li><code>cv::String</code>：字符串；</li>
+<li><code>cv::_InputArray</code>,<code>cv::_OutputArray</code>：输入输出类，其拷贝构造函数可以接受Mat,Vec等各种数据类型；</li>
+<li><code>cv::Mat_&lt;T&gt;</code>：N维数组类，在编译时确定元素类型；</li>
+<li><code>cv::Matx&lt;T,m,n&gt;</code>：用于小尺寸矩阵，在编译时确定元素类型和矩阵尺寸；</li>
+<li><code>cv::MatIterator_&lt;T&gt;</code>：Mat迭代器；</li>
+<li><code>cv::Complex&lt;T&gt;</code>：复数类，和std::complex类似；</li>
+<li><code>cv::UMat</code>：类似于Mat（会在支持OpenCL的设备上自动使用GPU运算，在不支持OpenCL的设备仍然使用CPU运算）</li>
+<li><code>cv::cuda::GpuMat</code>：用使Gpu的Mat类型，需要安装Cuda；</li>
+</ul>
+<p>模板类之间的联系：</p>
+<pre><code>// type
+CV_MAKE_TYPE(depth,cn) ~ CV_MAKE_TYPE(CV_8U,cn) -&gt; CV_8UC(n)
+CV_MAKE_TYPE(depth,cn) ~ CV_MAKE_TYPE(CV_8U,1)  -&gt; CV_8UC1
+
+// 坐标和点
+cv::Point_&lt;T&gt;  ~ cv::Point_&lt;int&gt;  -&gt; cv::Point2i -&gt; cv::Point
+cv::Point3_&lt;T&gt; ~ cv::Point3_&lt;int&gt; -&gt; cv::Point3i
+cv::Size_&lt;T&gt;   ~ cv::Size_&lt;int&gt;   -&gt; cv::Size2i  -&gt; cv::Size
+cv::Rect_&lt;T&gt;   ~ cv::Size_&lt;int&gt;   -&gt; cv::Rect2i  -&gt; cv::Rect
+
+// 矩阵和向量
+cv::Matx&lt;T,m,n&gt; ~ cv::Matx&lt;T,m,1&gt; ~ cv::Vec&lt;T, m&gt;
+cv::Vec&lt;T, 4&gt;   ~ cv::Scalar_&lt;T&gt;  ~ cv::Scalar_&lt;double&gt; -&gt; cv::Scalar
+cv::Vec&lt;T, n&gt;   ~ cv::Vec&lt;int, 2&gt;   -&gt; cv::Vec2i
+cv::Vec&lt;T, n&gt;   ~ cv::Vec&lt;uchar, 3&gt; -&gt; cv::Vec3b
+</code></pre>
+<p>更多的<a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/dc/d84/group__core__basic.html">数据类型可参考这</a>。</p>
+<p><code>type</code>与通道类型对应关系：</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">C1</th>
+<th align="left">C2</th>
+<th align="left">C3</th>
+<th align="left">C4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">CV_8U</td>
+<td align="left">0</td>
+<td align="left">8</td>
+<td align="left">16</td>
+<td align="left">24</td>
+</tr>
+<tr>
+<td align="left">CV_8S</td>
+<td align="left">1</td>
+<td align="left">9</td>
+<td align="left">17</td>
+<td align="left">25</td>
+</tr>
+<tr>
+<td align="left">CV_16U</td>
+<td align="left">2</td>
+<td align="left">10</td>
+<td align="left">18</td>
+<td align="left">26</td>
+</tr>
+<tr>
+<td align="left">CV_16S</td>
+<td align="left">3</td>
+<td align="left">11</td>
+<td align="left">19</td>
+<td align="left">27</td>
+</tr>
+<tr>
+<td align="left">CV_32S</td>
+<td align="left">4</td>
+<td align="left">12</td>
+<td align="left">20</td>
+<td align="left">28</td>
+</tr>
+<tr>
+<td align="left">CV_32F</td>
+<td align="left">5</td>
+<td align="left">13</td>
+<td align="left">21</td>
+<td align="left">29</td>
+</tr>
+<tr>
+<td align="left">CV_64F</td>
+<td align="left">6</td>
+<td align="left">14</td>
+<td align="left">22</td>
+<td align="left">30</td>
+</tr>
+</tbody></table>
+<p><code>type</code>与数据类型对应关系：</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">C1</th>
+<th align="left">C2</th>
+<th align="left">C3</th>
+<th align="left">C4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">CV_8U</td>
+<td align="left"><code>uchar</code></td>
+<td align="left"><code>Vec2b</code></td>
+<td align="left"><code>Vec3b</code></td>
+<td align="left"><code>Vec4b</code></td>
+</tr>
+<tr>
+<td align="left">CV_8S</td>
+<td align="left"><code>char</code></td>
+<td align="left"><code>Vec&lt;char, 2&gt;</code></td>
+<td align="left"><code>Vec&lt;char, 3&gt;</code></td>
+<td align="left"><code>Vec&lt;char, 4&gt;</code></td>
+</tr>
+<tr>
+<td align="left">CV_16U</td>
+<td align="left"><code>short</code></td>
+<td align="left"><code>Vec2w</code></td>
+<td align="left"><code>Vec3w</code></td>
+<td align="left"><code>Vec4w</code></td>
+</tr>
+<tr>
+<td align="left">CV_16S</td>
+<td align="left"><code>ushort</code></td>
+<td align="left"><code>Vec2s</code></td>
+<td align="left"><code>Vec3s</code></td>
+<td align="left"><code>Vec4s</code></td>
+</tr>
+<tr>
+<td align="left">CV_32S</td>
+<td align="left"><code>int</code></td>
+<td align="left"><code>Vec2i</code></td>
+<td align="left"><code>Vec3i</code></td>
+<td align="left"><code>Vec4i</code></td>
+</tr>
+<tr>
+<td align="left">CV_32F</td>
+<td align="left"><code>float</code></td>
+<td align="left"><code>Vec2f</code></td>
+<td align="left"><code>Vec3f</code></td>
+<td align="left"><code>Vec4f</code></td>
+</tr>
+<tr>
+<td align="left">CV_64F</td>
+<td align="left"><code>double</code></td>
+<td align="left"><code>Vec2d</code></td>
+<td align="left"><code>Vec3d</code></td>
+<td align="left"><code>Vec4d</code></td>
+</tr>
+</tbody></table>
+<h2 id="创建cv-Mat"><a href="#创建cv-Mat" class="headerlink" title="创建cv::Mat"></a>创建cv::Mat</h2><ul>
+<li>创建二维图像</li>
+</ul>
+<pre><code class="cpp">cv::Mat mat(200, 300, CV_8UC3);
+std::cout &lt;&lt; &quot;dims: &quot;   &lt;&lt; mat.dims;        // 2维
+std::cout &lt;&lt; &quot;row:&quot;     &lt;&lt; mat.rows;        // 200行
+std::cout &lt;&lt; &quot;col:&quot;     &lt;&lt; mat.cols;        // 300列
+std::cout &lt;&lt; &quot;total:&quot;   &lt;&lt; mat.total();     // 总共60000个元素
+std::cout &lt;&lt; &quot;depth:&quot;   &lt;&lt; mat.depth();     // 深度，即类型CV_8U
+std::cout &lt;&lt; &quot;channel:&quot; &lt;&lt; mat.channels();  // 3通道，即类型C3
+std::cout &lt;&lt; &quot;eSize:&quot;   &lt;&lt; mat.elemSize();  // 一个元素为3个字节，即3个uchar
+std::cout &lt;&lt; &quot;eSize1:&quot;  &lt;&lt; mat.elemSize1(); // 元素的一个通道为1个字节，即uchar
+std::cout &lt;&lt; &quot;type:&quot;    &lt;&lt; mat.type();      // type == CV_8UC3
+</code></pre>
+<ul>
+<li>创建多维数组</li>
+</ul>
+<pre><code class="cpp">int size[] = &#123;20, 30, 20, 50&#125;;              // 每维的元素个数
+cv::Mat mat(sizeof(size) / sizeof(int), size, CV_16UC(5));
+std::cout &lt;&lt; &quot;dims: &quot;   &lt;&lt; mat.dims;        // 4维
+std::cout &lt;&lt; &quot;row:&quot;     &lt;&lt; mat.rows;        // 多维时为-1
+std::cout &lt;&lt; &quot;col:&quot;     &lt;&lt; mat.cols;        // 多维时为-1
+std::cout &lt;&lt; &quot;total:&quot;   &lt;&lt; mat.total();     // 总共600000个元素
+std::cout &lt;&lt; &quot;total:&quot;   &lt;&lt; mat.total(0, 2); // 维度在[0,2)总共600个元素
+std::cout &lt;&lt; &quot;depth:&quot;   &lt;&lt; mat.depth();     // 深度，即类型CV_16U
+std::cout &lt;&lt; &quot;channel:&quot; &lt;&lt; mat.channels();  // 5通道，即类型C(5)
+std::cout &lt;&lt; &quot;eSize:&quot;   &lt;&lt; mat.elemSize();  // 一个元素为10个字节，即5个ushort
+std::cout &lt;&lt; &quot;eSize1:&quot;  &lt;&lt; mat.elemSize1(); // 元素的一个通道为2个字节，即ushort
+std::cout &lt;&lt; &quot;type:&quot;    &lt;&lt; mat.type();      // type == CV_16UC(5)
+</code></pre>
+<ul>
+<li>从已有数据创建Mat</li>
+</ul>
+<pre><code class="cpp">mat.create(300, 300, CV_8UC3);
+uchar data[300*300*3];
+cv::Range range[] = &#123;cv::Range(0, 100), cv::Range(0, 200)&#125;;
+
+// 只创建矩阵头，使用data作为元素内存
+cv::Mat mat0(300, 300, CV_8UC3, data);
+
+// 只创建矩阵头，和mat共用指定的元素内存，
+cv::Mat mat1(mat, cv::Range(0, 100), cv::Range(0, 200));
+cv::Mat mat2(mat, cv::Range::all(), cv::Range(0, 200));
+cv::Mat mat3(mat, cv::Rect(0,0, 100, 200));
+cv::Mat mat4(mat, range);
+cv::Mat mat5 = mat;                 // 效果同 cv::Mat mat4(mat);
+cv::Mat mat6 = mat.reshape(4, 100); // 改成4通道，100行
+cv::Mat mat7 = mat.row(100);        // 取一行
+cv::Mat mat8 = mat.colRange(0, 100);// 取100列
+
+// 通过复制创建，包括元素内存数据也复制，即不共用元素内存
+cv::Mat mat9 = mat.clone();
+cv::Mat mat10;
+mat.copyTo(mat10);
+
+// 通过矩阵表达式(&#39;=&#39;右边为cv::MatExpr)计算，创建新的矩阵
+cv::Mat mat11 = mat0 + mat5;
+</code></pre>
+<ul>
+<li>创建特殊矩阵</li>
+</ul>
+<pre><code class="cpp">uchar vec[300] = &#123;255&#125;;
+cv::Mat mat0 = cv::Mat::diag(cv::Mat(cv::Vec&lt;uchar, 300&gt;(vec))); // 对角矩阵，需要给出对角线向量
+cv::Mat mat1 = cv::Mat::eye(300, 300, CV_8UC1) * 255;       // 单位矩阵
+cv::Mat mat2 = cv::Mat::ones(300, 300, CV_8UC1) * 128;      // 初值全为1的矩阵
+cv::Mat mat3 = cv::Mat::zeros(300, 300, CV_8UC1) + mat1;    // 初值全为0的矩阵
+cv::Matx&lt;uchar, 4, 4&gt; matl(0, 1, 2, 3,
+                           3, 2, 1, 0,
+                           4, 4, 4, 4,
+                           8, 8, 8, 8);                     // 创建小矩阵，编译时就确定的尺寸
+cv::Matx&lt;uchar, 3, 3&gt; mat33;
+mat33 &lt;&lt;  1, -1, 0,
+         -1,  0, 1,
+          0,  1, 1;
+</code></pre>
+<h2 id="cv-Mat运算"><a href="#cv-Mat运算" class="headerlink" title="cv::Mat运算"></a>cv::Mat运算</h2><p>具体的接口参考<a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/d3/d63/classcv_1_1Mat.html">cv::Mat</a>, <a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/df/dfc/classcv_1_1Mat__.html">cv::Mat_&lt;&gt;</a>, <a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/de/de1/classcv_1_1Matx.html">cv::Matx&lt;&gt;</a>, <a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/d1/d10/classcv_1_1MatExpr.html">cv::MatExpr</a></p>
+<h3 id="访问元素"><a href="#访问元素" class="headerlink" title="访问元素"></a>访问元素</h3><ul>
+<li>使用at或指针访问单个元素</li>
+</ul>
+<pre><code class="cpp">for (int k = 0; k &lt; mat.rows; k++)
+&#123;
+    uchar* byte = mat.ptr&lt;uchar&gt;(k);
+    cv::Vec3b* ptr = mat.ptr&lt;cv::Vec3b&gt;(k);
+    for (int i = 0; i &lt; mat.cols; i++)
+    &#123;
+        mat.at&lt;cv::Vec3b&gt;(k, i) = cv::Vec3b(k%255, 0, i%255);
+        byte[3*i+0] = k%255; byte[3*i+1] = 0; byte[3*i+2] = i%255;
+        ptr[i] = cv::Vec3b(k%255, 0, i%255);
+    &#125;
+&#125;
+</code></pre>
+<ul>
+<li>使用iterator访问单个元素</li>
+</ul>
+<pre><code class="cpp">for (cv::MatIterator_&lt;cv::Vec3b&gt; it = mat.begin&lt;cv::Vec3b&gt;();
+     it!=mat.end&lt;cv::Vec3b&gt;();
+     ++it)
+    *it = cv::Vec3b(0, 255, 255);
+
+// 结合Mat_&lt;&gt;和auto，iterator更方便使用
+for (auto&amp; it:cv::Mat_&lt;cv::Vec3b&gt;(mat))
+    it = cv::Vec3b(0, 255, 255);
+</code></pre>
+<ul>
+<li>使用forEach访问单个元素</li>
+</ul>
+<pre><code class="cpp">// 使用forEach，可以使用仿函数或lambda
+// 其中，pix为元素值，pos为元素坐标
+mat.forEach&lt;cv::Vec3b&gt;(
+    [](cv::Vec3b&amp; pix, const int* pos)-&gt;void&#123;pix = cv::Vec3b(255, 255, 0);&#125;
+);
+</code></pre>
+<ul>
+<li>按向量访问</li>
+</ul>
+<pre><code class="cpp">mat.row(150) = mat.row(0);      // 不起作用，&#39;=&#39;右边为cv::Mat，只是共用元素内存
+// 上面1行与下面3行等价，整个过程没有产生复制元素内存的操作
+cv::Mat a = mat.row(0);         // a和mat共用第0行元素内存
+cv::Mat b = mat.row(150);       // b和mat共用第150行元素内存
+a = b;                          // a和b共用元素内存
+
+mat.row(150) = mat.row(0) + 0;  // &#39;=&#39;右边为cv::MatExpr，会复制元素内存
+mat.row(0).copyTo(mat.row(150));// 通过copyTo，会复制元素内存数据
+mat.diag(-10).copyTo(mat.diag(10)); // 将对角线下第10行复制到对角线上第10行
+</code></pre>
+<h3 id="矩阵基本计算"><a href="#矩阵基本计算" class="headerlink" title="矩阵基本计算"></a>矩阵基本计算</h3><pre><code class="cpp">cv::Vec3f a(1.0, 0.0, 0.0);
+cv::Vec3f b(0.0, 1.0, 0.0);
+std::cout &lt;&lt; a.cross(b);        // 向量叉乘，向量积
+std::cout &lt;&lt; a.dot(b);          // 向量点乘
+
+cv::Mat a(cv::Matx22f(-2, 1, 4, -3));
+cv::Mat b(cv::Matx22f(1, 2, 3, 4));
+std::cout &lt;&lt; a.t();    // 转置矩阵
+std::cout &lt;&lt; a.inv();  // 逆矩阵
+std::cout &lt;&lt; a.diag(); // 对角线向量
+std::cout &lt;&lt; a.mul(b); // 按元素相乘
+std::cout &lt;&lt; a/b;      // 按元素相除
+std::cout &lt;&lt; a+b;      // 矩阵加法
+std::cout &lt;&lt; a*b;      // 矩阵乘法
+std::cout &lt;&lt; 2*a;
+std::cout &lt;&lt; (a&lt;b);    // 矩阵比较，结果为Mask矩阵
+std::cout &lt;&lt; (2.5&lt;b);
+std::cout &lt;&lt; cv::max(a, b);  // 取最值，结果矩阵
+std::cout &lt;&lt; cv::min(a, 0);
+std::cout &lt;&lt; cv::abs(a);
+
+cv::Mat c(cv::Matx&lt;int, 2, 2&gt;(1, 1, 4, 3));
+cv::Mat d(cv::Matx&lt;int, 2, 2&gt;(1, 2, 3, 4));
+std::cout &lt;&lt; (c&amp;d); // 按元素做位与
+std::cout &lt;&lt; (c|d); // 按元素做位或
+std::cout &lt;&lt; (c^d); // 按元素做位或
+</code></pre>
+<h3 id="C接口"><a href="#C接口" class="headerlink" title="C接口"></a>C接口</h3><p>前面均是基本C++介绍的，但是OpenCv同样提供的<a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/d2/df8/group__core__c.html">C接口</a>，具体可以看文档。C++接口用cv名字空间封装，而C接口以cv或CV开头，没有特殊情况，最好不要C和C++接口混用，虽然两者间可以转换。</p>
+<p>知道基本OpenCv数据结构的使用，那之后无论用Mat来处理图像，或是基于矩阵进行数值计算，基本上就是看库模块技术文档+实践的过程了。</p>
+<hr>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="图像基本操作"><a href="#图像基本操作" class="headerlink" title="图像基本操作"></a>图像基本操作</h1><p>基本的图像操作模块有<a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/d4/da8/group__imgcodecs.html">imgcodecs</a>,<a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/dd/de7/group__videoio.html">videoio</a>,<a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/d7/dfc/group__highgui.html">highgui</a>,<a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/d7/dbd/group__imgproc.html">imgproc</a>，下面是一些简单用法。</p>
+<h2 id="图片读写"><a href="#图片读写" class="headerlink" title="图片读写"></a>图片读写</h2><p>最简单就是使用imread和imwrite。</p>
+<pre><code class="cpp">cv::Mat img = cv::imread(&quot;pic.jpg&quot;);    // 读取图像数据到Mat
+cv::imwrite(&quot;pic_new.jpg&quot;, img);        // 将Mat保存成图像
+</code></pre>
+<h2 id="图片显示"><a href="#图片显示" class="headerlink" title="图片显示"></a>图片显示</h2><p>显示图片就要创建窗口，OpenCv通过字符串来索引窗口。如果要使用Qt做为图形显示后端，就需要自行编译，加入Qt编译参数。</p>
+<pre><code>cv::String wstr = &quot;Pic&quot;;
+cv::Mat img = cv::imread(&quot;pic.jpg&quot;);
+cv::namedWindow(wstr, cv::WindowFlags::WINDOW_AUTOSIZE);    // 创建窗口
+cv::moveWindow(wstr, 50, 50);                   // 移动窗口
+cv::setWindowTitle(wstr, &quot;Showing pic.jpg&quot;);    // 设置标题
+cv::Rect rect = cv::selectROI(img);             // 输入Rect
+cv::imshow(wstr, img);                          // 显示窗口
+while(1) &#123;
+    cv::imshow(wstr, img);
+    char key = cv::waitKey(10);     // 等待按键，同时便于观看窗口
+    if (key == &#39;q&#39; || key == 27) break;
+&#125;
+cv::destroyWindow(wstr);        // 释放窗口
+//cv::destroyAllWindows();      // 释放所有窗口
+</code></pre>
+<p>窗口中还可以添加鼠标事件，Trackbar等，通过回调来实现。</p>
+<h2 id="视频读写"><a href="#视频读写" class="headerlink" title="视频读写"></a>视频读写</h2><p>通过<code>cv:VideoCapture</code>或<code>cv:VideoWriter</code>来读写视频文件、摄像头图像等，其视频后端支持FFMpeg,OpenNI等。</p>
+<pre><code>//cv::VideoCapture cap(&quot;cam.mp4&quot;);  // 打开文件
+cv::VideoCapture cap(0);            // 打开摄像头
+//cap.open(0);                      // 使用open函数打开
+cv::Size size(cap.get(cv::CAP_PROP_FRAME_WIDTH),    // 获取cap参数
+              cap.get(cv::CAP_PROP_FRAME_HEIGHT));  // 同时通过set可以设置相映参数
+int codec = cv::VideoWriter::fourcc(&#39;M&#39;,&#39;J&#39;,&#39;P&#39;,&#39;G&#39;);
+cv::VideoWriter wrt(&quot;./cam.mp4&quot;, codec, 25, size, 1);
+
+while(1) &#123;
+    cap &gt;&gt; img; // cap.read(img);   // 读取图像
+    wrt &lt;&lt; img; // wrt.write(img);  // 将图像写入到文件
+    cv::imshow(wstr, img);
+    char key = cv::waitKey(10);
+    if (key == &#39;q&#39; || key == 27) break;
+&#125;
+cap.release();
+wrt.release();
+</code></pre>
+<h2 id="图像绘制"><a href="#图像绘制" class="headerlink" title="图像绘制"></a>图像绘制</h2><p>OpenCv提供了基本的绘图函数，到此<a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/d6/d6e/group__imgproc__draw.html">查看技术文档</a>。</p>
+<pre><code>cv::Mat img(300, 300, CV_8UC3);
+cv::Scalar clr_b = cv::Scalar(255,0,0);
+cv::Scalar clr_g = cv::Scalar(0,255,0);
+cv::Scalar clr_r = cv::Scalar(0,0,255);
+cv::arrowedLine(img, cv::Point(0,0), cv::Point(100,100), clr_b);
+cv::line(img, cv::Point(0,150), cv::Point(300,150), clr_g);
+cv::circle(img, cv::Point(150,150), 100, clr_r);
+cv::putText(img, &quot;Hello&quot;, cv::Point(100,100),
+        cv::HersheyFonts::FONT_HERSHEY_SIMPLEX, 1.0, clr_b);
+cv::imshow(wstr, img);
+</code></pre>
+<hr>
+<h1 id="Python中使用OpenCv"><a href="#Python中使用OpenCv" class="headerlink" title="Python中使用OpenCv"></a>Python中使用OpenCv</h1><p>先安装opencv-python，即可在python中引入。</p>
+<pre><code>import cv2
+
+img = cv2.imread(&#39;pic.jpg&#39;)
+cv2.imshow(&#39;pic&#39;, img)
+
+while True:
+    key = cv2.waitKey(10)
+    if key in [27, 113]:
+        break
+cv2.destroyAllWindows()
+</code></pre>
+<p>还可以和Matplotlib、Numpy等库结合使用。</p>
+<pre><code>import matplotlib.pyplot as plt
+import cv2
+plt.imshow(cv2.cvtColor(cv2.imread(&#39;pic.jpg&#39;), cv2.COLOR_BGR2RGB))
+plt.show()
+</code></pre>
+<h1 id="几个小demo"><a href="#几个小demo" class="headerlink" title="几个小demo"></a>几个小demo</h1><p>顺便附上几个以前用过模块的小demo。</p>
+<h2 id="图像畸变校正"><a href="#图像畸变校正" class="headerlink" title="图像畸变校正"></a>图像畸变校正</h2><p>原来用Matlab，用OpenCv也试下。</p>
+<pre><code class="cpp">std::vector&lt;cv::String&gt; filelist;// 图像文件
+
+// find corners
+int square_size = 30;           // 方格大小，mm
+cv::Size image_size(640, 480);  // 图像大小，pixel
+cv::Size border_size(13,12);    // 内角点个数
+std::vector&lt;std::vector&lt;cv::Point2f&gt;&gt; image_corners;// 角点坐标
+for (auto&amp; file:filelist)
+&#123;
+    cv::Mat img;
+    cv::Mat gray;
+    std::vector&lt;cv::Point2f&gt; corners;
+    img = cv::imread(file);
+    cv::cvtColor(img, gray, cv::COLOR_BGR2GRAY);
+
+    bool found = cv::findChessboardCorners(img, border_size, corners,
+        cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_FAST_CHECK | cv::CALIB_CB_NORMALIZE_IMAGE);
+    if (found)
+    &#123;
+        cv::cornerSubPix(gray, corners, cv::Size(11,11), cv::Size(-1,-1),
+                cv::TermCriteria(cv::TermCriteria::EPS + cv::TermCriteria::COUNT, 30, 0.1));
+        cv::drawChessboardCorners(img, border_size, cv::Mat(corners), found);
+
+        image_corners.push_back(corners);
+        cv::imshow(file, img);
+    &#125;
+&#125;
+
+// calc matrix
+cv::Mat cam_mat = cv::Mat::eye(3, 3, CV_64FC1);
+cv::Mat dist_coeffs = cv::Mat::zeros(8, 1, CV_64FC1);
+std::vector&lt;cv::Mat&gt; rvecs, tvecs;
+std::vector&lt;std::vector&lt;cv::Point3f&gt;&gt; obj_points(1);
+for (int i = 0; i &lt; border_size.height; i ++)
+    for (int j = 0; j &lt; border_size.width; j ++)
+        obj_points[0].push_back(cv::Point3f(float(j*square_size),
+                                            float(i*square_size),
+                                            0));
+obj_points.resize(image_corners.size(), obj_points[0]);
+cv::calibrateCamera(obj_points, image_corners, image_size,
+    cam_mat, dist_coeffs, rvecs, tvecs,
+    cv::CALIB_FIX_K4 | cv::CALIB_FIX_K5);
+
+// undistort
+cv::Mat view, rview, map1, map2;
+cv::initUndistortRectifyMap(cam_mat, dist_coeffs, cv::Mat(),
+    cv::getOptimalNewCameraMatrix(cam_mat, dist_coeffs, image_size, 1, image_size, 0),
+    image_size, CV_16SC2, map1, map2);
+for (auto&amp; file:filelist)
+&#123;
+    view = cv::imread(file);
+    //cv::undistort(view, rview, cam_mat, dist_coeffs, cam_mat);
+    cv::remap(view, rview, map1, map2, cv::INTER_LINEAR);
+    cv::imshow(file + &quot; + undistort&quot;, rview);
+&#125;
+
+
+</code></pre>
+<h2 id="DPM人物检测"><a href="#DPM人物检测" class="headerlink" title="DPM人物检测"></a>DPM人物检测</h2><p>DPM模块在opencv_contrib中，需要自行编译，或者直接使用源码。</p>
+<pre><code class="cpp">typedef cv::dpm::DPMDetector DD;
+cv::Mat img = cv::imread(&quot;pic.jpg&quot;);
+cv::Mat frame = img.clone();
+cv::Ptr&lt;DD&gt; detector =          // 检测器
+  DD::create(std::vector&lt;std::string&gt;(1, &quot;inriaperson.xml&quot;));
+std::vector&lt;DD::ObjectDetection&gt; ds;
+detector-&gt;detect(frame, ds);    // 开始检测
+for (auto&amp; it:ds)
+    cv::rectangle(img, it.rect, cv::Scalar(0,0,255), 2);
+cv::imshow(&quot;mat&quot;, img);
+</code></pre>
+<p>检测示例结果：</p>
+<p><img src="/pic_rect.jpg" alt="dpm"></p>
+<h2 id="Tracker物体跟踪"><a href="#Tracker物体跟踪" class="headerlink" title="Tracker物体跟踪"></a>Tracker物体跟踪</h2><p>tracking模块在opencv_contrib中，需要自行编译，或者直接使用源码。</p>
+<pre><code class="cpp">cv::Mat img;
+cv::Ptr&lt;cv::Tracker&gt; tracker = cv::Tracker::create(&quot;KCF&quot;);
+cv::VideoCapture cap(0);
+
+cap &gt;&gt; img;
+cv::Rect2d roi = cv::selectROI(&quot;tracker&quot;, img, false, false);   // 框选跟踪目标
+tracker-&gt;init(img, roi);
+
+while (cap.isOpened())
+&#123;
+    cap &gt;&gt; img;
+    tracker-&gt;update(img, roi);      // 跟踪
+    cv::rectangle(img, roi, cv::Scalar(0,0,255),2);
+    cv::imshow(&quot;tracker&quot;, img);
+&#125;
+</code></pre>
+<h1 id="常用模块"><a href="#常用模块" class="headerlink" title="常用模块"></a>常用模块</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/d2/de8/group__core__array.html">Operations on arrays</a>：线性代数计算等；</li>
+<li><a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/d7/dbd/group__imgproc.html">Image processing</a>：各种图像滤镜、特征检测、坐标变换等；</li>
+<li><a target="_blank" rel="noopener" href="https://docs.opencv.org/3.4.1/d9/d0c/group__calib3d.html">calib3d</a>：图像校准和3D重建；</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 [ yehuohan@gmail.com ] </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>工具参考书之OpenCv基本使用</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="Y">Y</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-05-29, 17:31:15</p>
+    <p><span class="copy-title">最后更新:</span>2019-05-21, 20:48:48</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/05/29/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BOpenCv%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="工具参考书之OpenCv基本使用">http://yehuohan.github.io/2018/05/29/%E7%AC%94%E8%AE%B0/DOC/%E5%B7%A5%E5%85%B7%E5%8F%82%E8%80%83%E4%B9%A6%E4%B9%8BOpenCv%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2017 Y
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

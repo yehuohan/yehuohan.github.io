@@ -1,0 +1,50 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{bm}
+
+\usetikzlibrary{arrows,automata}
+
+
+\input{motor.tex}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\coordinate (O1) at (0,0);
+
+\draw [line width=2pt] (O1) circle(0.1)
+	-- ++(10,0) -- +(0,1) coordinate (T1)
+	-- ++(0,5) -- ++(-1,0) ++(-1.6,0) coordinate (T2) 
+	-- ++(-1,0) ++(-1.6,0) coordinate (T22)
+	-- ++(-4.8,0)
+	circle (0.1) coordinate (T3);
+
+% 元件
+\powerVol{(T1)}{90};
+\inductor{(T2)}{0};
+\inductor{(T22)}{0};
+\filldraw [color=white] (T22)++(-1,-0.2) rectangle +(-1.5,0.4);
+\draw [line width=2pt] (T22)++(-1,-0.2) rectangle +(-1.5,0.4);
+
+\filldraw [color=white] (O1) circle(0.06);
+\filldraw [color=white] (T3) circle(0.06);
+
+% 符号
+\draw [line width=2pt] [latex-] (O1)++(0,1)--+(0,3) coordinate (T4);
+\draw (T4)+(0.5,-1.5) node {\LARGE \bm{$u_s$}};
+\draw [line width=2pt] [-latex] (T3)++(1,-0.5)--+(3,0) coordinate (T5);
+\draw (T5)+(-1.5,-0.5) node {\LARGE \bm{$i_s$}};
+
+\draw (T1)+(-1,0.5) node {\LARGE \bm{$e_0$}};
+\draw (T3)+(3,0.8) node {\LARGE \bm{$R$}};
+\draw (T3)+(5.5,0.8) node {\LARGE \bm{$L_{s\sigma}$}};
+\draw (T3)+(8.2,0.8) node {\LARGE \bm{$L_m$}};
+
+\draw (T2)+(-0.6,1.5) node [rotate = 180] {\bm{$\underbrace{\hspace{3cm}}$}};
+\draw (T2)+(-0.6,2) node {\LARGE \bm{$L_s$}};
+
+\end{tikzpicture}
+
+\end{document}
+

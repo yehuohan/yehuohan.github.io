@@ -1,0 +1,29 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{bm}
+
+\newcommand*{\is} {1}
+\newcommand*{\psif} {2.5}
+\newcommand*{\ldq} {-1}
+
+\begin{document}
+ 
+\begin{tikzpicture}[scale = 1.5]
+
+% 坐标轴
+\draw [line width = 1pt] [->] (0,0) -- (pi+pi/2,0) node[below] {\LARGE $\bm{\beta}$};
+\draw [line width = 1pt] [->] (0,0) -- (0,3.5) node[left] {\LARGE $\bm{t_{e}}$};
+\draw (pi/2, -0.2) node [below] {\LARGE $\bm{\pi \over 2}$};
+\draw (pi, -0.2) node [below] {\LARGE $\bm{\pi}$};
+
+% sin函数
+\draw [line width =2pt, color=cyan, domain=0:pi] plot(\x,{\psif*\is*sin(\x r)});
+\draw [line width =2pt, color=cyan, domain=0:pi] plot(\x,{1/2*\ldq*\is*\is*sin(2*\x r)});
+\draw [line width =2pt, color=blue, domain=0:pi] plot(\x,{\psif*\is*sin(\x r) + 1/2*\ldq*\is*\is*sin(2*\x r)});
+\draw [line width =1pt] (0.7,1.7)--(0.5,3) node [above] {\LARGE $\bm{1}$};
+\draw [line width =1pt] (2,0.4)--(1.5,1) node [above] {\LARGE $\bm{2}$};
+\draw [line width =1pt] (2.7,1.6)--(3,2.8) node [above] {\LARGE $\bm{3}$};
+\end{tikzpicture}
+
+\end{document}
+

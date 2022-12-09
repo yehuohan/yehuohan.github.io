@@ -1,0 +1,125 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+
+%\usepackage{CJKutf8}
+\usepackage{bm}
+
+\usetikzlibrary{arrows,automata}
+
+\newcommand {\tr} {18}
+
+\input{motor.tex}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\coordinate (O1) at (0,0);
+\coordinate (O2) at (9,0);
+\coordinate (O3) at (18,0);
+
+% 面装式
+\draw [line width=2pt] (O1) circle(2.5);
+\draw [line width=2pt] (O1) circle(1);
+% 磁铁
+\sector{(O1)}{2.5}{3}{45}{45/2};
+\sector{(O1)}{2.5}{3}{45}{45/2+90};
+\sector{(O1)}{2.5}{3}{45}{45/2+180};
+\sector{(O1)}{2.5}{3}{45}{45/2+270};
+
+% NS
+\draw (O1)+(45:1.9) node {\Large \textbf{N}};
+\draw (O1)+(45+90:1.9) node {\Large \textbf{S}};
+\draw (O1)+(45+180:1.9) node {\Large \textbf{N}};
+\draw (O1)+(45+270:1.9) node {\Large \textbf{S}};
+\draw (O1)+(45:3.5) node {\Large \textbf{S}};
+\draw (O1)+(45+90:3.5) node {\Large \textbf{N}};
+\draw (O1)+(45+180:3.5) node {\Large \textbf{S}};
+\draw (O1)+(45+270:3.5) node {\Large \textbf{N}};
+% Line
+\draw [line width=1.5pt](O1)--+(175:3.6);
+\draw [line width=1.5pt](O1)+(160:2)--+(162:3.7);
+\draw [line width=1.5pt](O1)+(220:2.7)--+(188:3.6);
+
+
+
+
+% 插入式
+\draw [line width=2pt] (O2) circle(2.5);
+\draw [line width=2pt] (O2) circle(1);
+% 磁铁
+\sector{(O2)}{2}{2.5}{45}{-45/2};
+\sector{(O2)}{2}{2.5}{45}{-45/2+90};
+\sector{(O2)}{2}{2.5}{45}{-45/2+180};
+\sector{(O2)}{2}{2.5}{45}{-45/2+270};
+
+% NS
+\draw (O2)+(0:1.5) node {\Large \textbf{N}};
+\draw (O2)+(0+90:1.5) node {\Large \textbf{S}};
+\draw (O2)+(0+180:1.5) node {\Large \textbf{N}};
+\draw (O2)+(0+270:1.5) node {\Large \textbf{S}};
+\draw (O2)+(0:3) node {\Large \textbf{S}};
+\draw (O2)+(0+90:3) node {\Large \textbf{N}};
+\draw (O2)+(0+180:3) node {\Large \textbf{S}};
+\draw (O2)+(0+270:3) node {\Large \textbf{N}};
+% Line
+\draw [line width=1.5pt](O2)--+(145:3.6);
+\draw [line width=1.5pt](O2)+(130:2)--+(132:4.1);
+\draw [line width=1.5pt](O2)+(170:2.3)--+(158:3.2);
+
+
+
+
+% 扇形
+% #1 圆心位置
+% #2 内圆半径
+% #3 外圆半径
+% #4 扇形角度
+% #5 旋转角度
+\newcommand {\sectorC}[5]{
+\filldraw [rotate around={#5:(0,0)}, color=white] 
+	#1++(0:#2) arc(0:#4:#2)
+	-- ++(#4:#3-#2)
+	arc(#4:0:#3)
+	-- ++(0:#2-#3);
+}
+
+% 内装式
+\coordinate (O31) at ([shift={+(0.2,0.2)}] O3);
+\coordinate (O32) at ([shift={+(-0.2,0.2)}] O3);
+\coordinate (O33) at ([shift={+(-0.2,-0.2)}] O3);
+\coordinate (O34) at ([shift={+(0.2,-0.2)}] O3);
+% 磁铁
+\filldraw [color=gray] (O3) circle(2.5);
+\sectorC{(O31)}{0}{2.3}{90}{0};
+\sectorC{(O32)}{0}{2.3}{90}{90};
+\sectorC{(O33)}{0}{2.3}{90}{180};
+\sectorC{(O34)}{0}{2.3}{90}{-90};
+\draw [line width=2pt] (O3)+(2.5,0.2) -- +(-2.5,0.2);
+\draw [line width=2pt] (O3)+(2.5,-0.2) -- +(-2.5,-0.2);
+\draw [line width=2pt] (O3)+(0.2,2.5) -- +(0.2,-2.5);
+\draw [line width=2pt] (O3)+(-0.2,2.5) -- +(-0.2,-2.5);
+% 铁心
+\filldraw [color=white] (O3)+(-1.1,-1.1) rectangle +(1.1,1.1);
+\draw [line width=2pt] (O3)+(-1.1,-1.1) rectangle +(1.1,1.1);
+\draw [line width=2pt] (O3) circle(2.5);
+\draw [line width=2pt] (O3) circle(1);
+% NS
+\draw (O3)+(-20:1.8) node {\Large \textbf{N}};
+\draw (O3)+(20:1.8) node {\Large \textbf{S}};
+\draw (O3)+(90+20:1.8) node {\Large \textbf{N}};
+\draw (O3)+(90-20:1.8) node {\Large \textbf{S}};
+\draw (O3)+(180-20:1.8) node {\Large \textbf{N}};
+\draw (O3)+(180+20:1.8) node {\Large \textbf{S}};
+\draw (O3)+(270+20:1.8) node {\Large \textbf{N}};
+\draw (O3)+(270-20:1.8) node {\Large \textbf{S}};
+% Line
+\draw [line width=1.5pt](O3)+(130:2)--+(135:4);
+\draw [line width=1.5pt](O3)--+(150:3.4);
+\draw [line width=1.5pt](O3)+(180:2.3)--+(168:3);
+\draw [line width=1.5pt](O3)+(225:1.2)--+(200:3.1);
+
+\end{tikzpicture}
+
+\end{document}
+

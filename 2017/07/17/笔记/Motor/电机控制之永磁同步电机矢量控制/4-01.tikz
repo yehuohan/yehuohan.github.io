@@ -1,0 +1,75 @@
+
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{bm}
+
+\usetikzlibrary{arrows,automata}
+
+\input{motor.tex}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+% d轴角度
+\newcommand {\tr} {20}
+% psi轴角度
+\newcommand {\trpsiAgl} {30}
+\newcommand {\trpsi} {\tr+\trpsiAgl}
+% is轴角度
+\newcommand {\trisAgl} {90}
+\newcommand {\tris} {\tr+\trisAgl}
+% us轴角度
+\newcommand {\trusAgl} {115}
+\newcommand {\trus} {\tr+\trusAgl}
+
+\coordinate (O1) at (5,0);
+
+% 插入式
+\draw [line width=2pt] (O1) circle(3);
+\draw [line width=2pt] (O1) circle(1.5);
+\draw [line width=2pt] (O1) circle(1);
+
+% 磁铁
+\sector{(O1)}{0.8}{1}{90}{\tr-45};
+\sector{(O1)}{0.8}{1}{90}{\tr-45+180};
+
+% A轴
+\draw [line width=2pt] [-latex] (O1) -- +(0:7.8) node [right] {\LARGE \textbf{A}};
+
+% dq轴
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr:6.5)
+	node [right] {\LARGE \bm{$d$}};
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr:5.2) 
+	node [below] {\LARGE \bm{$\psi_f$}};
+\draw [line width=1.5pt] [-latex] (O1)+(0:3.7) arc(0:\tr:3.7);
+\draw (O1)+(\tr-7:3) node [right] {\Large \bm{$\theta_r$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr-10:7.7) arc(\tr-10:\tr+10:7.7);
+\draw (O1)+(\tr:7.7) node [right] {\LARGE \bm{$\omega_r$}};
+
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr+90:6.5) 
+	node [above] {\LARGE\bm{$q$}}
+	node [below left] {\LARGE \bm{$j$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr+90-10:7.5) arc(\tr+90-10:\tr+90+10:7.5);
+\draw (O1)+(\tr+90:8) node [right] {\LARGE \bm{$\omega_s$}};
+
+% is轴
+\newcommand {\trisLen} {5}
+\draw [line width=1.5pt] [-latex] (O1)--+(\tris:\trisLen) 
+	node [left] {\LARGE \bm{$i_s$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tr:3.5) arc(\tr:\tris:3.5);
+\draw (O1)+(\tr+60:4) node [right] {\Large \bm{$\beta$}};
+
+\draw [line width=1.5pt] [-latex] (O1)--+(\tr+90:\trisLen*sin{\trisAgl}) node [above right]{\Large \bm{$i_q$}};
+
+
+% us轴
+\draw [line width=1.5pt] [-latex] (O1)--+(\trus:5) 
+	node [below left] {\LARGE \bm{$u_s$}};
+\draw [line width=1.5pt] [-latex] (O1)+(\tris:2.1) arc(\tris:\trus:2.1);
+\draw (O1)+(\trus-3:2.8) node [right] {\LARGE \bm{$\phi$}};
+
+
+\end{tikzpicture}
+
+\end{document}
+
